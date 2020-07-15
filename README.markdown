@@ -86,7 +86,7 @@ $ python3 selfbotsk2.py
 
 ## THAKS TO 
  - thaks to [Line](https://line.me/ti/p/~yapuy)
- - thaks to zerro coll (crash overdie)
+ - thaks to zerro coll (https://github.com/crash-override404/linepy-modified)
  - thaks to Fadil rahman and all tem bot
 ## NOTE
  - Login fix qr jangan lupa masukan mid di Admin owner dan staff
