@@ -91,4 +91,4 @@ $ python3 selfbotsk2.py
 ## NOTE
  - Login fix qr jangan lupa masukan mid di Admin owner dan staff
  - Config default mengunakan header IOSIPAD Ubah bagian config.py Jika ingin ubah header
- -Jika ingin menggunakan selfbot jadi asist atau pro silahkan login min 2akun lalu tigal Addbot {mention}
+ - Jika ingin menggunakan selfbot jadi asist atau pro silahkan login min 2akun lalu tigal Addbot {mention}
