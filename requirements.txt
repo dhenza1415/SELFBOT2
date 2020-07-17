@@ -1,0 +1,15 @@
+thrift==0.13.0
+hyper==0.7.0
+httpx==0.12.1
+httplib2==0.18.0
+bs4==0.0.1
+humanfriendly==8.2
+livejson==1.8.1
+pafy==0.5.5
+youtube-dl==2020.5.8
+timeago==1.0.7
+googletrans==2.4.0
+kbbi==0.4.1
+wikipedia==1.4.0
+html5lib==1.0.1
+humanize==2.4.0
