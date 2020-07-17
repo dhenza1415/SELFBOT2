@@ -28,7 +28,7 @@ sudo pip3 install youtube_dl<br>
 git clone https://github.com/dhenza1415/SELFBOT2<br>
 cd SELFBOT2<br>
 ls<br>
-python selfbotsk2.py<br>
+python3 selfbotsk2.py<br>
 ======================================== <br>
 
 # INSTALL MELALUI TERMUX<br>
