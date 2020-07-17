@@ -83,12 +83,18 @@ $ python3 selfbotsk2.py
 
 - Linux :
  > pip freeze | grep (name)
+ 
+ ## Author
+Zero Cool / [@crash-override404](https://github.com/crash-override404)  
+Fadhiil Rachman / [@fadhiilrachman](https://www.instagram.com/fadhiilrachman)  
+Alin / [@muhmursalind](https://github.com/muhmursalind)
 
 ## THAKS TO 
  - thaks to [Line](https://line.me/ti/p/~yapuy)
- - thaks to zerro coll (https://github.com/crash-override404/linepy-modified)
- - thaks to Fadil rahman and all tem bot
+ - thaks to zerro cool (https://github.com/crash-override404/linepy-modified)
+ - thaks to Fadhiil Rachman / [@fadhiilrachman](https://www.instagram.com/fadhiilrachman)  
 ## NOTE
  - Login fix qr jangan lupa masukan mid di Admin owner dan staff
  - Config default mengunakan header IOSIPAD Ubah bagian config.py Jika ingin ubah header
  - Jika ingin menggunakan selfbot jadi asist atau pro silahkan login min 2akun lalu tigal Addbot {mention}
+## Masih dalam tahap update login free baned :)
