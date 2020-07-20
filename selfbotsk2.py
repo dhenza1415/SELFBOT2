@@ -728,7 +728,8 @@ def help():
     num = (num+1)
     helpMessage += "│ " + " ├──────────────\n"
     helpMessage += "│ " + " ╰───• sʙ ʙʏ ©ᴅʜᴇɴᴢᴀ™ •────\n"
-    helpMessage += "╰━─────────────━"
+    helpMessage += "╰━─────────────━ \n"
+    helpMessage += "https://www.youtube.com/channel/UCNLejYy84XyUX8qcDropXMw"
     return helpMessage
 
 def helpbot():
@@ -842,7 +843,8 @@ def helpbot():
     num = (num+1)
     helpMessage2 += "│ " + "├──────────────\n"
     helpMessage2 += "│ " + "╰───• sʙ ʙʏ ©ᴅʜᴇɴᴢᴀ™ •────\n"
-    helpMessage2 += "╰━────────────━"
+    helpMessage2 += "╰━────────────━ \n"
+    helpMessage2 += "https://www.youtube.com/channel/UCNLejYy84XyUX8qcDropXMw"
     return helpMessage2
     
     
@@ -889,7 +891,8 @@ def helpmedia():
     num = (num+1)
     helpMessage3 += "│ " + " ├──────────────\n"
     helpMessage3 += "│ " + " ╰───• sʙ ʙʏ ©ᴅʜᴇɴᴢᴀ™ •────\n"
-    helpMessage3 += "╰━────────────━"
+    helpMessage3 += "╰━────────────━ \n"
+    helpMessage3 += "https://www.youtube.com/channel/UCNLejYy84XyUX8qcDropXMw"
     return helpMessage3
 
 def bot(op):
@@ -3952,26 +3955,34 @@ def bot(op):
 
     except Exception as error:
         print (error)
-        
-    except TalkException as talk_error:
-        logError(talk_error)
-        if talk_error.code in [7, 8, 20]:
-            sys.exit(1)
-    except KeyboardInterrupt:
-        sys.exit('[ System Message : *KEYBOARD INTERRUPT.')
-    except Exception as error:
-        logError(error)
-        
-while True:
-    try:
-        ops = oepoll.singleTrace(count=50)
-        if ops is not None:
+  
+def runningProgram():
+    if Setmain['restartPoint'] is not None:
+        try:
+            dhenzaSelfbot.sendMessage(settings['restartPoint'], 'Aye Sir, Im Back!')
+        except TalkException:
+            pass
+        Setmain['restartPoint'] = None
+    while True:
+        try:
+            ops = oepoll.singleTrace(count=50)
+        except TalkException as talk_error:
+            logError(talk_error)
+            if talk_error.code in [7, 8, 20]:
+                sys.exit(1)
+            continue
+        except KeyboardInterrupt:
+            sys.exit('[ System Message : *KEYBOARD INTERRUPT.')
+        except Exception as error:
+            logError(error)
+            continue
+        if ops:
             for op in ops:
                 bot(op)
-                # Don't remove this line, if you wan't get error soon!
                 oepoll.setRevision(op.revision)
-    except Exception as e:
-        logError(e)
 
 if __name__ == '__main__':
     print ('[ System Message : *PROGRAM HAS BEEN STARTED.\n______________________________\n')
+    runningProgram()
+      
+    
