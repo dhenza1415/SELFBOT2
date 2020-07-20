@@ -1,19 +1,21 @@
 # -*- coding: utf-8 -*-
-from DATA.ttypes import ApplicationType
+from akad.ttypes import ApplicationType
 import re
 
 class Config(object):
-    LINE_HOST_DOMAIN            = 'https://gd2.line.naver.jp'
+    Q_HOST = "ga2"
+    DOMAIN = "line.naver.jp"
+    LINE_HOST_DOMAIN            = 'https://%s.%s' % (Q_HOST, DOMAIN) #ga2, #gfp, #gd2x
     LINE_OBS_DOMAIN             = 'https://obs-sg.line-apps.com'
-    LINE_TIMELINE_API           = 'https://gd2.line.naver.jp/mh/api'
-    LINE_TIMELINE_MH            = 'https://gd2.line.naver.jp/mh'
+    LINE_TIMELINE_API           = 'https://%s.%s/mh/api' % (Q_HOST, DOMAIN)
+    LINE_TIMELINE_MH            = 'https://%s.%s/mh' % (Q_HOST, DOMAIN)
     LINE_LIFF_SEND              = 'https://api.line.me/message/v3/share'
     LINE_PERMISSION_API         = 'https://access.line.me/dialog/api/permissions'
 
     LINE_LOGIN_QUERY_PATH       = '/api/v4p/rs'
     LINE_AUTH_QUERY_PATH        = '/api/v4/TalkService.do'
 
-    LINE_API_QUERY_PATH_FIR     = '/S4'
+    LINE_API_QUERY_PATH_FIR     = '/S4' #F
     LINE_POLL_QUERY_PATH_FIR    = '/P4'
     LINE_CALL_QUERY_PATH        = '/V4'
     LINE_LIFF_QUERY_PATH        = '/LIFF1'
@@ -21,7 +23,7 @@ class Config(object):
     LINE_CHAN_QUERY_PATH        = '/CH4'
     LINE_SQUARE_QUERY_PATH      = '/SQS1'
     LINE_SHOP_QUERY_PATH        = '/SHOP4'
-    
+
     CHANNEL_ID = {
         'HELLO_WORLD': '1602289196',
         'LINE_TIMELINE': '1341209850',
@@ -33,28 +35,28 @@ class Config(object):
     }
 
     APP_VERSION = {
-        'ANDROID': '10.10.1',
-        'IOS': '10.10.0',
-        'ANDROIDLITE': '2.14.0',
-        'DESKTOPWIN': '6.1.0',
-        'DESKTOPMAC': '6.0.3',
-        'IOSIPAD': '10.10.0',
-        'CHROMEOS': '2.3.8',
-        'DEFAULT': '10.9.0'
+        'ANDROID': '10.1.1',
+        'IOS': '10.1.1',
+        'ANDROIDLITE': '2.12.0',
+        'DESKTOPWIN': '5.21.3',
+        'DESKTOPMAC': '5.21.3',
+        'IOSIPAD': '10.1.1',
+        'CHROMEOS': '2.3.3',
+        'DEFAULT': '10.1.1'
     }
 
     SYSTEM_VERSION = {
         'ANDROID': '10.0',
-        'IOS': '13.5.1',
+        'IOS': '13.3.1',
         'ANDROIDLITE': '10.0',
         'DESKTOPWIN': '10.0',
         'DESKTOPMAC': '10.15.1',
-        'IOSIPAD': '13.5.1',
-        'CHROMEOS': '83.0',
+        'IOSIPAD': '13.3.1',
+        'CHROMEOS': '79.0',
         'DEFAULT': '10.0'
     }
 
-    APP_TYPE    = 'IOSIPAD'
+    APP_TYPE    = 'DESKTOPWIN'
     APP_VER     = APP_VERSION[APP_TYPE] if APP_TYPE in APP_VERSION else APP_VERSION['DEFAULT']
     CARRIER     = '51089, 1-0'
     SYSTEM_NAME = 'SILENTKILLER'
