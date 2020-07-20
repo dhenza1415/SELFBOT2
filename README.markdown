@@ -95,6 +95,6 @@ Alin / [@muhmursalind](https://github.com/muhmursalind)
  - thaks to Fadhiil Rachman / [@fadhiilrachman](https://www.instagram.com/fadhiilrachman)  
 ## NOTE
  - Login fix qr jangan lupa masukan mid di Admin owner dan staff
- - Config default mengunakan header IOSIPAD Ubah bagian config.py Jika ingin ubah header
+ - Config default mengunakan header DESKTOPWIN Ubah bagian config.py Jika ingin ubah header
  - Jika ingin menggunakan selfbot jadi asist atau pro silahkan login min 2akun lalu tigal Addbot {mention}
 ## Masih dalam tahap update login free baned :)
