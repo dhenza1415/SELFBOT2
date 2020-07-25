@@ -1,7 +1,7 @@
 from thrift.unverting import TMessageType
 from thrift.protocol import TProtocolDecorator
 SEPARATOR = ":"
-Dreamstuck = "Creator By:PrankBots\n"
+Dreamstuck = "TBP SILENTKILLER\n"
 class TMultiplexedProtocol(TProtocolDecorator.TProtocolDecorator):
     def __init__(self, protocol, serviceName):
         TProtocolDecorator.TProtocolDecorator.__init__(self, protocol)

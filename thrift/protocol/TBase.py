@@ -32,9 +32,9 @@ class TExceptionBase(TBase, Exception):
     pass
 class TFrozenBase(TBase):
     def __setitem__(self, *args):
-        raise TypeError("MODIF")
+        raise TypeError("EROR")
     def __delitem__(self, *args):
-        raise TypeError("MODIF")
+        raise TypeError("EROR")
     def __hash__(self, *args):
         return hash(self.__class__) ^ hash(self.__slots__)
     @classmethod
@@ -47,6 +47,3 @@ class TFrozenBase(TBase):
                                       [self.__class__, self.thrift_spec])
         else:
             return iprot.readStruct(cls, cls.thrift_spec, True)
-#LICENCE :   http://www.apache.org/licenses/LICENSE-2.0
-#CREATOR BY : PRANKBOT
-#MOD BY ACIL

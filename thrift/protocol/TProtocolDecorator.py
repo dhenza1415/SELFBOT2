@@ -1,6 +1,3 @@
-#LICENCE :   http://www.apache.org/licenses/LICENSE-2.0
-#CREATOR BY : PRANKBOT
-#MOD BY ACIL
 import types
 from thrift.protocol.TProtocol import TProtocolBase
 class TProtocolDecorator():
@@ -27,6 +24,3 @@ class TProtocolDecorator():
         else:
             result = func(self.protocol, *args, **kwargs)
         return result
-#LICENCE :   http://www.apache.org/licenses/LICENSE-2.0
-#CREATOR BY : PRANKBOT
-#MOD BY ACIL

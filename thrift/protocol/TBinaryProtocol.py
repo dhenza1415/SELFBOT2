@@ -1,6 +1,3 @@
-#LICENCE :   http://www.apache.org/licenses/LICENSE-2.0
-#CREATOR BY : PRANKBOT
-#MOD BY ACIL
 from .TProtocol import TType, TProtocolBase, TProtocolException
 from struct import pack, unpack
 
@@ -202,6 +199,3 @@ class TBinaryProtocolAcceleratedFactory(object):
             string_length_limit=self.string_length_limit,
             container_length_limit=self.container_length_limit,
             fallback=self._fallback)
-#LICENCE :   http://www.apache.org/licenses/LICENSE-2.0
-#CREATOR BY : PRANKBOT
-#MOD BY ACIL
