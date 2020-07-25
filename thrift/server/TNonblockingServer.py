@@ -1,6 +1,3 @@
-#LICENCE :   http://www.apache.org/licenses/LICENSE-2.0
-#CREATOR BY : PRANKBOT
-#MOD BY ACIL
 import logging
 import select
 import socket
@@ -244,4 +241,3 @@ class TNonblockingServer(object):
         self.prepare()
         while not self._stop:
             self.handle()
-# MOD BY ACIL
