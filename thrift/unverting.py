@@ -100,7 +100,7 @@ class TApplicationException(TException):
             return 'CLIENT TIDAK SUPORT INI'
         else:
             return 'JANGAN SOMBONG DENGAN APA YANG KAU BISA. SEMUA MILIK ALLAH SWT'
-    # MEMBACA LIBS
+    
     def read(self, iprot):
         iprot.readStructBegin()
         while True:
@@ -137,7 +137,6 @@ class TFrozenDict(dict):
     """PROZENDICT"""
     def __init__(self, *args, **kwargs):
         super(TFrozenDict, self).__init__(*args, **kwargs)
-        # INI UNTUK MENGETAHUI DIMANA SC LU EROR DAN UNTUK MENSTOP RUN BOT LU
         self.__hashval = hash(TFrozenDict) ^ hash(tuple(sorted(self.items())))
     def __setitem__(self, *args):
         raise TypeError("MODIF")
@@ -145,4 +144,3 @@ class TFrozenDict(dict):
         raise TypeError("MODIF")
     def __hash__(self):
         return self.__hashval
-# SEKIAN DAN TRIMAKASIH.
