@@ -1,6 +1,3 @@
-#LICENCE :   http://www.apache.org/licenses/LICENSE-2.0
-#CREATOR BY : PRANKBOT
-#MOD BY ACIL
 from six.moves import queue
 import logging
 import os
@@ -190,5 +187,3 @@ class TForkingServer(TServer):
                 self.children.remove(pid)
             else:
                 break
-# MOD BY ACIL
-# CREATOR BY PRANKBOTS
