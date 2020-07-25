@@ -1,6 +1,3 @@
-#LICENCE :   http://www.apache.org/licenses/LICENSE-2.0
-#CREATOR BY : PRANKBOT
-#MOD BY ACIL
 from thrift.unverting import TException, TType, TFrozenDict
 from thrift.transport.TTransport import TTransportException
 from ..compat import binary_to_str, str_to_binary
