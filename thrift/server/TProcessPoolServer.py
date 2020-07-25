@@ -1,6 +1,3 @@
-#LICENCE :   http://www.apache.org/licenses/LICENSE-2.0
-#CREATOR BY : PRANKBOT
-#MOD BY ACIL
 import logging
 from multiprocessing import Process, Value, Condition
 from .TServer import TServer
@@ -75,5 +72,3 @@ class TProcessPoolServer(TServer):
         self.stopCondition.acquire()
         self.stopCondition.notify()
         self.stopCondition.release()
-# MOD BY ACIL
-# PRANKBOTS CREATOR
