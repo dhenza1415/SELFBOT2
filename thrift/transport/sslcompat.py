@@ -1,6 +1,3 @@
-#LICENCE :   http://www.apache.org/licenses/LICENSE-2.0
-#CREATOR BY : PRANKBOT
-#MOD BY ACIL
 import logging
 import sys
 from thrift.transport.TTransport import TTransportException
@@ -63,4 +60,3 @@ def _optional_dependencies():
         match = legacy_validate_callback
     return ipaddr, match
 _match_has_ipaddress, _match_hostname = _optional_dependencies()
-# MOD BY ACIL

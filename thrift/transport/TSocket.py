@@ -1,6 +1,3 @@
-#LICENCE :   http://www.apache.org/licenses/LICENSE-2.0
-#CREATOR BY : PRANKBOT
-#MOD BY ACIL
 import errno
 import logging
 import os
@@ -132,4 +129,3 @@ class TServerSocket(TSocketBase, TServerTransportBase):
         result = TSocket()
         result.setHandle(client)
         return result
-# CROT BRO

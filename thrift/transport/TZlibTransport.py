@@ -1,6 +1,3 @@
-#LICENCE :   http://www.apache.org/licenses/LICENSE-2.0
-#CREATOR BY : PRANKBOT
-#MOD BY ACIL
 from __future__ import division
 import zlib
 from .TTransport import TTransportBase, CReadableTransport
@@ -112,5 +109,3 @@ class TZlibTransport(TTransportBase, CReadableTransport):
             retstring += self.read(reqlen - len(retstring))
         self.__rbuf = BufferIO(retstring)
         return self.__rbuf
-# JANGAN SOMBONG APA YANG KAMU PUNYA DAN APA YANG KAMU BISA
-# SEMUA MILIK ALLAH SWT

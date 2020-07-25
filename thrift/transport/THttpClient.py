@@ -1,6 +1,3 @@
-#LICENCE :   http://www.apache.org/licenses/LICENSE-2.0
-#CREATOR BY : PRANKBOT
-#MOD BY ACIL
 from io import BytesIO
 import os
 import socket
@@ -110,4 +107,3 @@ class THttpClient(TTransportBase):
         self.code = self.__http_response.status
         self.message = self.__http_response.reason
         self.headers = self.__http_response.msg
-#THANKS CROT

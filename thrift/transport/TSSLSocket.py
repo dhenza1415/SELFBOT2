@@ -1,7 +1,3 @@
-#LICENCE :   http://www.apache.org/licenses/LICENSE-2.0
-#CREATOR BY : PRANKBOT
-#MOD BY ACIL
-# INI BUAT NYAMBUNGIN KE SERVER LU
 import logging
 import os
 import socket
@@ -298,4 +294,3 @@ class TSSLServerSocket(TSocket.TServerSocket, TSSLBase):
         result = TSocket.TSocket()
         result.handle = client
         return result
-# BAHAGIALAH KAWAN

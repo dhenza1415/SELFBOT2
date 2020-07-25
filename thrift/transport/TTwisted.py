@@ -1,5 +1,3 @@
-# MODIF BY ACIL
-# SUPORT CREATOR BY PRANKBOTS
 from io import BytesIO
 import struct
 from zope.interface import implementer, Interface, Attribute
@@ -214,5 +212,3 @@ class ThriftResource(resource.Resource):
         d = self.processor.process(iprot, oprot)
         d.addCallback(self._cbProcess, request, tmo)
         return server.NOT_DONE_YET
-
-# CEK KONEKSI INI SBENRNYA DISINU

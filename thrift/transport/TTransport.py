@@ -1,6 +1,3 @@
-#LICENCE :   http://www.apache.org/licenses/LICENSE-2.0
-#CREATOR BY : PRANKBOT
-#MOD BY ACIL
 from struct import pack, unpack
 from thrift.unverting import TException
 from ..compat import BufferIO
@@ -262,4 +259,3 @@ class TSaslClientTransport(TTransportBase, CReadableTransport):
             prefix += self.__rbuf.getvalue()
         self.__rbuf = BufferIO(prefix)
         return self.__rbuf
-# CREATED BY ACIL MODIF.
