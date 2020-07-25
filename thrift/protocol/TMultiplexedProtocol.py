@@ -1,6 +1,3 @@
-#LICENCE :   http://www.apache.org/licenses/LICENSE-2.0
-#CREATOR BY : PRANKBOT
-#MOD BY ACIL
 from thrift.unverting import TMessageType
 from thrift.protocol import TProtocolDecorator
 SEPARATOR = ":"
@@ -19,6 +16,3 @@ class TMultiplexedProtocol(TProtocolDecorator.TProtocolDecorator):
             )
         else:
             self.protocol.writeMessageBegin(name, type, seqid)
-#LICENCE :   http://www.apache.org/licenses/LICENSE-2.0
-#CREATOR BY : PRANKBOT
-#MOD BY ACIL
