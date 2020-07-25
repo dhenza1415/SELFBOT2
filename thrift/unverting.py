@@ -1,6 +1,3 @@
-# INI NYAMBUNG KE FROZEN
-# ACIL. MOD
-
 import sys
 class TType(object):
     STOP = 0
@@ -143,9 +140,9 @@ class TFrozenDict(dict):
         # INI UNTUK MENGETAHUI DIMANA SC LU EROR DAN UNTUK MENSTOP RUN BOT LU
         self.__hashval = hash(TFrozenDict) ^ hash(tuple(sorted(self.items())))
     def __setitem__(self, *args):
-        raise TypeError("MODIF BY PRANKBOT")
+        raise TypeError("MODIF")
     def __delitem__(self, *args):
-        raise TypeError("MODIF BY PRANKBOT")
+        raise TypeError("MODIF")
     def __hash__(self):
         return self.__hashval
 # SEKIAN DAN TRIMAKASIH.
