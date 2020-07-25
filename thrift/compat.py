@@ -1,6 +1,3 @@
-#COMPAT  INI UNTUK STRINGIO KE BINARY
-#ACIL. MOD
-
 import sys
 
 if sys.version_info[0] == 2:
