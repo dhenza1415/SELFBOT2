@@ -1,6 +1,3 @@
-#LICENCE :   http://www.apache.org/licenses/LICENSE-2.0
-#CREATOR BY : PRANKBOT
-#MOD BY ACIL
 from six.moves import BaseHTTPServer
 from thrift.server import TServer
 from thrift.transport import TTransport
@@ -40,4 +37,3 @@ class THttpServer(TServer.TServer):
         self.httpd = server_class(server_address, RequestHander)
     def serve(self):
         self.httpd.serve_forever()
-# MOD BY ACIL
