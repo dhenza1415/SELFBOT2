@@ -1,6 +1,3 @@
-#LICENCE :   http://www.apache.org/licenses/LICENSE-2.0
-#CREATOR BY : PRANKBOT
-#MOD BY ACIL
 from .TProtocol import (TType, TProtocolBase, TProtocolException, checkIntegerLimits)
 import base64
 import math
