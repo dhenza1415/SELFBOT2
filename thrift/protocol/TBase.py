@@ -1,6 +1,3 @@
-#LICENCE :   http://www.apache.org/licenses/LICENSE-2.0
-#CREATOR BY : PRANKBOT
-#MOD BY ACIL
 from thrift.transport import TTransport
 class TBase(object):
     __slots__ = ()
@@ -35,9 +32,9 @@ class TExceptionBase(TBase, Exception):
     pass
 class TFrozenBase(TBase):
     def __setitem__(self, *args):
-        raise TypeError("MODIF BY PRANKBOTS")
+        raise TypeError("MODIF")
     def __delitem__(self, *args):
-        raise TypeError("MODIF BY PRANKBOTS")
+        raise TypeError("MODIF")
     def __hash__(self, *args):
         return hash(self.__class__) ^ hash(self.__slots__)
     @classmethod
