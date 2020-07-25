@@ -1,4 +1,3 @@
-#MODIFED BY PRANKBOT
 from .protocol import TBinaryProtocol
 from .transport import TTransport
 def serialize(thrift_object,
