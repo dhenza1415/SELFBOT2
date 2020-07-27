@@ -2135,7 +2135,7 @@ def bot(op):
                         elif text.lower() == "mymid":
                                dhenzaSelfbot.sendMessage(msg.to, msg._from)
                                
-                       elif text.lower() == "dz":
+                        elif text.lower() == "dz":
                                dhenzaSelfbot.sendMessage(msg.to, "hallo jangan lupa di subscribe ya kk chanel kita\n https://www.youtube.com/channel/UCNLejYy84XyUX8qcDropXMw")
 
                         elif ("Get id " in msg.text):
