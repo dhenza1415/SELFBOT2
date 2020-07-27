@@ -32,11 +32,10 @@ python3 selfbotsk2.py<br>
 ======================================== <br>
 
 # INSTALL MELALUI TERMUX<br>
-
-pkg install python3 -y<br>
 apt-get install python --upgrade<br>
 pkg install git -y<br>
 pkg install nano -y<br>
+pip install --upgrade pip<br>
 pip3 install rsa<br>
 pip3 install thrift==0.11.0<br>
 pip3 install requests<br>
@@ -44,7 +43,6 @@ pip3 install bs4<br>
 pip3 install gtts<br>
 pip3 install beautifulsoup<br>
 pip3 install googletrans<br>
-pip3 install pafy<br>
 pip3 install humanfriendly<br>
 pip3 install goslate<br>
 pip3 install wikipedia<br>
@@ -53,6 +51,11 @@ pip3 install tweepy<br>
 pip3 install pytz<br>
 pip3 install html5lib<br>
 pip3 install pafy<br>
+pip3 install livejson<br>
+pip3 install hyper<br>
+pip3 install httplib2<br>
+pip3 install kbbi<br>
+pip3 install humanize<br>
 git clone https://github.com/dhenza1415/SELFBOT2<br>
 ls<br>
 cd SELFBOT2<br>
