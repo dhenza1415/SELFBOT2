@@ -4,7 +4,10 @@ import re
 
 class Config(object):
     Q_HOST = "ga2"
+    #Q_HOST = "ga2"
     DOMAIN = "line.naver.jp"
+    #DOMAIN = "line-apps-beta.com"
+    #Q_HOST = "legy-beta"
     LINE_HOST_DOMAIN            = 'https://%s.%s' % (Q_HOST, DOMAIN) #ga2, #gfp, #gd2x
     LINE_OBS_DOMAIN             = 'https://obs-sg.line-apps.com'
     LINE_TIMELINE_API           = 'https://%s.%s/mh/api' % (Q_HOST, DOMAIN)
@@ -59,7 +62,7 @@ class Config(object):
     APP_TYPE    = 'DESKTOPWIN'
     APP_VER     = APP_VERSION[APP_TYPE] if APP_TYPE in APP_VERSION else APP_VERSION['DEFAULT']
     CARRIER     = '51089, 1-0'
-    SYSTEM_NAME = 'SILENTKILLER'
+    SYSTEM_NAME = 'LRTT'
     SYSTEM_VER  = SYSTEM_VERSION[APP_TYPE] if APP_TYPE in SYSTEM_VERSION else SYSTEM_VERSION['DEFAULT']
     IP_ADDR     = '8.8.8.8'
     EMAIL_REGEX = re.compile(r"[^@]+@[^@]+\.[^@]+")

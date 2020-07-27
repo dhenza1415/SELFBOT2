@@ -13,12 +13,12 @@ class NewQRLogin:
             "X-Line-Application": "ANDROID\t10.6.2\tAndroid OS\t10"
         },
         "ios_ipad": {
-            "User-Agent": "Line/9.18.1",
-            "X-Line-Application": "IOSIPAD\t9.18.1\tiPhone 8\t12.4.1"
+            "User-Agent": "Line/10.1.1",
+            "X-Line-Application": "IOSIPAD\t10.1.1\tiPhone 8\t11.2.5"
         },
         "ios": {
-            "User-Agent": "Line/9.18.1",
-            "X-Line-Application": "IOS\t9.18.1\tiPhone 8\t12.4.1"
+            "User-Agent": "Line/10.1.1",
+            "X-Line-Application": "IOS\t10.1.1\tiPhone 8\t11.2.5"
         },
         "chrome": {
             "User-Agent": "MozilX-Line-Application/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36",
