@@ -33,7 +33,7 @@ python3 selfbotsk2.py<br>
 
 # INSTALL MELALUI TERMUX<br>
 pkg install python<br>
-apt-get update
+apt-get update<br>
 pip install --upgrade pip<br>
 pkg install git -y<br>
 pkg install nano -y<br>
