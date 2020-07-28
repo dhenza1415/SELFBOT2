@@ -32,9 +32,11 @@ python3 selfbotsk2.py<br>
 ======================================== <br>
 
 # INSTALL MELALUI TERMUX<br>
+pkg install python<br>
+apt-get update
+pip install --upgrade pip<br>
 pkg install git -y<br>
 pkg install nano -y<br>
-pip install --upgrade pip<br>
 pip3 install rsa<br>
 pip3 install thrift==0.11.0<br>
 pip3 install requests<br>
