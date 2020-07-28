@@ -32,7 +32,6 @@ python3 selfbotsk2.py<br>
 ======================================== <br>
 
 # INSTALL MELALUI TERMUX<br>
-apt-get install python --upgrade<br>
 pkg install git -y<br>
 pkg install nano -y<br>
 pip install --upgrade pip<br>
@@ -87,7 +86,7 @@ $ python3 selfbotsk2.py
 - Linux :
  > pip freeze | grep (name)
  
- ## Author
+ ## Author bot
 Zero Cool / [@crash-override404](https://github.com/crash-override404)  
 Fadhiil Rachman / [@fadhiilrachman](https://www.instagram.com/fadhiilrachman)  
 Alin / [@muhmursalind](https://github.com/muhmursalind)
