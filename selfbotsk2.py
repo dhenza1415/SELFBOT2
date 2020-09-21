@@ -62,20 +62,20 @@ except Exception as error:
     if args.traceback: traceback.print_tb(error.__traceback__)
     sys.exit(1)
 
-if dhenzaSelfbot:
-    print ('\n[ Your Auth Token ] -> %s\n' % dhenzaSelfbot.authToken)
+if zyeSelfbot:
+    print ('\n[ Your Auth Token ] -> %s\n' % zyeSelfbot.authToken)
 else:
     sys.exit('[ System Message ] - Login Failed.')
     
 oepoll = OEPoll(dhenzaSelfbot)
-call = dhenzaSelfbot
-creator = ["ub1c5a71f27b863896e9d44bea857d35b"]
-owner = ["ub1c5a71f27b863896e9d44bea857d35b"]
-admin = ["ub1c5a71f27b863896e9d44bea857d35b"]
-staff = ["ub1c5a71f27b863896e9d44bea857d35b"]
-mid = dhenzaSelfbot.getProfile().mid
+call = zyeSelfbot
+creator = ["u261ccc50a1817e83dc8674e8068057d6"]
+owner = ["u38a0db46c15e8d89726abd2ecb2c8148"]
+admin = ["u9ac2dd61652b0c4fb936a0772e2e9c22"]
+staff = ["ucaa9f4b74ef5787a043a7ec058719393"]
+mid = zyeSelfbot.getProfile().mid u70d809f5c40dcf104fff9fa78a3a0f8e
 Bots = [mid]
-AKU = [dhenzaSelfbot]
+AKU = [zyeSelfbot]
 TEAMBOTPROTECT = admin + owner + staff
 Team = owner + admin + Bots + staff
 Setbot = codecs.open("setting.json","r","utf-8")
@@ -203,7 +203,7 @@ wait = {
     "delladmin":False,
     "postId":False,
     "staff":{},
-    "dhenza":{},
+    "zye":{},
     "likeOn":{},
     "autoLike": {},
     "status":False,
@@ -268,8 +268,8 @@ wait = {
     "mention":"nah loh ketahuan ngintip msh aja sider",
     "Respontag":"Apa syang 😍 ",
     "welcome":"Wellcome to my Fams",
-    "comment":"ᴀᴜᴛᴏʟɪᴋᴇ ʙʏ: \n\n\n\n™S̶̭̗̞̙̿͑̽̆̃̒į̷̙̝̦̤̜̗́̉ͅl̸̛͓͋͋͆̍ę̶͇̮̦̣̖̙̘̪̉n̸͍̦͉̖̟͚̗̣̍̓̽̅̚ť̴̙͋ ̷̨̳̠͎̮̘͇̀̅̀͒̈́͊̕͝T̸̡̯̗̩̺͉̑́͛̌̒ͅé̶̡̱̯̮̯̊̏́̀̃͜a̴̭͓̫͚̐́̂̍̂̊̋̚m̸̨̨̹͎͍̳̥͆̓͗̿͐͗͑̿̓͠ ̴̠͐̂B̷̛̳͎̫̻̫̯̣͓̲͋̀͋̋͊̈͗͑o̵̲̾̈́͒͗t̴̢͍̫̰̠̞͖͍̬̑̊̽͒́̈́͗ͅ\n\n\n\nᴄʀᴇᴀᴛᴏʀ:\nhttp://line.me/ti/p/~teambotprotect\nɢɪᴛhᴜʙ:\ngithub.com/dhenza1415\nchanel ʏᴏᴜᴛᴜʙᴇ:\nhttps://youtu.be/CRqXKcTl6IY\n\nnew ᴄʜᴀɴᴇʟ:\nhttps://youtu.be/6UGH_4gG9qk",
-    "message":"ᴄɪᴇᴇ ᴋᴇᴛᴀʜᴜᴀɴ ɴɢᴇ ᴀᴅᴅ\nᴍᴀᴋᴀsɪʜ ʏᴀ sᴜᴅᴀʜ ᴀᴅᴅ..\n\n\n\n\n™S̶̭̗̞̙̿͑̽̆̃̒į̷̙̝̦̤̜̗́̉ͅl̸̛͓͋͋͆̍ę̶͇̮̦̣̖̙̘̪̉n̸͍̦͉̖̟͚̗̣̍̓̽̅̚ť̴̙͋ ̷̨̳̠͎̮̘͇̀̅̀͒̈́͊̕͝T̸̡̯̗̩̺͉̑́͛̌̒ͅé̶̡̱̯̮̯̊̏́̀̃͜a̴̭͓̫͚̐́̂̍̂̊̋̚m̸̨̨̹͎͍̳̥͆̓͗̿͐͗͑̿̓͠ ̴̠͐̂B̷̛̳͎̫̻̫̯̣͓̲͋̀͋̋͊̈͗͑o̵̲̾̈́͒͗t̴̢͍̫̰̠̞͖͍̬̑̊̽͒́̈́͗ͅ\n\n\n\nᴄʀᴇᴀᴛᴏʀ:\nhttp://line.me/ti/p/~teambotprotect\nɢɪᴛhᴜʙ:\ngithub.com/dhenza1415\nchanel ʏᴏᴜᴛᴜʙᴇ:\nhttps://youtu.be/CRqXKcTl6IY\n\nnew ᴄʜᴀɴᴇʟ:\nhttps://youtu.be/6UGH_4gG9qk",
+    "comment":"welcome"
+    "message":"welcome"
 }
 
 
@@ -298,13 +298,13 @@ try:
 except:
     print("Couldn't read Log data")
     
-dhenzaSelfbotProfile = dhenzaSelfbot.getProfile()
-myProfile["displayName"] = dhenzaSelfbotProfile.displayName
-myProfile["statusMessage"] = dhenzaSelfbotProfile.statusMessage
-myProfile["pictureStatus"] = dhenzaSelfbotProfile.pictureStatus
+zyeSelfbotProfile = zyeSelfbot.getProfile()
+myProfile["displayName"] = zyeSelfbotProfile.displayName
+myProfile["statusMessage"] = zyeSelfbotProfile.statusMessage
+myProfile["pictureStatus"] = zyeSelfbotProfile.pictureStatus
 
-contact = dhenzaSelfbot.getProfile()
-backup = dhenzaSelfbot.getProfile()
+contact = zyeSelfbot.getProfile()
+backup = zyeSelfbot.getProfile()
 backup.displayName = contact.displayName
 backup.statusMessage = contact.statusMessage
 backup.pictureStatus = contact.pictureStatus
@@ -408,27 +408,27 @@ def cloneProfile(mid):
         profile = dhenzaSelfbot.getProfile()
         profile.displayName, profile.statusMessage = contact.displayName, contact.statusMessage
         dhenzaSelfbot.updateProfile(profile)
-        pict = dhenzaSelfbot.downloadFileURL('http://dl.profile.line-cdn.net/' + contact.pictureStatus, saveAs="tmp/pict.bin")
-        vids = dhenzaSelfbot.downloadFileURL( 'http://dl.profile.line-cdn.net/' + contact.pictureStatus + '/vp', saveAs="tmp/video.bin")
+        pict = zyeSelfbot.downloadFileURL('http://dl.profile.line-cdn.net/' + contact.pictureStatus, saveAs="tmp/pict.bin")
+        vids = zyeSelfbot.downloadFileURL( 'http://dl.profile.line-cdn.net/' + contact.pictureStatus + '/vp', saveAs="tmp/video.bin")
         changeVideoAndPictureProfile(pict, vids)
-    coverId = dhenzaSelfbot.getProfileDetail(mid)['result']['objectId']
-    dhenzaSelfbot.updateProfileCoverById(coverId)
+    coverId = zyeSelfbot.getProfileDetail(mid)['result']['objectId']
+    zyeSelfbot.updateProfileCoverById(coverId)
     
 def restoreProfile():
-    profile = dhenzaSelfbot.getProfile()
+    profile = zyeSelfbot.getProfile()
     profile.displayName = settings['myProfile']['displayName']
     profile.statusMessage = settings['myProfile']['statusMessage']
     if settings['myProfile']['videoProfile'] == None:
         profile.pictureStatus = settings['myProfile']['pictureStatus']
-        dhenzaSelfbot.updateProfileAttribute(8, profile.pictureStatus)
-        dhenzaSelfbot.updateProfile(profile)
+        zyeSelfbot.updateProfileAttribute(8, profile.pictureStatus)
+        zyeSelfbot.updateProfile(profile)
     else:
-        dhenzaSelfbot.updateProfile(profile)
-        pict = dhenzaSelfbot.downloadFileURL('http://dl.profile.line-cdn.net/' + settings['myProfile']['pictureStatus'], saveAs="tmp/pict.bin")
-        vids = dhenzaSelfbot.downloadFileURL( 'http://dl.profile.line-cdn.net/' + settings['myProfile']['pictureStatus'] + '/vp', saveAs="tmp/video.bin")
+        zyeSelfbot.updateProfile(profile)
+        pict = zyeSelfbot.downloadFileURL('http://dl.profile.line-cdn.net/' + settings['myProfile']['pictureStatus'], saveAs="tmp/pict.bin")
+        vids = zyeSelfbot.downloadFileURL( 'http://dl.profile.line-cdn.net/' + settings['myProfile']['pictureStatus'] + '/vp', saveAs="tmp/video.bin")
         changeVideoAndPictureProfile(pict, vids)
     coverId = settings['myProfile']['coverId']
-    dhenzaSelfbot.updateProfileCoverById(coverId)
+    zyeSelfbot.updateProfileCoverById(coverId)
     
 def changeProfileVideo(to):
     if settings['changevp']['picture'] == True:
@@ -497,9 +497,9 @@ def siderMembers(to, mid):
                     no = "\n╚══[ {} ]".format(str(dhenzaSelfbot.getGroup(to).name))
                 except:
                     no = "\n╚══[ Success ]"
-        dhenzaSelfbot.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+        zyeSelfbot.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
-        dhenzaSelfbot.sendMessage(to, "[ INFO ] Error :\n" + str(error))
+        zyeSelfbot.sendMessage(to, "[ INFO ] Error :\n" + str(error))
 
 def welcomeMembers(to, mid):
     try:
@@ -522,12 +522,12 @@ def welcomeMembers(to, mid):
                 num=(num+1)
             else:
                 try:
-                    no = "\n╚══[ {} ]".format(str(dhenzaSelfbot.getGroup(to).name))
+                    no = "\n╚══[ {} ]".format(str(zyeSelfbot.getGroup(to).name))
                 except:
                     no = "\n╚══[ Success ]"
-        dhenzaSelfbot.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+        zyeSelfbot.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
-        dhenzaSelfbot.sendMessage(to, "[ INFO ] Error :\n" + str(error))
+        zyeSelfbot.sendMessage(to, "[ INFO ] Error :\n" + str(error))
 
 def sendMention(to, mid, firstmessage):
     try:
@@ -544,8 +544,8 @@ def sendMention(to, mid, firstmessage):
         hari = (str(future - today))
         comma = hari.find(",")
         hari = hari[:comma]
-        teman = dhenzaSelfbot.getAllContactIds()
-        gid = dhenzaSelfbot.getGroupIdsJoined()
+        teman = zyeSelfbot.getAllContactIds()
+        gid = zyeSelfbot.getGroupIdsJoined()
         tz = pytz.timezone("Asia/Jakarta")
         timeNow = datetime.now(tz=tz)
         eltime = time.time() - mulai
@@ -729,10 +729,9 @@ def help():
     helpMessage += "│ " + " ├──────────────\n"
     helpMessage += "│ " + " ╰───• sʙ ʙʏ ©ᴅʜᴇɴᴢᴀ™ •────\n"
     helpMessage += "╰━─────────────━ \n"
-    helpMessage += "https://www.youtube.com/channel/UCNLejYy84XyUX8qcDropXMw\n"
-    helpMessage += "https://youtu.be/iwZuig9flas"
-    return helpMessage
-
+    helpMessage += https://line.me/ti/p/aDKJL3ZEky 
+    helpMessage += https://line.me/ti/p/aDKJL3ZEky 
+    return helpMessage += https://line.me/ti/p/aDKJL3ZEky 
 def helpbot():
     num = 1
     key = Setmain["keyCommand"]
@@ -812,42 +811,42 @@ def helpbot():
     helpMessage2 += "│" + " │  • SET STAFF BOTS •  \n"
     helpMessage2 += "│" + " ├──────────────\n"
     num = (num+1)
-    helpMessage2 += "│" + " │ %i) " % num + key + "ᴀᴅᴍɪɴ ᴏɴ\n"
+    helpMessage2 += "│" + " │ %i) " % num + key + "admin on\n"
     num = (num+1)
-    helpMessage2 += "│" + " │ %i) " % num + key + "ᴀᴅᴍɪɴ ᴏғғ\n"
+    helpMessage2 += "│" + " │ %i) " % num + key + "admin off\n"
     num = (num+1)
-    helpMessage2 += "│" + " │ %i) " % num + key + "ᴀᴅᴍɪɴ @\n"
+    helpMessage2 += "│" + " │ %i) " % num + key + "admin @\n"
     num = (num+1)
-    helpMessage2 += "│" + " │ %i) " % num + key + "ᴀᴅᴍɪɴᴅᴇʟʟ @\n"
+    helpMessage2 += "│" + " │ %i) " % num + key + "admindell @\n"
     num = (num+1)
-    helpMessage2 += "│" + " │ %i) " % num + key + "sᴛᴀғғ  ᴏɴ\n"
+    helpMessage2 += "│" + " │ %i) " % num + key + "staff  on\n"
     num = (num+1)
-    helpMessage2 += "│" + " │ %i) " % num + key + "sᴛᴀғғ ᴏɴ\n"
+    helpMessage2 += "│" + " │ %i) " % num + key + "staff off\n"
     num = (num+1)
-    helpMessage2 += "│" + " │ %i) " % num + key + "sᴛᴀғғ @\n"
+    helpMessage2 += "│" + " │ %i) " % num + key + "staff @\n"
     num = (num+1)
-    helpMessage2 += "│" + " │ %i) " % num + key + "sᴛᴀғғᴅᴇʟʟ @\n"
+    helpMessage2 += "│" + " │ %i) " % num + key + "staffdell @\n"
     num = (num+1)
-    helpMessage2 += "│" + " │ %i) " % num + key + "ʙᴏᴛ ᴏɴ\n"
+    helpMessage2 += "│" + " │ %i) " % num + key + "bot on\n"
     num = (num+1)
-    helpMessage2 += "│" + " │ %i) " % num + key + "ʙᴏᴛ ᴏғғ\n"
+    helpMessage2 += "│" + " │ %i) " % num + key + "off off\n"
     num = (num+1)
-    helpMessage2 += "│" + " │ %i)" % num + key + " Spesan: kata\n"
+    helpMessage2 += "│" + " │ %i)" % num + key + " setmsg: kata\n"
     num = (num+1)
-    helpMessage2 += "│" + " │ %i)" % num + key + " Swelcome: kata\n"
+    helpMessage2 += "│" + " │ %i)" % num + key + " setwelcome: kata\n"
     num = (num+1)
-    helpMessage2 += "│" + " │ %i)" % num + key + " Srespon: kata\n"
+    helpMessage2 += "│" + " │ %i)" % num + key + " setrespon: kata\n"
     num = (num+1)
-    helpMessage2 += "│" + " │ %i)" % num + key + " Sspam: kata\n"
+    helpMessage2 += "│" + " │ %i)" % num + key + " setspam: kata\n"
     num = (num+1)
-    helpMessage2 += "│" + " │ %i)" % num + key + " Ssider: kata\n"
+    helpMessage2 += "│" + " │ %i)" % num + key + " setsider: kata\n"
     num = (num+1)
     helpMessage2 += "│ " + "├──────────────\n"
     helpMessage2 += "│ " + "╰───• sʙ ʙʏ ©ᴅʜᴇɴᴢᴀ™ •────\n"
     helpMessage2 += "╰━────────────━ \n"
-    helpMessage2 += "https://www.youtube.com/channel/UCNLejYy84XyUX8qcDropXMw\n"
-    helpMessage2 += "https://youtu.be/iwZuig9flas"
-    return helpMessage2
+    helpMessage2 += https://line.me/ti/p/aDKJL3ZEky 
+    helpMessage2 += https://line.me/ti/p/aDKJL3ZEky 
+    return helpMessage2 += https://line.me/ti/p/aDKJL3ZEky 
     
 def helpmedia():
     num = 1
@@ -893,9 +892,9 @@ def helpmedia():
     helpMessage3 += "│ " + " ├──────────────\n"
     helpMessage3 += "│ " + " ╰───• sʙ ʙʏ ©ᴅʜᴇɴᴢᴀ™ •────\n"
     helpMessage3 += "╰━────────────━ \n"
-    helpMessage3 += "https://www.youtube.com/channel/UCNLejYy84XyUX8qcDropXMw\n"
-    helpMessage3 += "https://youtu.be/iwZuig9flas"
-    return helpMessage3    
+    helpMessage3 += https://line.me/ti/p/aDKJL3ZEky 
+    helpMessage3 += https://line.me/ti/p/aDKJL3ZEky 
+    return helpMessage3 += https://line.me/ti/p/aDKJL3ZEky 
 
 def bot(op):
     global time
@@ -1232,9 +1231,9 @@ def bot(op):
                     else:
                         wait["blacklist"][op.param2] = True
                         try:
-                            dhenzaSelfbot.kickoutFromGroup(op.param1,[op.param2])
-                            dhenzaSelfbot.findAndAddContactsByMid(op.param1,[op.param3])
-                            dhenzaSelfbot.inviteIntoGroup(op.param1,[op.param3])
+                            zyeSelfbot.kickoutFromGroup(op.param1,[op.param2])
+                            zyeSelfbot.findAndAddContactsByMid(op.param1,[op.param3])
+                            zyeSelfbot.inviteIntoGroup(op.param1,[op.param3])
                         except:
                             pass
                     return
@@ -1253,9 +1252,9 @@ def bot(op):
                     else:
                         wait["blacklist"][op.param2] = True
                         try:
-                            dhenzaSelfbot.kickoutFromGroup(op.param1,[op.param2])
-                            dhenzaSelfbot.inviteIntoGroup(op.param1,[op.param3])
-                            dhenzaSelfbot.acceptGroupInvitation(op.param1)
+                            zyeSelfbot.kickoutFromGroup(op.param1,[op.param2])
+                            zyeSelfbot.inviteIntoGroup(op.param1,[op.param3])
+                            zyeSelfbot.acceptGroupInvitation(op.param1)
                         except:
                             pass
                     return
@@ -1275,8 +1274,8 @@ def bot(op):
                         pass
                     else:
                         cctv['sidermem'][op.param1] += "\n " + Name
-                        teambotmaxZ={'previewUrl': "http://dl.profile.line-cdn.net/"+dhenzaSelfbot.getContact(op.param2).picturePath, 'i-installUrl': 'http://itunes.apple.com/app/linemusic/id966142320', 'type': 'mt', 'subText': 'creator : dhenza15', 'a-installUrl': 'market://details?id=jp.linecorp.linemusic.android', 'a-packageName': 'jp.linecorp.linemusic.android', 'countryCode': 'JP', 'a-linkUri': 'linemusic://open?target=track&item=mb00000000016197ea&subitem=mt000000000d69e2db&cc=JP&from=lc&v=1', 'i-linkUri': 'linemusic://open?target=track&item=mb00000000016197ea&subitem=mt000000000d69e2db&cc=JP&from=lc&v=1', 'text': dhenzaSelfbot.getContact(op.param2).displayName, 'id': 'mt000000000d69e2db', 'linkUri': 'https://music.me.me/launch?target=track&item=mb00000000016197ea&subitem=mt000000000d69e2db&cc=JP&from=lc&v=1','MSG_SENDER_ICON': "https://os.line.naver.jp/os/p/"+op.param2,'MSG_SENDER_NAME':  dhenzaSelfbot.getContact(op.param2).displayName,}
-                        dhenzaSelfbot.sendMessage(op.param1, dhenzaSelfbot.getContact(op.param2).displayName, teambotmaxZ, 19)
+                        teambotmaxZ={'previewUrl': "http://dl.profile.line-cdn.net/"+zyeSelfbot.getContact(op.param2).picturePath, 'i-installUrl': 'http://itunes.apple.com/app/linemusic/id966142320', 'type': 'mt', 'subText': 'creator : dhenza15', 'a-installUrl': 'market://details?id=jp.linecorp.linemusic.android', 'a-packageName': 'jp.linecorp.linemusic.android', 'countryCode': 'JP', 'a-linkUri': 'linemusic://open?target=track&item=mb00000000016197ea&subitem=mt000000000d69e2db&cc=JP&from=lc&v=1', 'i-linkUri': 'linemusic://open?target=track&item=mb00000000016197ea&subitem=mt000000000d69e2db&cc=JP&from=lc&v=1', 'text': dhenzaSelfbot.getContact(op.param2).displayName, 'id': 'mt000000000d69e2db', 'linkUri': 'https://music.me.me/launch?target=track&item=mb00000000016197ea&subitem=mt000000000d69e2db&cc=JP&from=lc&v=1','MSG_SENDER_ICON': "https://os.line.naver.jp/os/p/"+op.param2,'MSG_SENDER_NAME':  dhenzaSelfbot.getContact(op.param2).displayName,}
+                        zyeSelfbot.sendMessage(op.param1, zyeSelfbot.getContact(op.param2).displayName, teambotmaxZ, 19)
 
 
         if op.type == 55:
@@ -1294,28 +1293,28 @@ def bot(op):
                 else:
                     wait["blacklist"][op.param2] = True
                     try:
-                        dhenzaSelfbot.kickoutFromGroup(op.param1,[op.param2])
+                        zyeSelfbot.kickoutFromGroup(op.param1,[op.param2])
                     except:
                         try:
-                            dhenzaSelfbot.kickoutFromGroup(op.param1,[op.param2])
+                            zyeSelfbot.kickoutFromGroup(op.param1,[op.param2])
                         except:
                             try:
-                                dhenzaSelfbot.kickoutFromGroup(op.param1,[op.param2])
+                                zyeSelfbot.kickoutFromGroup(op.param1,[op.param2])
                             except:
                                 pass
                 return
 
             if cctv['cyduk'][op.param1]==True:
                 if op.param1 in cctv['point']:
-                    Name = dhenzaSelfbot.getContact(op.param2).displayName
+                    Name = zyeSelfbot.getContact(op.param2).displayName
                     if Name in cctv['sidermem'][op.param1]:
                         pass
                     else:
                         cctv['sidermem'][op.param1] += "\n~ " + Name
                         siderMembers(op.param1, [op.param2])
-                        contact = dhenzaSelfbot.getContact(op.param2)
+                        contact = zyeSelfbot.getContact(op.param2)
                         image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
-                        dhenzaSelfbot.sendImageWithURL(op.param1, image)
+                        zyeSelfbot.sendImageWithURL(op.param1, image)
                         
         if op.type == 65:
             if settings["unsendMessage"] == True:
@@ -1342,17 +1341,17 @@ def bot(op):
                                 zx2.append(zx)
                                 zxc += pesan2
                                 text = xpesan + zxc + ret_ + ""
-                                dhenzaSelfbot.sendMessage(at, text, contentMetadata={'MENTION':str('{"MENTIONEES":'+json.dumps(zx2).replace(' ','')+'}')}, contentType=0)
-                                dhenzaSelfbot.sendImage(at, msg_dict[msg_id]["data"])
+                                zyeSelfbot.sendMessage(at, text, contentMetadata={'MENTION':str('{"MENTIONEES":'+json.dumps(zx2).replace(' ','')+'}')}, contentType=0)
+                                zyeSelfbot.sendImage(at, msg_dict[msg_id]["data"])
                            else:
-                                ginfo = dhenzaSelfbot.getGroup(at)
-                                ryan = dhenzaSelfbot.getContact(msg_dict[msg_id]["from"])
+                                ginfo = zyeSelfbot.getGroup(at)
+                                ryan = zyeSelfbot.getContact(msg_dict[msg_id]["from"])
                                 ret_ =  "📧 Pesan Dihapus 📧\n"
                                 ret_ += " Pengirim : {}".format(str(ryan.displayName))
                                 ret_ += "\n Nama Grup : {}".format(str(ginfo.name))
                                 ret_ += "\n Waktu Ngirim : {}".format(dt_to_str(cTime_to_datetime(msg_dict[msg_id]["createdTime"])))
                                 ret_ += "\n Pesannya : {}".format(str(msg_dict[msg_id]["text"]))
-                                dhenzaSelfbot.sendMessage(at, str(ret_))
+                                zyeSelfbot.sendMessage(at, str(ret_))
                         del msg_dict[msg_id]
                 except Exception as e:
                     print(e)
@@ -1364,15 +1363,15 @@ def bot(op):
                     msg_id = op.param2
                     if msg_id in msg_dict1:
                         if msg_dict1[msg_id]["from"]:
-                                ginfo = dhenzaSelfbot.getGroup(at)
-                                ryan = dhenzaSelfbot.getContact(msg_dict1[msg_id]["from"])
+                                ginfo = zyeSelfbot.getGroup(at)
+                                ryan = zyeSelfbot.getContact(msg_dict1[msg_id]["from"])
                                 ret_ =  "📧 Sticker Dihapus 📧\n"
                                 ret_ += " Pengirim : {}".format(str(ryan.displayName))
                                 ret_ += "\n Nama Grup : {}".format(str(ginfo.name))
                                 ret_ += "\n Waktu Ngirim : {}".format(dt_to_str(cTime_to_datetime(msg_dict1[msg_id]["createdTime"])))
                                 ret_ += "{}".format(str(msg_dict1[msg_id]["text"]))
-                                dhenzaSelfbot.sendMessage(at, str(ret_))
-                                dhenzaSelfbot.sendImage(at, msg_dict1[msg_id]["data"])
+                                zyeSelfbot.sendMessage(at, str(ret_))
+                                zyeSelfbot.sendImage(at, msg_dict1[msg_id]["data"])
                         del msg_dict1[msg_id]
                 except Exception as e:
                     print(e) 
@@ -1384,7 +1383,7 @@ def bot(op):
             receiver = msg.to
             sender = msg._from
             if msg.toType == 0 or msg.toType == 2:
-                if sender != dhenzaSelfbot.profile.mid:
+                if sender != zyeSelfbot.profile.mid:
                     to = sender
                 else:
                     to = receiver
@@ -1392,9 +1391,9 @@ def bot(op):
                   if settings["nCall"] == True:
                     if msg._from not in Bots:
                         try:
-                            contact = dhenzaSelfbot.getContact(sender)
-                            group = dhenzaSelfbot.getGroup(msg.to)
-                            cover = dhenzaSelfbot.getProfileCoverURL(sender)
+                            contact = zyeSelfbot.getContact(sender)
+                            group = zyeSelfbot.getGroup(msg.to)
+                            cover = zyeSelfbot.getProfileCoverURL(sender)
                             tz = pytz.timezone("Asia/Jakarta")
                             timeNow = datetime.now(tz=tz)
                             if msg.toType == 2:
@@ -2067,66 +2066,66 @@ def bot(op):
                                 timeNow = datetime.now(tz=tz)                                
                                 md = "│╔══[ TΣΔM βΩT PRΩTΣCTsᴋ ] \n"                                
                                 if wait["sticker"] == True: md+="│╠══[  ON  ] sᴛɪᴄᴋᴇʀ✔️\n"
-                                else: md+="│╠══[ OFF ] sᴛɪᴄᴋᴇʀ❌\n"
+                                else: md+="│╠══[ OFF ] sticker❌\n"
                                 if wait["contact"] == True: md+="│╠══[  ON  ] ᴄᴏɴᴛᴀᴄᴛ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴄᴏɴᴛᴀᴄᴛ❌\n"
+                                else: md+="│╠══[ OFF ] contact❌\n"
                                 if wait["detectMention"] == True: md+="│╠══[  ON  ] ʀᴇsᴘᴏɴ✔️\n"
-                                else: md+="│╠══[ OFF ] ʀᴇsᴘᴏɴ❌\n"
+                                else: md+="│╠══[ OFF ] detectMentio❌\n"
                                 if wait["autoJoin"] == True: md+="│╠══[  ON  ] ᴀᴜᴛᴏᴊᴏɪɴ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴀᴜᴛᴏᴊᴏɪɴ❌\n"
+                                else: md+="│╠══[ OFF ] autojoin❌\n"
                                 if settings["autoJoinTicket"] == True: md+="│╠══[  ON  ] ᴊᴏɪɴᴛɪᴄᴋᴇᴛ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴊᴏɪɴᴛɪᴄᴋᴇᴛ❌\n"
+                                else: md+="│╠══[ OFF ] autoJoinTicket❌\n"
                                 if wait["autoBlock"] == True: md+="│╠══[  ON  ] autoblock ✔️\n"
                                 else: md+="│╠══[ OFF ] autoblock ❌\n"
                                 if settings["unsendMessage"] == True: md+="│╠══[  ON  ] ᴜɴsᴇɴᴅ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴜɴsᴇɴᴅ❌\n"
+                                else: md+="│╠══[ OFF ] unsendMessage❌\n"
                                 if wait["autoAdd"] == True: md+="│╠══[  ON  ] ᴀᴜᴛᴏᴀᴅᴅ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴀᴜᴛᴏᴀᴅᴅ❌\n"
+                                else: md+="│╠══[ OFF ] autoAdd❌\n"
                                 if msg.to in welcome: md+="│╠══[  ON  ] ᴡᴇʟᴄᴏᴍᴇ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴡᴇʟᴄᴏᴍᴇ❌\n"
+                                else: md+="│╠══[ OFF ] welcome❌\n"
                                 if wait["autoLeave"] == True: md+="│╠══[  ON  ] ᴀᴜᴛᴏʟᴇᴀᴠᴇ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴀᴜᴛᴏʟᴇᴀᴠᴇ❌\n"                               
+                                else: md+="│╠══[ OFF ] autoLeave❌\n"                               
                                 if msg.to in protectqr: md+="│╠══[  ON  ] ᴘʀᴏᴛᴇᴄᴛǫʀ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴘʀᴏᴛᴇᴄᴛǫʀ❌\n"
+                                else: md+="│╠══[ OFF ] protectqr❌\n"
                                 if msg.to in protectjoin: md+="│╠══[  ON  ] ᴘʀᴏᴛᴇᴄᴛᴊᴏɪɴ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴘʀᴏᴛᴇᴄᴛᴊᴏɪɴ❌\n"
+                                else: md+="│╠══[ OFF ] protectjoin❌\n"
                                 if msg.to in protectkick: md+="│╠══[  ON  ] ᴘʀᴏᴛᴇᴄᴛᴋɪᴄᴋ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴘʀᴏᴛᴇᴄᴛᴋɪᴄᴋ❌\n"
+                                else: md+="│╠══[ OFF ] protectkick❌\n"
                                 if msg.to in protectinvite: md+="│╠══[  ON  ] ᴘʀᴏᴛᴇᴄᴛɪɴᴠɪᴛᴇ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴘʀᴏᴛᴇᴄᴛɪɴᴠɪᴛᴇ❌\n"
+                                else: md+="│╠══[ OFF ] protectinvite❌\n"
                                 if msg.to in protectantijs: md+="│╠══[  ON  ] ᴊs✔️\n"
-                                else: md+="│╠══[ OFF ] ᴊs❌\n"                                
+                                else: md+="│╠══[ OFF ] protectjs❌\n"                                
                                 if msg.to in protectcancel: md+="│╠══[  ON  ] ᴘʀᴏᴛᴇᴄᴛᴄᴀɴᴄᴇʟ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴘʀᴏᴛᴇᴄᴛᴄᴀɴᴄᴇʟ❌\n"
+                                else: md+="│╠══[ OFF ] protectcancel❌\n"
                                 md+= "│╚══[ TΣΔM βΩT PRΩTΣCTsᴋ ]"
-                                md+= " https://www.youtube.com/channel/UCNLejYy84XyUX8qcDropXMw"
-                                dhenzaSelfbot.sendMessage(msg.to, md+"\n│ᴛᴀɴɢɢᴀʟ : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n│ᴊᴀᴍ  "+ datetime.strftime(timeNow,'%H:%M:%S')+" ")   
+                                md+= https://line.me/ti/p/aDKJL3ZEky 
+                                zyeSelfbot += https://line.me/ti/p/aDKJL3ZEky 
                                 
                           
                         elif cmd == "creator" or text.lower() == 'creator':
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
-                                dhenzaSelfbot.sendMessage(msg.to,"Creator Kami")
+                                zyeSelfbot.sendMessage(msg.to,"Creator Kami")
                                 ma = ""
                                 for i in creator:
-                                    ma = dhenzaSelfbot.getContact(i)
-                                    dhenzaSelfbot.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
+                                    ma = zyeSelfbot.getContact(i)
+                                    zyeSelfbot.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
 
                         elif cmd == "about" or cmd == "informasi":
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                sendMention(msg.to, sender, "ɪɴғᴏ sᴇʟғʙᴏᴛ\n\n")
-                               dhenzaSelfbot.sendMessage(msg.to, None, contentMetadata={'mid': mid}, contentType=13)
+                               zyeSelfbot.sendMessage(msg.to, None, contentMetadata={'mid': mid}, contentType=13)
 
                         elif cmd == "me" or text.lower() == 'me':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': msg._from}
-                               dhenzaSelfbot.sendMessage(msg.to, None, contentMetadata={'mid': msg._from}, contentType=13)
+                               zyeSelfbot.sendMessage(msg.to, None, contentMetadata={'mid': msg._from}, contentType=13)
                                
 
                         elif text.lower() == "mymid":
-                               dhenzaSelfbot.sendMessage(msg.to, msg._from)
+                               zyeSelfbot.sendMessage(msg.to, msg._from)
                                
                         elif text.lower() == "dz":
                                dhenzaSelfbot.sendMessage(msg.to, "hallo jangan lupa di subscribe ya kk chanel kita\n https://www.youtube.com/channel/UCNLejYy84XyUX8qcDropXMw")
@@ -2137,28 +2136,28 @@ def bot(op):
                                key = eval(msg.contentMetadata["MENTION"])
                                key1 = key["MENTIONEES"][0]["M"]
                                mi = dhenzaSelfbot.getContact(key1)
-                               dhenzaSelfbot.sendMessage(msg.to, "Nama : "+str(mi.displayName)+"\nMID : " +key1)
-                               dhenzaSelfbot.sendMessage(msg.to, None, contentMetadata={'mid': key1}, contentType=13)
+                               zyeSelfbot.sendMessage(msg.to, "Nama : "+str(mi.displayName)+"\nMID : " +key1)
+                               zyeSelfbot.sendMessage(msg.to, None, contentMetadata={'mid': key1}, contentType=13)
 
                         elif ("Profile " in msg.text):
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                key = eval(msg.contentMetadata["MENTION"])
                                key1 = key["MENTIONEES"][0]["M"]
-                               mi = dhenzaSelfbot.getContact(key1)
-                               dhenzaSelfbot.sendMessage(msg.to, "Nama : "+str(mi.displayName)+"\nMid : " +key1+"\nStatus Msg"+str(mi.statusMessage))
-                               dhenzaSelfbot.sendMessage(msg.to, None, contentMetadata={'mid': key1}, contentType=13)
+                               mi = zyeSelfbot.getContact(key1)
+                               zyeSelfbot.sendMessage(msg.to, "Nama : "+str(mi.displayName)+"\nMid : " +key1+"\nStatus Msg"+str(mi.statusMessage))
+                               zyeSelfbot.sendMessage(msg.to, None, contentMetadata={'mid': key1}, contentType=13)
                                if "videoProfile='{" in str(dhenzaSelfbot.getContact(key1)):
-                                   dhenzaSelfbot.sendVideoWithURL(msg.to, 'http://dl.profile.line.naver.jp'+str(mi.picturePath)+'/vp.small')
+                                   zyeSelfbot.sendVideoWithURL(msg.to, 'http://dl.profile.line.naver.jp'+str(mi.picturePath)+'/vp.small')
                                else:
-                                   dhenzaSelfbot.sendImageWithURL(msg.to, 'http://dl.profile.line.naver.jp'+str(mi.picturePath))
+                                   zyeSelfbot.sendImageWithURL(msg.to, 'http://dl.profile.line.naver.jp'+str(mi.picturePath))
 
                         elif cmd == "mybot":
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': mid}
-                               dhenzaSelfbot.sendMessage(msg.to, None, contentMetadata={'mid': mid}, contentType=13)
+                               zyeSelfbot.sendMessage(msg.to, None, contentMetadata={'mid': mid}, contentType=13)
 
                         elif cmd == "reject":
                           if wait["selfbot"] == True:
