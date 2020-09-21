@@ -69,13 +69,13 @@ else:
     
 oepoll = OEPoll(dhenzaSelfbot)
 call = dhenzaSelfbot
-creator = ["ub1c5a71f27b863896e9d44bea857d35b"]
-owner = ["ub1c5a71f27b863896e9d44bea857d35b"]
-admin = ["ub1c5a71f27b863896e9d44bea857d35b"]
-staff = ["ub1c5a71f27b863896e9d44bea857d35b"]
+creator = ["u38a0db46c15e8d89726abd2ecb2c8148"]
+owner = ["u38a0db46c15e8d89726abd2ecb2c8148"]
+admin = ["u38a0db46c15e8d89726abd2ecb2c8148"]
+staff = ["u38a0db46c15e8d89726abd2ecb2c8148"]
 mid = dhenzaSelfbot.getProfile().mid
 Bots = [mid]
-AKU = [dhenzaSelfbot]
+AKU = [zyeSelfbot]
 TEAMBOTPROTECT = admin + owner + staff
 Team = owner + admin + Bots + staff
 Setbot = codecs.open("setting.json","r","utf-8")
@@ -303,8 +303,8 @@ myProfile["displayName"] = dhenzaSelfbotProfile.displayName
 myProfile["statusMessage"] = dhenzaSelfbotProfile.statusMessage
 myProfile["pictureStatus"] = dhenzaSelfbotProfile.pictureStatus
 
-contact = dhenzaSelfbot.getProfile()
-backup = dhenzaSelfbot.getProfile()
+contact = zyeSelfbot.getProfile()
+backup = zyeSelfbot.getProfile()
 backup.displayName = contact.displayName
 backup.statusMessage = contact.statusMessage
 backup.pictureStatus = contact.pictureStatus
@@ -408,27 +408,27 @@ def cloneProfile(mid):
         profile = dhenzaSelfbot.getProfile()
         profile.displayName, profile.statusMessage = contact.displayName, contact.statusMessage
         dhenzaSelfbot.updateProfile(profile)
-        pict = dhenzaSelfbot.downloadFileURL('http://dl.profile.line-cdn.net/' + contact.pictureStatus, saveAs="tmp/pict.bin")
-        vids = dhenzaSelfbot.downloadFileURL( 'http://dl.profile.line-cdn.net/' + contact.pictureStatus + '/vp', saveAs="tmp/video.bin")
+        pict = zyeSelfbot.downloadFileURL('http://dl.profile.line-cdn.net/' + contact.pictureStatus, saveAs="tmp/pict.bin")
+        vids = zyeSelfbot.downloadFileURL( 'http://dl.profile.line-cdn.net/' + contact.pictureStatus + '/vp', saveAs="tmp/video.bin")
         changeVideoAndPictureProfile(pict, vids)
-    coverId = dhenzaSelfbot.getProfileDetail(mid)['result']['objectId']
-    dhenzaSelfbot.updateProfileCoverById(coverId)
+    coverId = zyeSelfbot.getProfileDetail(mid)['result']['objectId']
+    zyeSelfbot.updateProfileCoverById(coverId)
     
 def restoreProfile():
-    profile = dhenzaSelfbot.getProfile()
+    profile = zyeSelfbot.getProfile()
     profile.displayName = settings['myProfile']['displayName']
     profile.statusMessage = settings['myProfile']['statusMessage']
     if settings['myProfile']['videoProfile'] == None:
         profile.pictureStatus = settings['myProfile']['pictureStatus']
-        dhenzaSelfbot.updateProfileAttribute(8, profile.pictureStatus)
-        dhenzaSelfbot.updateProfile(profile)
+        zyeSelfbot.updateProfileAttribute(8, profile.pictureStatus)
+        zyeSelfbot.updateProfile(profile)
     else:
-        dhenzaSelfbot.updateProfile(profile)
-        pict = dhenzaSelfbot.downloadFileURL('http://dl.profile.line-cdn.net/' + settings['myProfile']['pictureStatus'], saveAs="tmp/pict.bin")
-        vids = dhenzaSelfbot.downloadFileURL( 'http://dl.profile.line-cdn.net/' + settings['myProfile']['pictureStatus'] + '/vp', saveAs="tmp/video.bin")
+        zyeSelfbot.updateProfile(profile)
+        pict = zyeSelfbot.downloadFileURL('http://dl.profile.line-cdn.net/' + settings['myProfile']['pictureStatus'], saveAs="tmp/pict.bin")
+        vids = zyeSelfbot.downloadFileURL( 'http://dl.profile.line-cdn.net/' + settings['myProfile']['pictureStatus'] + '/vp', saveAs="tmp/video.bin")
         changeVideoAndPictureProfile(pict, vids)
     coverId = settings['myProfile']['coverId']
-    dhenzaSelfbot.updateProfileCoverById(coverId)
+    zyeSelfbot.updateProfileCoverById(coverId)
     
 def changeProfileVideo(to):
     if settings['changevp']['picture'] == True:
@@ -729,8 +729,8 @@ def help():
     helpMessage += "│ " + " ├──────────────\n"
     helpMessage += "│ " + " ╰───• sʙ ʙʏ ©ᴅʜᴇɴᴢᴀ™ •────\n"
     helpMessage += "╰━─────────────━ \n"
-    helpMessage += "https://www.youtube.com/channel/UCNLejYy84XyUX8qcDropXMw\n"
-    helpMessage += "https://youtu.be/iwZuig9flas"
+    helpMessage += "https://line.me/ti/p/aDKJL3ZEky 
+    helpMessage += 
     return helpMessage
 
 def helpbot():
@@ -845,8 +845,8 @@ def helpbot():
     helpMessage2 += "│ " + "├──────────────\n"
     helpMessage2 += "│ " + "╰───• sʙ ʙʏ ©ᴅʜᴇɴᴢᴀ™ •────\n"
     helpMessage2 += "╰━────────────━ \n"
-    helpMessage2 += "https://www.youtube.com/channel/UCNLejYy84XyUX8qcDropXMw\n"
-    helpMessage2 += "https://youtu.be/iwZuig9flas"
+    helpMessage2 += "https://line.me/ti/p/aDKJL3ZEky 
+    helpMessage2 += 
     return helpMessage2
     
 def helpmedia():
@@ -893,8 +893,8 @@ def helpmedia():
     helpMessage3 += "│ " + " ├──────────────\n"
     helpMessage3 += "│ " + " ╰───• sʙ ʙʏ ©ᴅʜᴇɴᴢᴀ™ •────\n"
     helpMessage3 += "╰━────────────━ \n"
-    helpMessage3 += "https://www.youtube.com/channel/UCNLejYy84XyUX8qcDropXMw\n"
-    helpMessage3 += "https://youtu.be/iwZuig9flas"
+    helpMessage3 += "https://line.me/ti/p/aDKJL3ZEky 
+    helpMessage3 += "
     return helpMessage3    
 
 def bot(op):
