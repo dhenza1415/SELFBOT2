@@ -267,8 +267,7 @@ wait = {
             },
     "mention":"nah loh ketahuan ngintip msh aja sider",
     "Respontag":"Apa monyet 😍 ",
-    "welcome":"Wellcome to my Fams"
-    "comment": "",
+    "welcome":"Wellcome to my Fams",
 }
 
 
