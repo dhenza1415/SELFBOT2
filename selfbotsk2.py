@@ -266,7 +266,7 @@ wait = {
             "statusMessage": ""
             },
     "mention":"nah loh ketahuan ngintip msh aja sider",
-    "Respontag":"Apa syang 😍 ",
+    "Respontag":"Apa monyet 😍 ",
     "welcome":"Wellcome to my Fams"
     "comment": "",
 }
