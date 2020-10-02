@@ -269,7 +269,6 @@ wait = {
     "Respontag":"Apa syang 😍 ",
     "welcome":"Wellcome to my Fams"
     "comment": "",
-    "message": "",
 }
 
 
