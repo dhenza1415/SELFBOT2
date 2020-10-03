@@ -71,6 +71,7 @@ oepoll = OEPoll(dhenzaSelfbot)
 call = dhenzaSelfbot
 creator = ["u47a5a04d2d29284d90aa79e02cf4917a"]
 owner = ["u47a5a04d2d29284d90aa79e02cf4917a"]
+owner = ["uc0d1ae4fe193c6cabdd8782f4b3a13d1"]
 admin = ["u47a5a04d2d29284d90aa79e02cf4917a"]
 staff = ["u47a5a04d2d29284d90aa79e02cf4917a"]
 mid = dhenzaSelfbot.getProfile().mid
@@ -2527,7 +2528,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 G = dhenzaSelfbot.getGroup(msg.to)
-                                dhenzaSelfbot.sendMessage(msg.to, "See you next again "+str(G.name))
+                                dhenzaSelfbot.sendMessage(msg.to, "Anjir di usir Gua bye anjing "+str(G.name))
                                 dhenzaSelfbot.leaveGroup(msg.to)
 
                         elif cmd.startswith("leave "):
