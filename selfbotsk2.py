@@ -110,7 +110,7 @@ settings = {
     "checkContact": False,
     "postEndUrl": True,
     "checkPost": False,
-    "setKey": False,
+    "setKey": True,
     "restartPoint": False,
     "checkSticker": False,
     "userMentioned": False,
@@ -168,7 +168,7 @@ settings = {
     "ChangeVideoProfilevid":{},
     "ChangeVideoProfilePicture":{},
     "autoJoinTicket":False,
-    "SpamInvite":False,
+    "SpamInvite":True,
     "displayName": "",
     "userAgent": [
         "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0",
@@ -2127,7 +2127,7 @@ def bot(op):
                                dhenzaSelfbot.sendMessage(msg.to, msg._from)
                                
                         elif text.lower() == "dz":
-                               dhenzaSelfbot.sendMessage(msg.to, "hallo jangan lupa di subscribe ya kk chanel kita\n https://www.youtube.com/channel/UCNLejYy84XyUX8qcDropXMw")
+                               dhenzaSelfbot.sendMessage(msg.to, "hallo jangan lupa di follow ya kk IG kita\n instagram.com/vincenzoads_")
 
                         elif ("Get id " in msg.text):
                           if wait["selfbot"] == True:
@@ -2185,7 +2185,7 @@ def bot(op):
                                pesan = text.replace(sep[0] + " ","")
                                saya = dhenzaSelfbot.getGroupIdsJoined()
                                for group in saya:
-                                   dhenzaSelfbot.sendMessage(group,"ʙʀᴏᴀᴅᴄᴀsᴛ ʙʏ ©ᴅʜᴇɴᴢᴀ™\n\n" + str(pesan))
+                                   dhenzaSelfbot.sendMessage(group,"ʙʀᴏᴀᴅᴄᴀsᴛ ʙʏ Idiotic™\n\n" + str(pesan))
                                                            
                         elif text.lower() == "cek name":
                           if wait["selfbot"] == True:
@@ -2527,7 +2527,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 G = dhenzaSelfbot.getGroup(msg.to)
-                                dhenzaSelfbot.sendMessage(msg.to, "Anjir di usir Gua bye anjing "+str(G.name))
+                                dhenzaSelfbot.sendMessage(msg.to, " bye bos anjing "+str(G.name))
                                 dhenzaSelfbot.leaveGroup(msg.to)
 
                         elif cmd.startswith("leave "):
@@ -2560,7 +2560,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                start = time.time()
-                               dhenzaSelfbot.sendMessage(to, "..")
+                               dhenzaSelfbot.sendMessage(to, "Lemot kek otak mejik")
                                elapsed_time = time.time() - start
                                dhenzaSelfbot.sendMessage(to,"%s"%str(round(elapsed_time,4)))
 
