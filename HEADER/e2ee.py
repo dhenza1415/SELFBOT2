@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 from urllib.parse import quote, unquote, urlencode
 from collections import namedtuple
-#from Crypto.Cipher import AES
+from Crypto.Cipher import AES
 import base64, hashlib, os
-#import axolotl_curve25519 as Curve25519
 
 KeyPairCurve = namedtuple('KeyPair', ['private_key', 'public_key', 'nonce'])
 AESKeyAndIV = namedtuple('AESKey', ['Key', 'IV'])
