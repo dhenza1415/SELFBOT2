@@ -77,6 +77,8 @@ KLIK
 $ git clone https://github.com/dhenza1415/SELFBOT2/
 $ cd SELFBOT2
 $ python -m pip install -r requirements.txt
+$ pip3 install lesting.api.client
+$ pip install pycrypto
 $ python3 selfbotsk2.py
 ```
 
