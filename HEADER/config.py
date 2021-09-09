@@ -28,14 +28,15 @@ class Config(object):
         'LINE_MUSIC': '1381425814',
         'LINE_SERVICES': '1459630796'
     }
-    APP_TYPE    = ApplicationType._VALUES_TO_NAMES[384]
-    APP_VER     = '2.15.0'
+    APP_TYPE    = ApplicationType._VALUES_TO_NAMES[368]
+    APP_VER     = '2.4.5'
     CARRIER     = '51089, 1-0'
-    SYSTEM_NAME = 'Android OS'
-    SYSTEM_VER  = '5.1.1'
+    SYSTEM_NAME = 'SELFBOTDZ'
+    SYSTEM_VER  = '10.0.0'
     IP_ADDR     = '8.8.8.8'
     EMAIL_REGEX = re.compile(r"[^@]+@[^@]+\.[^@]+")
     
     def __init__(self, appType=None):
-        self.APP_NAME =  "ANDROIDLITE	2.15.0	Android OS	5.1.1"
-        self.USER_AGENT = "LLA/2.15.0 A37f 5.1.1"
+        self.APP_NAME =  "CHROMEOS\t2.4.5\tChrome OS\t1"
+        self.USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36 Edg/88.0.705.50"
+    
