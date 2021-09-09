@@ -19,30 +19,34 @@ all_structs = []
 
 
 class Iface(object):
-    def getSnsFriends(self, snsIdType, snsAccessToken, startIdx, limit):
+    def notifyLeaveGroup(self, groupMid):
         """
         Parameters:
-         - snsIdType
-         - snsAccessToken
-         - startIdx
-         - limit
+         - groupMid
         """
         pass
 
-    def getSnsMyProfile(self, snsIdType, snsAccessToken):
+    def notifyLeaveRoom(self, roomMid):
         """
         Parameters:
-         - snsIdType
-         - snsAccessToken
+         - roomMid
         """
         pass
 
-    def postSnsInvitationMessage(self, snsIdType, snsAccessToken, toSnsUserId):
+    def getBotUseInfo(self, botMid):
         """
         Parameters:
-         - snsIdType
-         - snsAccessToken
-         - toSnsUserId
+         - botMid
+        """
+        pass
+
+    def sendChatCheckedByWatermark(self, seq, mid, watermark, sessionId):
+        """
+        Parameters:
+         - seq
+         - mid
+         - watermark
+         - sessionId
         """
         pass
 
@@ -54,29 +58,23 @@ class Client(Iface):
             self._oprot = oprot
         self._seqid = 0
 
-    def getSnsFriends(self, snsIdType, snsAccessToken, startIdx, limit):
+    def notifyLeaveGroup(self, groupMid):
         """
         Parameters:
-         - snsIdType
-         - snsAccessToken
-         - startIdx
-         - limit
+         - groupMid
         """
-        self.send_getSnsFriends(snsIdType, snsAccessToken, startIdx, limit)
-        return self.recv_getSnsFriends()
+        self.send_notifyLeaveGroup(groupMid)
+        self.recv_notifyLeaveGroup()
 
-    def send_getSnsFriends(self, snsIdType, snsAccessToken, startIdx, limit):
-        self._oprot.writeMessageBegin('getSnsFriends', TMessageType.CALL, self._seqid)
-        args = getSnsFriends_args()
-        args.snsIdType = snsIdType
-        args.snsAccessToken = snsAccessToken
-        args.startIdx = startIdx
-        args.limit = limit
+    def send_notifyLeaveGroup(self, groupMid):
+        self._oprot.writeMessageBegin('notifyLeaveGroup', TMessageType.CALL, self._seqid)
+        args = notifyLeaveGroup_args()
+        args.groupMid = groupMid
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_getSnsFriends(self):
+    def recv_notifyLeaveGroup(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -84,34 +82,100 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = getSnsFriends_result()
+        result = notifyLeaveGroup_result()
+        result.read(iprot)
+        iprot.readMessageEnd()
+        if result.e is not None:
+            raise result.e
+        return
+
+    def notifyLeaveRoom(self, roomMid):
+        """
+        Parameters:
+         - roomMid
+        """
+        self.send_notifyLeaveRoom(roomMid)
+        self.recv_notifyLeaveRoom()
+
+    def send_notifyLeaveRoom(self, roomMid):
+        self._oprot.writeMessageBegin('notifyLeaveRoom', TMessageType.CALL, self._seqid)
+        args = notifyLeaveRoom_args()
+        args.roomMid = roomMid
+        args.write(self._oprot)
+        self._oprot.writeMessageEnd()
+        self._oprot.trans.flush()
+
+    def recv_notifyLeaveRoom(self):
+        iprot = self._iprot
+        (fname, mtype, rseqid) = iprot.readMessageBegin()
+        if mtype == TMessageType.EXCEPTION:
+            x = TApplicationException()
+            x.read(iprot)
+            iprot.readMessageEnd()
+            raise x
+        result = notifyLeaveRoom_result()
+        result.read(iprot)
+        iprot.readMessageEnd()
+        if result.e is not None:
+            raise result.e
+        return
+
+    def getBotUseInfo(self, botMid):
+        """
+        Parameters:
+         - botMid
+        """
+        self.send_getBotUseInfo(botMid)
+        return self.recv_getBotUseInfo()
+
+    def send_getBotUseInfo(self, botMid):
+        self._oprot.writeMessageBegin('getBotUseInfo', TMessageType.CALL, self._seqid)
+        args = getBotUseInfo_args()
+        args.botMid = botMid
+        args.write(self._oprot)
+        self._oprot.writeMessageEnd()
+        self._oprot.trans.flush()
+
+    def recv_getBotUseInfo(self):
+        iprot = self._iprot
+        (fname, mtype, rseqid) = iprot.readMessageBegin()
+        if mtype == TMessageType.EXCEPTION:
+            x = TApplicationException()
+            x.read(iprot)
+            iprot.readMessageEnd()
+            raise x
+        result = getBotUseInfo_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getSnsFriends failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "getBotUseInfo failed: unknown result")
 
-    def getSnsMyProfile(self, snsIdType, snsAccessToken):
+    def sendChatCheckedByWatermark(self, seq, mid, watermark, sessionId):
         """
         Parameters:
-         - snsIdType
-         - snsAccessToken
+         - seq
+         - mid
+         - watermark
+         - sessionId
         """
-        self.send_getSnsMyProfile(snsIdType, snsAccessToken)
-        return self.recv_getSnsMyProfile()
+        self.send_sendChatCheckedByWatermark(seq, mid, watermark, sessionId)
+        self.recv_sendChatCheckedByWatermark()
 
-    def send_getSnsMyProfile(self, snsIdType, snsAccessToken):
-        self._oprot.writeMessageBegin('getSnsMyProfile', TMessageType.CALL, self._seqid)
-        args = getSnsMyProfile_args()
-        args.snsIdType = snsIdType
-        args.snsAccessToken = snsAccessToken
+    def send_sendChatCheckedByWatermark(self, seq, mid, watermark, sessionId):
+        self._oprot.writeMessageBegin('sendChatCheckedByWatermark', TMessageType.CALL, self._seqid)
+        args = sendChatCheckedByWatermark_args()
+        args.seq = seq
+        args.mid = mid
+        args.watermark = watermark
+        args.sessionId = sessionId
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_getSnsMyProfile(self):
+    def recv_sendChatCheckedByWatermark(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -119,44 +183,7 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = getSnsMyProfile_result()
-        result.read(iprot)
-        iprot.readMessageEnd()
-        if result.success is not None:
-            return result.success
-        if result.e is not None:
-            raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getSnsMyProfile failed: unknown result")
-
-    def postSnsInvitationMessage(self, snsIdType, snsAccessToken, toSnsUserId):
-        """
-        Parameters:
-         - snsIdType
-         - snsAccessToken
-         - toSnsUserId
-        """
-        self.send_postSnsInvitationMessage(snsIdType, snsAccessToken, toSnsUserId)
-        self.recv_postSnsInvitationMessage()
-
-    def send_postSnsInvitationMessage(self, snsIdType, snsAccessToken, toSnsUserId):
-        self._oprot.writeMessageBegin('postSnsInvitationMessage', TMessageType.CALL, self._seqid)
-        args = postSnsInvitationMessage_args()
-        args.snsIdType = snsIdType
-        args.snsAccessToken = snsAccessToken
-        args.toSnsUserId = toSnsUserId
-        args.write(self._oprot)
-        self._oprot.writeMessageEnd()
-        self._oprot.trans.flush()
-
-    def recv_postSnsInvitationMessage(self):
-        iprot = self._iprot
-        (fname, mtype, rseqid) = iprot.readMessageBegin()
-        if mtype == TMessageType.EXCEPTION:
-            x = TApplicationException()
-            x.read(iprot)
-            iprot.readMessageEnd()
-            raise x
-        result = postSnsInvitationMessage_result()
+        result = sendChatCheckedByWatermark_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.e is not None:
@@ -168,9 +195,10 @@ class Processor(Iface, TProcessor):
     def __init__(self, handler):
         self._handler = handler
         self._processMap = {}
-        self._processMap["getSnsFriends"] = Processor.process_getSnsFriends
-        self._processMap["getSnsMyProfile"] = Processor.process_getSnsMyProfile
-        self._processMap["postSnsInvitationMessage"] = Processor.process_postSnsInvitationMessage
+        self._processMap["notifyLeaveGroup"] = Processor.process_notifyLeaveGroup
+        self._processMap["notifyLeaveRoom"] = Processor.process_notifyLeaveRoom
+        self._processMap["getBotUseInfo"] = Processor.process_getBotUseInfo
+        self._processMap["sendChatCheckedByWatermark"] = Processor.process_sendChatCheckedByWatermark
 
     def process(self, iprot, oprot):
         (name, type, seqid) = iprot.readMessageBegin()
@@ -187,13 +215,13 @@ class Processor(Iface, TProcessor):
             self._processMap[name](self, seqid, iprot, oprot)
         return True
 
-    def process_getSnsFriends(self, seqid, iprot, oprot):
-        args = getSnsFriends_args()
+    def process_notifyLeaveGroup(self, seqid, iprot, oprot):
+        args = notifyLeaveGroup_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = getSnsFriends_result()
+        result = notifyLeaveGroup_result()
         try:
-            result.success = self._handler.getSnsFriends(args.snsIdType, args.snsAccessToken, args.startIdx, args.limit)
+            self._handler.notifyLeaveGroup(args.groupMid)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
@@ -208,18 +236,18 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("getSnsFriends", msg_type, seqid)
+        oprot.writeMessageBegin("notifyLeaveGroup", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_getSnsMyProfile(self, seqid, iprot, oprot):
-        args = getSnsMyProfile_args()
+    def process_notifyLeaveRoom(self, seqid, iprot, oprot):
+        args = notifyLeaveRoom_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = getSnsMyProfile_result()
+        result = notifyLeaveRoom_result()
         try:
-            result.success = self._handler.getSnsMyProfile(args.snsIdType, args.snsAccessToken)
+            self._handler.notifyLeaveRoom(args.roomMid)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
@@ -234,18 +262,18 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("getSnsMyProfile", msg_type, seqid)
+        oprot.writeMessageBegin("notifyLeaveRoom", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_postSnsInvitationMessage(self, seqid, iprot, oprot):
-        args = postSnsInvitationMessage_args()
+    def process_getBotUseInfo(self, seqid, iprot, oprot):
+        args = getBotUseInfo_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = postSnsInvitationMessage_result()
+        result = getBotUseInfo_result()
         try:
-            self._handler.postSnsInvitationMessage(args.snsIdType, args.snsAccessToken, args.toSnsUserId)
+            result.success = self._handler.getBotUseInfo(args.botMid)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
@@ -260,7 +288,33 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("postSnsInvitationMessage", msg_type, seqid)
+        oprot.writeMessageBegin("getBotUseInfo", msg_type, seqid)
+        result.write(oprot)
+        oprot.writeMessageEnd()
+        oprot.trans.flush()
+
+    def process_sendChatCheckedByWatermark(self, seqid, iprot, oprot):
+        args = sendChatCheckedByWatermark_args()
+        args.read(iprot)
+        iprot.readMessageEnd()
+        result = sendChatCheckedByWatermark_result()
+        try:
+            self._handler.sendChatCheckedByWatermark(args.seq, args.mid, args.watermark, args.sessionId)
+            msg_type = TMessageType.REPLY
+        except TTransport.TTransportException:
+            raise
+        except TalkException as e:
+            msg_type = TMessageType.REPLY
+            result.e = e
+        except TApplicationException as ex:
+            logging.exception('TApplication exception in handler')
+            msg_type = TMessageType.EXCEPTION
+            result = ex
+        except Exception:
+            logging.exception('Unexpected exception in handler')
+            msg_type = TMessageType.EXCEPTION
+            result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
+        oprot.writeMessageBegin("sendChatCheckedByWatermark", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
@@ -268,21 +322,15 @@ class Processor(Iface, TProcessor):
 # HELPER FUNCTIONS AND STRUCTURES
 
 
-class getSnsFriends_args(object):
+class notifyLeaveGroup_args(object):
     """
     Attributes:
-     - snsIdType
-     - snsAccessToken
-     - startIdx
-     - limit
+     - groupMid
     """
 
 
-    def __init__(self, snsIdType=None, snsAccessToken=None, startIdx=None, limit=None,):
-        self.snsIdType = snsIdType
-        self.snsAccessToken = snsAccessToken
-        self.startIdx = startIdx
-        self.limit = limit
+    def __init__(self, groupMid=None,):
+        self.groupMid = groupMid
 
     def read(self, iprot):
         if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
@@ -293,24 +341,9 @@ class getSnsFriends_args(object):
             (fname, ftype, fid) = iprot.readFieldBegin()
             if ftype == TType.STOP:
                 break
-            if fid == 2:
-                if ftype == TType.I32:
-                    self.snsIdType = iprot.readI32()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 3:
+            if fid == 1:
                 if ftype == TType.STRING:
-                    self.snsAccessToken = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 4:
-                if ftype == TType.I32:
-                    self.startIdx = iprot.readI32()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 5:
-                if ftype == TType.I32:
-                    self.limit = iprot.readI32()
+                    self.groupMid = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
                 else:
                     iprot.skip(ftype)
             else:
@@ -322,22 +355,10 @@ class getSnsFriends_args(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('getSnsFriends_args')
-        if self.snsIdType is not None:
-            oprot.writeFieldBegin('snsIdType', TType.I32, 2)
-            oprot.writeI32(self.snsIdType)
-            oprot.writeFieldEnd()
-        if self.snsAccessToken is not None:
-            oprot.writeFieldBegin('snsAccessToken', TType.STRING, 3)
-            oprot.writeString(self.snsAccessToken.encode('utf-8') if sys.version_info[0] == 2 else self.snsAccessToken)
-            oprot.writeFieldEnd()
-        if self.startIdx is not None:
-            oprot.writeFieldBegin('startIdx', TType.I32, 4)
-            oprot.writeI32(self.startIdx)
-            oprot.writeFieldEnd()
-        if self.limit is not None:
-            oprot.writeFieldBegin('limit', TType.I32, 5)
-            oprot.writeI32(self.limit)
+        oprot.writeStructBegin('notifyLeaveGroup_args')
+        if self.groupMid is not None:
+            oprot.writeFieldBegin('groupMid', TType.STRING, 1)
+            oprot.writeString(self.groupMid.encode('utf-8') if sys.version_info[0] == 2 else self.groupMid)
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
@@ -355,326 +376,14 @@ class getSnsFriends_args(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(getSnsFriends_args)
-getSnsFriends_args.thrift_spec = (
+all_structs.append(notifyLeaveGroup_args)
+notifyLeaveGroup_args.thrift_spec = (
     None,  # 0
-    None,  # 1
-    (2, TType.I32, 'snsIdType', None, None, ),  # 2
-    (3, TType.STRING, 'snsAccessToken', 'UTF8', None, ),  # 3
-    (4, TType.I32, 'startIdx', None, None, ),  # 4
-    (5, TType.I32, 'limit', None, None, ),  # 5
+    (1, TType.STRING, 'groupMid', 'UTF8', None, ),  # 1
 )
 
 
-class getSnsFriends_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = SnsFriends()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = TalkException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSnsFriends_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSnsFriends_result)
-getSnsFriends_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [SnsFriends, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
-)
-
-
-class getSnsMyProfile_args(object):
-    """
-    Attributes:
-     - snsIdType
-     - snsAccessToken
-    """
-
-
-    def __init__(self, snsIdType=None, snsAccessToken=None,):
-        self.snsIdType = snsIdType
-        self.snsAccessToken = snsAccessToken
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 2:
-                if ftype == TType.I32:
-                    self.snsIdType = iprot.readI32()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 3:
-                if ftype == TType.STRING:
-                    self.snsAccessToken = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSnsMyProfile_args')
-        if self.snsIdType is not None:
-            oprot.writeFieldBegin('snsIdType', TType.I32, 2)
-            oprot.writeI32(self.snsIdType)
-            oprot.writeFieldEnd()
-        if self.snsAccessToken is not None:
-            oprot.writeFieldBegin('snsAccessToken', TType.STRING, 3)
-            oprot.writeString(self.snsAccessToken.encode('utf-8') if sys.version_info[0] == 2 else self.snsAccessToken)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSnsMyProfile_args)
-getSnsMyProfile_args.thrift_spec = (
-    None,  # 0
-    None,  # 1
-    (2, TType.I32, 'snsIdType', None, None, ),  # 2
-    (3, TType.STRING, 'snsAccessToken', 'UTF8', None, ),  # 3
-)
-
-
-class getSnsMyProfile_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = SnsProfile()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = TalkException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSnsMyProfile_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSnsMyProfile_result)
-getSnsMyProfile_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [SnsProfile, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
-)
-
-
-class postSnsInvitationMessage_args(object):
-    """
-    Attributes:
-     - snsIdType
-     - snsAccessToken
-     - toSnsUserId
-    """
-
-
-    def __init__(self, snsIdType=None, snsAccessToken=None, toSnsUserId=None,):
-        self.snsIdType = snsIdType
-        self.snsAccessToken = snsAccessToken
-        self.toSnsUserId = toSnsUserId
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 2:
-                if ftype == TType.I32:
-                    self.snsIdType = iprot.readI32()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 3:
-                if ftype == TType.STRING:
-                    self.snsAccessToken = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 4:
-                if ftype == TType.STRING:
-                    self.toSnsUserId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('postSnsInvitationMessage_args')
-        if self.snsIdType is not None:
-            oprot.writeFieldBegin('snsIdType', TType.I32, 2)
-            oprot.writeI32(self.snsIdType)
-            oprot.writeFieldEnd()
-        if self.snsAccessToken is not None:
-            oprot.writeFieldBegin('snsAccessToken', TType.STRING, 3)
-            oprot.writeString(self.snsAccessToken.encode('utf-8') if sys.version_info[0] == 2 else self.snsAccessToken)
-            oprot.writeFieldEnd()
-        if self.toSnsUserId is not None:
-            oprot.writeFieldBegin('toSnsUserId', TType.STRING, 4)
-            oprot.writeString(self.toSnsUserId.encode('utf-8') if sys.version_info[0] == 2 else self.toSnsUserId)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(postSnsInvitationMessage_args)
-postSnsInvitationMessage_args.thrift_spec = (
-    None,  # 0
-    None,  # 1
-    (2, TType.I32, 'snsIdType', None, None, ),  # 2
-    (3, TType.STRING, 'snsAccessToken', 'UTF8', None, ),  # 3
-    (4, TType.STRING, 'toSnsUserId', 'UTF8', None, ),  # 4
-)
-
-
-class postSnsInvitationMessage_result(object):
+class notifyLeaveGroup_result(object):
     """
     Attributes:
      - e
@@ -708,7 +417,7 @@ class postSnsInvitationMessage_result(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('postSnsInvitationMessage_result')
+        oprot.writeStructBegin('notifyLeaveGroup_result')
         if self.e is not None:
             oprot.writeFieldBegin('e', TType.STRUCT, 1)
             self.e.write(oprot)
@@ -729,8 +438,426 @@ class postSnsInvitationMessage_result(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(postSnsInvitationMessage_result)
-postSnsInvitationMessage_result.thrift_spec = (
+all_structs.append(notifyLeaveGroup_result)
+notifyLeaveGroup_result.thrift_spec = (
+    None,  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class notifyLeaveRoom_args(object):
+    """
+    Attributes:
+     - roomMid
+    """
+
+
+    def __init__(self, roomMid=None,):
+        self.roomMid = roomMid
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.roomMid = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('notifyLeaveRoom_args')
+        if self.roomMid is not None:
+            oprot.writeFieldBegin('roomMid', TType.STRING, 1)
+            oprot.writeString(self.roomMid.encode('utf-8') if sys.version_info[0] == 2 else self.roomMid)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(notifyLeaveRoom_args)
+notifyLeaveRoom_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'roomMid', 'UTF8', None, ),  # 1
+)
+
+
+class notifyLeaveRoom_result(object):
+    """
+    Attributes:
+     - e
+    """
+
+
+    def __init__(self, e=None,):
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('notifyLeaveRoom_result')
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(notifyLeaveRoom_result)
+notifyLeaveRoom_result.thrift_spec = (
+    None,  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class getBotUseInfo_args(object):
+    """
+    Attributes:
+     - botMid
+    """
+
+
+    def __init__(self, botMid=None,):
+        self.botMid = botMid
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 2:
+                if ftype == TType.STRING:
+                    self.botMid = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('getBotUseInfo_args')
+        if self.botMid is not None:
+            oprot.writeFieldBegin('botMid', TType.STRING, 2)
+            oprot.writeString(self.botMid.encode('utf-8') if sys.version_info[0] == 2 else self.botMid)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(getBotUseInfo_args)
+getBotUseInfo_args.thrift_spec = (
+    None,  # 0
+    None,  # 1
+    (2, TType.STRING, 'botMid', 'UTF8', None, ),  # 2
+)
+
+
+class getBotUseInfo_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.STRUCT:
+                    self.success = BotUseInfo()
+                    self.success.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('getBotUseInfo_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.STRUCT, 0)
+            self.success.write(oprot)
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(getBotUseInfo_result)
+getBotUseInfo_result.thrift_spec = (
+    (0, TType.STRUCT, 'success', [BotUseInfo, None], None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class sendChatCheckedByWatermark_args(object):
+    """
+    Attributes:
+     - seq
+     - mid
+     - watermark
+     - sessionId
+    """
+
+
+    def __init__(self, seq=None, mid=None, watermark=None, sessionId=None,):
+        self.seq = seq
+        self.mid = mid
+        self.watermark = watermark
+        self.sessionId = sessionId
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.I32:
+                    self.seq = iprot.readI32()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRING:
+                    self.mid = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 3:
+                if ftype == TType.I64:
+                    self.watermark = iprot.readI64()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 4:
+                if ftype == TType.BYTE:
+                    self.sessionId = iprot.readByte()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('sendChatCheckedByWatermark_args')
+        if self.seq is not None:
+            oprot.writeFieldBegin('seq', TType.I32, 1)
+            oprot.writeI32(self.seq)
+            oprot.writeFieldEnd()
+        if self.mid is not None:
+            oprot.writeFieldBegin('mid', TType.STRING, 2)
+            oprot.writeString(self.mid.encode('utf-8') if sys.version_info[0] == 2 else self.mid)
+            oprot.writeFieldEnd()
+        if self.watermark is not None:
+            oprot.writeFieldBegin('watermark', TType.I64, 3)
+            oprot.writeI64(self.watermark)
+            oprot.writeFieldEnd()
+        if self.sessionId is not None:
+            oprot.writeFieldBegin('sessionId', TType.BYTE, 4)
+            oprot.writeByte(self.sessionId)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(sendChatCheckedByWatermark_args)
+sendChatCheckedByWatermark_args.thrift_spec = (
+    None,  # 0
+    (1, TType.I32, 'seq', None, None, ),  # 1
+    (2, TType.STRING, 'mid', 'UTF8', None, ),  # 2
+    (3, TType.I64, 'watermark', None, None, ),  # 3
+    (4, TType.BYTE, 'sessionId', None, None, ),  # 4
+)
+
+
+class sendChatCheckedByWatermark_result(object):
+    """
+    Attributes:
+     - e
+    """
+
+
+    def __init__(self, e=None,):
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('sendChatCheckedByWatermark_result')
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(sendChatCheckedByWatermark_result)
+sendChatCheckedByWatermark_result.thrift_spec = (
     None,  # 0
     (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
 )

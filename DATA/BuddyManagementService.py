@@ -19,381 +19,435 @@ all_structs = []
 
 
 class Iface(object):
-    def getSquareChatAnnouncements(self, request):
+    def addBuddyMember(self, requestId, userMid):
         """
         Parameters:
-         - request
+         - requestId
+         - userMid
         """
         pass
 
-    def deleteSquareChatAnnouncement(self, request):
+    def addBuddyMembers(self, requestId, userMids):
         """
         Parameters:
-         - request
+         - requestId
+         - userMids
         """
         pass
 
-    def createSquareChatAnnouncement(self, request):
+    def blockBuddyMember(self, requestId, mid):
         """
         Parameters:
-         - request
+         - requestId
+         - mid
         """
         pass
 
-    def getNoteStatus(self, request):
+    def commitSendMessagesToAll(self, requestIdList):
         """
         Parameters:
-         - request
+         - requestIdList
         """
         pass
 
-    def getSquareStatus(self, request):
+    def commitSendMessagesToMids(self, requestIdList, mids):
         """
         Parameters:
-         - request
+         - requestIdList
+         - mids
         """
         pass
 
-    def reportSquareMember(self, request):
+    def containsBuddyMember(self, requestId, userMid):
         """
         Parameters:
-         - request
+         - requestId
+         - userMid
         """
         pass
 
-    def reportSquareMessage(self, request):
+    def downloadMessageContent(self, requestId, messageId):
         """
         Parameters:
-         - request
+         - requestId
+         - messageId
         """
         pass
 
-    def reportSquareChat(self, request):
+    def downloadMessageContentPreview(self, requestId, messageId):
         """
         Parameters:
-         - request
+         - requestId
+         - messageId
         """
         pass
 
-    def reportSquare(self, request):
+    def downloadProfileImage(self, requestId):
         """
         Parameters:
-         - request
+         - requestId
         """
         pass
 
-    def updateSquareMemberRelation(self, request):
+    def downloadProfileImagePreview(self, requestId):
         """
         Parameters:
-         - request
+         - requestId
         """
         pass
 
-    def updateSquareAuthority(self, request):
+    def getActiveMemberCountByBuddyMid(self, buddyMid):
         """
         Parameters:
-         - request
+         - buddyMid
         """
         pass
 
-    def updateSquareChatMember(self, request):
+    def getActiveMemberMidsByBuddyMid(self, buddyMid):
         """
         Parameters:
-         - request
+         - buddyMid
         """
         pass
 
-    def updateSquareChat(self, request):
+    def getAllBuddyMembers(self):
+        pass
+
+    def getBlockedBuddyMembers(self):
+        pass
+
+    def getBlockerCountByBuddyMid(self, buddyMid):
         """
         Parameters:
-         - request
+         - buddyMid
         """
         pass
 
-    def refreshSubscriptions(self, request):
+    def getBuddyDetailByMid(self, buddyMid):
         """
         Parameters:
-         - request
+         - buddyMid
         """
         pass
 
-    def removeSubscriptions(self, request):
+    def getBuddyProfile(self):
+        pass
+
+    def getContactTicket(self):
+        pass
+
+    def getMemberCountByBuddyMid(self, buddyMid):
         """
         Parameters:
-         - request
+         - buddyMid
         """
         pass
 
-    def rejectSquareMembers(self, request):
+    def getSendBuddyMessageResult(self, sendBuddyMessageRequestId):
         """
         Parameters:
-         - request
+         - sendBuddyMessageRequestId
         """
         pass
 
-    def updateSquareMembers(self, request):
+    def getSetBuddyOnAirResult(self, setBuddyOnAirRequestId):
         """
         Parameters:
-         - request
+         - setBuddyOnAirRequestId
         """
         pass
 
-    def updateSquareMember(self, request):
+    def getUpdateBuddyProfileResult(self, updateBuddyProfileRequestId):
         """
         Parameters:
-         - request
+         - updateBuddyProfileRequestId
         """
         pass
 
-    def updateSquareFeatureSet(self, request):
+    def isBuddyOnAirByMid(self, buddyMid):
         """
         Parameters:
-         - request
+         - buddyMid
         """
         pass
 
-    def getSquareFeatureSet(self, request):
+    def linkAndSendBuddyContentMessageToAllAsync(self, requestId, msg, sourceContentId):
         """
         Parameters:
-         - request
+         - requestId
+         - msg
+         - sourceContentId
         """
         pass
 
-    def searchSquares(self, request):
+    def linkAndSendBuddyContentMessageToMids(self, requestId, msg, sourceContentId, mids):
         """
         Parameters:
-         - request
+         - requestId
+         - msg
+         - sourceContentId
+         - mids
         """
         pass
 
-    def updateSquare(self, request):
+    def notifyBuddyBlocked(self, buddyMid, blockerMid):
         """
         Parameters:
-         - request
+         - buddyMid
+         - blockerMid
         """
         pass
 
-    def getCategories(self, request):
+    def notifyBuddyUnblocked(self, buddyMid, blockerMid):
         """
         Parameters:
-         - request
+         - buddyMid
+         - blockerMid
         """
         pass
 
-    def searchSquareMembers(self, request):
+    def registerBuddy(self, buddyId, searchId, displayName, statusMeessage, picture, settings):
         """
         Parameters:
-         - request
+         - buddyId
+         - searchId
+         - displayName
+         - statusMeessage
+         - picture
+         - settings
         """
         pass
 
-    def fetchSquareChatEvents(self, request):
+    def registerBuddyAdmin(self, buddyId, searchId, displayName, statusMessage, picture):
         """
         Parameters:
-         - request
+         - buddyId
+         - searchId
+         - displayName
+         - statusMessage
+         - picture
         """
         pass
 
-    def fetchMyEvents(self, request):
+    def reissueContactTicket(self, expirationTime, maxUseCount):
         """
         Parameters:
-         - request
+         - expirationTime
+         - maxUseCount
         """
         pass
 
-    def markAsRead(self, request):
+    def removeBuddyMember(self, requestId, userMid):
         """
         Parameters:
-         - request
+         - requestId
+         - userMid
         """
         pass
 
-    def getSquareAuthority(self, request):
+    def removeBuddyMembers(self, requestId, userMids):
         """
         Parameters:
-         - request
+         - requestId
+         - userMids
         """
         pass
 
-    def sendMessage(self, request):
+    def sendBuddyContentMessageToAll(self, requestId, msg, content):
         """
         Parameters:
-         - request
+         - requestId
+         - msg
+         - content
         """
         pass
 
-    def leaveSquare(self, request):
+    def sendBuddyContentMessageToAllAsync(self, requestId, msg, content):
         """
         Parameters:
-         - request
+         - requestId
+         - msg
+         - content
         """
         pass
 
-    def leaveSquareChat(self, request):
+    def sendBuddyContentMessageToMids(self, requestId, msg, content, mids):
         """
         Parameters:
-         - request
+         - requestId
+         - msg
+         - content
+         - mids
         """
         pass
 
-    def joinSquareChat(self, request):
+    def sendBuddyContentMessageToMidsAsync(self, requestId, msg, content, mids):
         """
         Parameters:
-         - request
+         - requestId
+         - msg
+         - content
+         - mids
         """
         pass
 
-    def joinSquare(self, request):
+    def sendBuddyMessageToAll(self, requestId, msg):
         """
         Parameters:
-         - request
+         - requestId
+         - msg
         """
         pass
 
-    def inviteToSquare(self, request):
+    def sendBuddyMessageToAllAsync(self, requestId, msg):
         """
         Parameters:
-         - request
+         - requestId
+         - msg
         """
         pass
 
-    def inviteToSquareChat(self, request):
+    def sendBuddyMessageToMids(self, requestId, msg, mids):
         """
         Parameters:
-         - request
+         - requestId
+         - msg
+         - mids
         """
         pass
 
-    def getSquareMember(self, request):
+    def sendBuddyMessageToMidsAsync(self, requestId, msg, mids):
         """
         Parameters:
-         - request
+         - requestId
+         - msg
+         - mids
         """
         pass
 
-    def getSquareMembers(self, request):
+    def sendIndividualEventToAllAsync(self, requestId, buddyMid, notificationStatus):
         """
         Parameters:
-         - request
+         - requestId
+         - buddyMid
+         - notificationStatus
         """
         pass
 
-    def getSquareMemberRelation(self, request):
+    def setBuddyOnAir(self, requestId, onAir):
         """
         Parameters:
-         - request
+         - requestId
+         - onAir
         """
         pass
 
-    def getSquareMemberRelations(self, request):
+    def setBuddyOnAirAsync(self, requestId, onAir):
         """
         Parameters:
-         - request
+         - requestId
+         - onAir
         """
         pass
 
-    def getSquareChatMembers(self, request):
+    def storeMessage(self, requestId, messageRequest):
         """
         Parameters:
-         - request
+         - requestId
+         - messageRequest
         """
         pass
 
-    def getSquareChatStatus(self, request):
+    def unblockBuddyMember(self, requestId, mid):
         """
         Parameters:
-         - request
+         - requestId
+         - mid
         """
         pass
 
-    def getSquareChat(self, request):
+    def unregisterBuddy(self, requestId):
         """
         Parameters:
-         - request
+         - requestId
         """
         pass
 
-    def getSquare(self, request):
+    def unregisterBuddyAdmin(self, requestId):
         """
         Parameters:
-         - request
+         - requestId
         """
         pass
 
-    def getJoinedSquares(self, request):
+    def updateBuddyAdminProfileAttribute(self, requestId, attributes):
         """
         Parameters:
-         - request
+         - requestId
+         - attributes
         """
         pass
 
-    def getJoinedSquareChats(self, request):
+    def updateBuddyAdminProfileImage(self, requestId, picture):
         """
         Parameters:
-         - request
+         - requestId
+         - picture
         """
         pass
 
-    def approveSquareMembers(self, request):
+    def updateBuddyProfileAttributes(self, requestId, attributes):
         """
         Parameters:
-         - request
+         - requestId
+         - attributes
         """
         pass
 
-    def createSquareChat(self, request):
+    def updateBuddyProfileAttributesAsync(self, requestId, attributes):
         """
         Parameters:
-         - request
+         - requestId
+         - attributes
         """
         pass
 
-    def createSquare(self, request):
+    def updateBuddyProfileImage(self, requestId, image):
         """
         Parameters:
-         - request
+         - requestId
+         - image
         """
         pass
 
-    def deleteSquareChat(self, request):
+    def updateBuddyProfileImageAsync(self, requestId, image):
         """
         Parameters:
-         - request
+         - requestId
+         - image
         """
         pass
 
-    def deleteSquare(self, request):
+    def updateBuddySearchId(self, requestId, searchId):
         """
         Parameters:
-         - request
+         - requestId
+         - searchId
         """
         pass
 
-    def destroyMessage(self, request):
+    def updateBuddySettings(self, settings):
         """
         Parameters:
-         - request
+         - settings
         """
         pass
 
-    def getJoinableSquareChats(self, request):
+    def uploadBuddyContent(self, contentType, content):
         """
         Parameters:
-         - request
-        """
-        pass
-
-    def getInvitationTicketUrl(self, request):
-        """
-        Parameters:
-         - request
-        """
-        pass
-
-    def findSquareByInvitationTicket(self, request):
-        """
-        Parameters:
-         - request
+         - contentType
+         - content
         """
         pass
 
@@ -405,23 +459,25 @@ class Client(Iface):
             self._oprot = oprot
         self._seqid = 0
 
-    def getSquareChatAnnouncements(self, request):
+    def addBuddyMember(self, requestId, userMid):
         """
         Parameters:
-         - request
+         - requestId
+         - userMid
         """
-        self.send_getSquareChatAnnouncements(request)
-        return self.recv_getSquareChatAnnouncements()
+        self.send_addBuddyMember(requestId, userMid)
+        self.recv_addBuddyMember()
 
-    def send_getSquareChatAnnouncements(self, request):
-        self._oprot.writeMessageBegin('getSquareChatAnnouncements', TMessageType.CALL, self._seqid)
-        args = getSquareChatAnnouncements_args()
-        args.request = request
+    def send_addBuddyMember(self, requestId, userMid):
+        self._oprot.writeMessageBegin('addBuddyMember', TMessageType.CALL, self._seqid)
+        args = addBuddyMember_args()
+        args.requestId = requestId
+        args.userMid = userMid
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_getSquareChatAnnouncements(self):
+    def recv_addBuddyMember(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -429,32 +485,32 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = getSquareChatAnnouncements_result()
+        result = addBuddyMember_result()
         result.read(iprot)
         iprot.readMessageEnd()
-        if result.success is not None:
-            return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getSquareChatAnnouncements failed: unknown result")
+        return
 
-    def deleteSquareChatAnnouncement(self, request):
+    def addBuddyMembers(self, requestId, userMids):
         """
         Parameters:
-         - request
+         - requestId
+         - userMids
         """
-        self.send_deleteSquareChatAnnouncement(request)
-        return self.recv_deleteSquareChatAnnouncement()
+        self.send_addBuddyMembers(requestId, userMids)
+        self.recv_addBuddyMembers()
 
-    def send_deleteSquareChatAnnouncement(self, request):
-        self._oprot.writeMessageBegin('deleteSquareChatAnnouncement', TMessageType.CALL, self._seqid)
-        args = deleteSquareChatAnnouncement_args()
-        args.request = request
+    def send_addBuddyMembers(self, requestId, userMids):
+        self._oprot.writeMessageBegin('addBuddyMembers', TMessageType.CALL, self._seqid)
+        args = addBuddyMembers_args()
+        args.requestId = requestId
+        args.userMids = userMids
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_deleteSquareChatAnnouncement(self):
+    def recv_addBuddyMembers(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -462,32 +518,32 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = deleteSquareChatAnnouncement_result()
+        result = addBuddyMembers_result()
         result.read(iprot)
         iprot.readMessageEnd()
-        if result.success is not None:
-            return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "deleteSquareChatAnnouncement failed: unknown result")
+        return
 
-    def createSquareChatAnnouncement(self, request):
+    def blockBuddyMember(self, requestId, mid):
         """
         Parameters:
-         - request
+         - requestId
+         - mid
         """
-        self.send_createSquareChatAnnouncement(request)
-        return self.recv_createSquareChatAnnouncement()
+        self.send_blockBuddyMember(requestId, mid)
+        self.recv_blockBuddyMember()
 
-    def send_createSquareChatAnnouncement(self, request):
-        self._oprot.writeMessageBegin('createSquareChatAnnouncement', TMessageType.CALL, self._seqid)
-        args = createSquareChatAnnouncement_args()
-        args.request = request
+    def send_blockBuddyMember(self, requestId, mid):
+        self._oprot.writeMessageBegin('blockBuddyMember', TMessageType.CALL, self._seqid)
+        args = blockBuddyMember_args()
+        args.requestId = requestId
+        args.mid = mid
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_createSquareChatAnnouncement(self):
+    def recv_blockBuddyMember(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -495,32 +551,30 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = createSquareChatAnnouncement_result()
+        result = blockBuddyMember_result()
         result.read(iprot)
         iprot.readMessageEnd()
-        if result.success is not None:
-            return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "createSquareChatAnnouncement failed: unknown result")
+        return
 
-    def getNoteStatus(self, request):
+    def commitSendMessagesToAll(self, requestIdList):
         """
         Parameters:
-         - request
+         - requestIdList
         """
-        self.send_getNoteStatus(request)
-        return self.recv_getNoteStatus()
+        self.send_commitSendMessagesToAll(requestIdList)
+        return self.recv_commitSendMessagesToAll()
 
-    def send_getNoteStatus(self, request):
-        self._oprot.writeMessageBegin('getNoteStatus', TMessageType.CALL, self._seqid)
-        args = getNoteStatus_args()
-        args.request = request
+    def send_commitSendMessagesToAll(self, requestIdList):
+        self._oprot.writeMessageBegin('commitSendMessagesToAll', TMessageType.CALL, self._seqid)
+        args = commitSendMessagesToAll_args()
+        args.requestIdList = requestIdList
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_getNoteStatus(self):
+    def recv_commitSendMessagesToAll(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -528,32 +582,34 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = getNoteStatus_result()
+        result = commitSendMessagesToAll_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getNoteStatus failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "commitSendMessagesToAll failed: unknown result")
 
-    def getSquareStatus(self, request):
+    def commitSendMessagesToMids(self, requestIdList, mids):
         """
         Parameters:
-         - request
+         - requestIdList
+         - mids
         """
-        self.send_getSquareStatus(request)
-        return self.recv_getSquareStatus()
+        self.send_commitSendMessagesToMids(requestIdList, mids)
+        return self.recv_commitSendMessagesToMids()
 
-    def send_getSquareStatus(self, request):
-        self._oprot.writeMessageBegin('getSquareStatus', TMessageType.CALL, self._seqid)
-        args = getSquareStatus_args()
-        args.request = request
+    def send_commitSendMessagesToMids(self, requestIdList, mids):
+        self._oprot.writeMessageBegin('commitSendMessagesToMids', TMessageType.CALL, self._seqid)
+        args = commitSendMessagesToMids_args()
+        args.requestIdList = requestIdList
+        args.mids = mids
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_getSquareStatus(self):
+    def recv_commitSendMessagesToMids(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -561,32 +617,34 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = getSquareStatus_result()
+        result = commitSendMessagesToMids_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getSquareStatus failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "commitSendMessagesToMids failed: unknown result")
 
-    def reportSquareMember(self, request):
+    def containsBuddyMember(self, requestId, userMid):
         """
         Parameters:
-         - request
+         - requestId
+         - userMid
         """
-        self.send_reportSquareMember(request)
-        return self.recv_reportSquareMember()
+        self.send_containsBuddyMember(requestId, userMid)
+        return self.recv_containsBuddyMember()
 
-    def send_reportSquareMember(self, request):
-        self._oprot.writeMessageBegin('reportSquareMember', TMessageType.CALL, self._seqid)
-        args = reportSquareMember_args()
-        args.request = request
+    def send_containsBuddyMember(self, requestId, userMid):
+        self._oprot.writeMessageBegin('containsBuddyMember', TMessageType.CALL, self._seqid)
+        args = containsBuddyMember_args()
+        args.requestId = requestId
+        args.userMid = userMid
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_reportSquareMember(self):
+    def recv_containsBuddyMember(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -594,32 +652,34 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = reportSquareMember_result()
+        result = containsBuddyMember_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "reportSquareMember failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "containsBuddyMember failed: unknown result")
 
-    def reportSquareMessage(self, request):
+    def downloadMessageContent(self, requestId, messageId):
         """
         Parameters:
-         - request
+         - requestId
+         - messageId
         """
-        self.send_reportSquareMessage(request)
-        return self.recv_reportSquareMessage()
+        self.send_downloadMessageContent(requestId, messageId)
+        return self.recv_downloadMessageContent()
 
-    def send_reportSquareMessage(self, request):
-        self._oprot.writeMessageBegin('reportSquareMessage', TMessageType.CALL, self._seqid)
-        args = reportSquareMessage_args()
-        args.request = request
+    def send_downloadMessageContent(self, requestId, messageId):
+        self._oprot.writeMessageBegin('downloadMessageContent', TMessageType.CALL, self._seqid)
+        args = downloadMessageContent_args()
+        args.requestId = requestId
+        args.messageId = messageId
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_reportSquareMessage(self):
+    def recv_downloadMessageContent(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -627,32 +687,34 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = reportSquareMessage_result()
+        result = downloadMessageContent_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "reportSquareMessage failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "downloadMessageContent failed: unknown result")
 
-    def reportSquareChat(self, request):
+    def downloadMessageContentPreview(self, requestId, messageId):
         """
         Parameters:
-         - request
+         - requestId
+         - messageId
         """
-        self.send_reportSquareChat(request)
-        return self.recv_reportSquareChat()
+        self.send_downloadMessageContentPreview(requestId, messageId)
+        return self.recv_downloadMessageContentPreview()
 
-    def send_reportSquareChat(self, request):
-        self._oprot.writeMessageBegin('reportSquareChat', TMessageType.CALL, self._seqid)
-        args = reportSquareChat_args()
-        args.request = request
+    def send_downloadMessageContentPreview(self, requestId, messageId):
+        self._oprot.writeMessageBegin('downloadMessageContentPreview', TMessageType.CALL, self._seqid)
+        args = downloadMessageContentPreview_args()
+        args.requestId = requestId
+        args.messageId = messageId
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_reportSquareChat(self):
+    def recv_downloadMessageContentPreview(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -660,32 +722,32 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = reportSquareChat_result()
+        result = downloadMessageContentPreview_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "reportSquareChat failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "downloadMessageContentPreview failed: unknown result")
 
-    def reportSquare(self, request):
+    def downloadProfileImage(self, requestId):
         """
         Parameters:
-         - request
+         - requestId
         """
-        self.send_reportSquare(request)
-        return self.recv_reportSquare()
+        self.send_downloadProfileImage(requestId)
+        return self.recv_downloadProfileImage()
 
-    def send_reportSquare(self, request):
-        self._oprot.writeMessageBegin('reportSquare', TMessageType.CALL, self._seqid)
-        args = reportSquare_args()
-        args.request = request
+    def send_downloadProfileImage(self, requestId):
+        self._oprot.writeMessageBegin('downloadProfileImage', TMessageType.CALL, self._seqid)
+        args = downloadProfileImage_args()
+        args.requestId = requestId
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_reportSquare(self):
+    def recv_downloadProfileImage(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -693,32 +755,32 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = reportSquare_result()
+        result = downloadProfileImage_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "reportSquare failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "downloadProfileImage failed: unknown result")
 
-    def updateSquareMemberRelation(self, request):
+    def downloadProfileImagePreview(self, requestId):
         """
         Parameters:
-         - request
+         - requestId
         """
-        self.send_updateSquareMemberRelation(request)
-        return self.recv_updateSquareMemberRelation()
+        self.send_downloadProfileImagePreview(requestId)
+        return self.recv_downloadProfileImagePreview()
 
-    def send_updateSquareMemberRelation(self, request):
-        self._oprot.writeMessageBegin('updateSquareMemberRelation', TMessageType.CALL, self._seqid)
-        args = updateSquareMemberRelation_args()
-        args.request = request
+    def send_downloadProfileImagePreview(self, requestId):
+        self._oprot.writeMessageBegin('downloadProfileImagePreview', TMessageType.CALL, self._seqid)
+        args = downloadProfileImagePreview_args()
+        args.requestId = requestId
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_updateSquareMemberRelation(self):
+    def recv_downloadProfileImagePreview(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -726,32 +788,32 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = updateSquareMemberRelation_result()
+        result = downloadProfileImagePreview_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "updateSquareMemberRelation failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "downloadProfileImagePreview failed: unknown result")
 
-    def updateSquareAuthority(self, request):
+    def getActiveMemberCountByBuddyMid(self, buddyMid):
         """
         Parameters:
-         - request
+         - buddyMid
         """
-        self.send_updateSquareAuthority(request)
-        return self.recv_updateSquareAuthority()
+        self.send_getActiveMemberCountByBuddyMid(buddyMid)
+        return self.recv_getActiveMemberCountByBuddyMid()
 
-    def send_updateSquareAuthority(self, request):
-        self._oprot.writeMessageBegin('updateSquareAuthority', TMessageType.CALL, self._seqid)
-        args = updateSquareAuthority_args()
-        args.request = request
+    def send_getActiveMemberCountByBuddyMid(self, buddyMid):
+        self._oprot.writeMessageBegin('getActiveMemberCountByBuddyMid', TMessageType.CALL, self._seqid)
+        args = getActiveMemberCountByBuddyMid_args()
+        args.buddyMid = buddyMid
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_updateSquareAuthority(self):
+    def recv_getActiveMemberCountByBuddyMid(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -759,32 +821,32 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = updateSquareAuthority_result()
+        result = getActiveMemberCountByBuddyMid_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "updateSquareAuthority failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "getActiveMemberCountByBuddyMid failed: unknown result")
 
-    def updateSquareChatMember(self, request):
+    def getActiveMemberMidsByBuddyMid(self, buddyMid):
         """
         Parameters:
-         - request
+         - buddyMid
         """
-        self.send_updateSquareChatMember(request)
-        return self.recv_updateSquareChatMember()
+        self.send_getActiveMemberMidsByBuddyMid(buddyMid)
+        return self.recv_getActiveMemberMidsByBuddyMid()
 
-    def send_updateSquareChatMember(self, request):
-        self._oprot.writeMessageBegin('updateSquareChatMember', TMessageType.CALL, self._seqid)
-        args = updateSquareChatMember_args()
-        args.request = request
+    def send_getActiveMemberMidsByBuddyMid(self, buddyMid):
+        self._oprot.writeMessageBegin('getActiveMemberMidsByBuddyMid', TMessageType.CALL, self._seqid)
+        args = getActiveMemberMidsByBuddyMid_args()
+        args.buddyMid = buddyMid
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_updateSquareChatMember(self):
+    def recv_getActiveMemberMidsByBuddyMid(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -792,32 +854,27 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = updateSquareChatMember_result()
+        result = getActiveMemberMidsByBuddyMid_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "updateSquareChatMember failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "getActiveMemberMidsByBuddyMid failed: unknown result")
 
-    def updateSquareChat(self, request):
-        """
-        Parameters:
-         - request
-        """
-        self.send_updateSquareChat(request)
-        return self.recv_updateSquareChat()
+    def getAllBuddyMembers(self):
+        self.send_getAllBuddyMembers()
+        return self.recv_getAllBuddyMembers()
 
-    def send_updateSquareChat(self, request):
-        self._oprot.writeMessageBegin('updateSquareChat', TMessageType.CALL, self._seqid)
-        args = updateSquareChat_args()
-        args.request = request
+    def send_getAllBuddyMembers(self):
+        self._oprot.writeMessageBegin('getAllBuddyMembers', TMessageType.CALL, self._seqid)
+        args = getAllBuddyMembers_args()
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_updateSquareChat(self):
+    def recv_getAllBuddyMembers(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -825,32 +882,27 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = updateSquareChat_result()
+        result = getAllBuddyMembers_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "updateSquareChat failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "getAllBuddyMembers failed: unknown result")
 
-    def refreshSubscriptions(self, request):
-        """
-        Parameters:
-         - request
-        """
-        self.send_refreshSubscriptions(request)
-        return self.recv_refreshSubscriptions()
+    def getBlockedBuddyMembers(self):
+        self.send_getBlockedBuddyMembers()
+        return self.recv_getBlockedBuddyMembers()
 
-    def send_refreshSubscriptions(self, request):
-        self._oprot.writeMessageBegin('refreshSubscriptions', TMessageType.CALL, self._seqid)
-        args = refreshSubscriptions_args()
-        args.request = request
+    def send_getBlockedBuddyMembers(self):
+        self._oprot.writeMessageBegin('getBlockedBuddyMembers', TMessageType.CALL, self._seqid)
+        args = getBlockedBuddyMembers_args()
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_refreshSubscriptions(self):
+    def recv_getBlockedBuddyMembers(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -858,32 +910,32 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = refreshSubscriptions_result()
+        result = getBlockedBuddyMembers_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "refreshSubscriptions failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "getBlockedBuddyMembers failed: unknown result")
 
-    def removeSubscriptions(self, request):
+    def getBlockerCountByBuddyMid(self, buddyMid):
         """
         Parameters:
-         - request
+         - buddyMid
         """
-        self.send_removeSubscriptions(request)
-        return self.recv_removeSubscriptions()
+        self.send_getBlockerCountByBuddyMid(buddyMid)
+        return self.recv_getBlockerCountByBuddyMid()
 
-    def send_removeSubscriptions(self, request):
-        self._oprot.writeMessageBegin('removeSubscriptions', TMessageType.CALL, self._seqid)
-        args = removeSubscriptions_args()
-        args.request = request
+    def send_getBlockerCountByBuddyMid(self, buddyMid):
+        self._oprot.writeMessageBegin('getBlockerCountByBuddyMid', TMessageType.CALL, self._seqid)
+        args = getBlockerCountByBuddyMid_args()
+        args.buddyMid = buddyMid
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_removeSubscriptions(self):
+    def recv_getBlockerCountByBuddyMid(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -891,32 +943,32 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = removeSubscriptions_result()
+        result = getBlockerCountByBuddyMid_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "removeSubscriptions failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "getBlockerCountByBuddyMid failed: unknown result")
 
-    def rejectSquareMembers(self, request):
+    def getBuddyDetailByMid(self, buddyMid):
         """
         Parameters:
-         - request
+         - buddyMid
         """
-        self.send_rejectSquareMembers(request)
-        return self.recv_rejectSquareMembers()
+        self.send_getBuddyDetailByMid(buddyMid)
+        return self.recv_getBuddyDetailByMid()
 
-    def send_rejectSquareMembers(self, request):
-        self._oprot.writeMessageBegin('rejectSquareMembers', TMessageType.CALL, self._seqid)
-        args = rejectSquareMembers_args()
-        args.request = request
+    def send_getBuddyDetailByMid(self, buddyMid):
+        self._oprot.writeMessageBegin('getBuddyDetailByMid', TMessageType.CALL, self._seqid)
+        args = getBuddyDetailByMid_args()
+        args.buddyMid = buddyMid
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_rejectSquareMembers(self):
+    def recv_getBuddyDetailByMid(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -924,32 +976,27 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = rejectSquareMembers_result()
+        result = getBuddyDetailByMid_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "rejectSquareMembers failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "getBuddyDetailByMid failed: unknown result")
 
-    def updateSquareMembers(self, request):
-        """
-        Parameters:
-         - request
-        """
-        self.send_updateSquareMembers(request)
-        return self.recv_updateSquareMembers()
+    def getBuddyProfile(self):
+        self.send_getBuddyProfile()
+        return self.recv_getBuddyProfile()
 
-    def send_updateSquareMembers(self, request):
-        self._oprot.writeMessageBegin('updateSquareMembers', TMessageType.CALL, self._seqid)
-        args = updateSquareMembers_args()
-        args.request = request
+    def send_getBuddyProfile(self):
+        self._oprot.writeMessageBegin('getBuddyProfile', TMessageType.CALL, self._seqid)
+        args = getBuddyProfile_args()
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_updateSquareMembers(self):
+    def recv_getBuddyProfile(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -957,32 +1004,27 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = updateSquareMembers_result()
+        result = getBuddyProfile_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "updateSquareMembers failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "getBuddyProfile failed: unknown result")
 
-    def updateSquareMember(self, request):
-        """
-        Parameters:
-         - request
-        """
-        self.send_updateSquareMember(request)
-        return self.recv_updateSquareMember()
+    def getContactTicket(self):
+        self.send_getContactTicket()
+        return self.recv_getContactTicket()
 
-    def send_updateSquareMember(self, request):
-        self._oprot.writeMessageBegin('updateSquareMember', TMessageType.CALL, self._seqid)
-        args = updateSquareMember_args()
-        args.request = request
+    def send_getContactTicket(self):
+        self._oprot.writeMessageBegin('getContactTicket', TMessageType.CALL, self._seqid)
+        args = getContactTicket_args()
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_updateSquareMember(self):
+    def recv_getContactTicket(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -990,32 +1032,32 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = updateSquareMember_result()
+        result = getContactTicket_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "updateSquareMember failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "getContactTicket failed: unknown result")
 
-    def updateSquareFeatureSet(self, request):
+    def getMemberCountByBuddyMid(self, buddyMid):
         """
         Parameters:
-         - request
+         - buddyMid
         """
-        self.send_updateSquareFeatureSet(request)
-        return self.recv_updateSquareFeatureSet()
+        self.send_getMemberCountByBuddyMid(buddyMid)
+        return self.recv_getMemberCountByBuddyMid()
 
-    def send_updateSquareFeatureSet(self, request):
-        self._oprot.writeMessageBegin('updateSquareFeatureSet', TMessageType.CALL, self._seqid)
-        args = updateSquareFeatureSet_args()
-        args.request = request
+    def send_getMemberCountByBuddyMid(self, buddyMid):
+        self._oprot.writeMessageBegin('getMemberCountByBuddyMid', TMessageType.CALL, self._seqid)
+        args = getMemberCountByBuddyMid_args()
+        args.buddyMid = buddyMid
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_updateSquareFeatureSet(self):
+    def recv_getMemberCountByBuddyMid(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1023,32 +1065,32 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = updateSquareFeatureSet_result()
+        result = getMemberCountByBuddyMid_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "updateSquareFeatureSet failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "getMemberCountByBuddyMid failed: unknown result")
 
-    def getSquareFeatureSet(self, request):
+    def getSendBuddyMessageResult(self, sendBuddyMessageRequestId):
         """
         Parameters:
-         - request
+         - sendBuddyMessageRequestId
         """
-        self.send_getSquareFeatureSet(request)
-        return self.recv_getSquareFeatureSet()
+        self.send_getSendBuddyMessageResult(sendBuddyMessageRequestId)
+        return self.recv_getSendBuddyMessageResult()
 
-    def send_getSquareFeatureSet(self, request):
-        self._oprot.writeMessageBegin('getSquareFeatureSet', TMessageType.CALL, self._seqid)
-        args = getSquareFeatureSet_args()
-        args.request = request
+    def send_getSendBuddyMessageResult(self, sendBuddyMessageRequestId):
+        self._oprot.writeMessageBegin('getSendBuddyMessageResult', TMessageType.CALL, self._seqid)
+        args = getSendBuddyMessageResult_args()
+        args.sendBuddyMessageRequestId = sendBuddyMessageRequestId
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_getSquareFeatureSet(self):
+    def recv_getSendBuddyMessageResult(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1056,32 +1098,32 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = getSquareFeatureSet_result()
+        result = getSendBuddyMessageResult_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getSquareFeatureSet failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "getSendBuddyMessageResult failed: unknown result")
 
-    def searchSquares(self, request):
+    def getSetBuddyOnAirResult(self, setBuddyOnAirRequestId):
         """
         Parameters:
-         - request
+         - setBuddyOnAirRequestId
         """
-        self.send_searchSquares(request)
-        return self.recv_searchSquares()
+        self.send_getSetBuddyOnAirResult(setBuddyOnAirRequestId)
+        return self.recv_getSetBuddyOnAirResult()
 
-    def send_searchSquares(self, request):
-        self._oprot.writeMessageBegin('searchSquares', TMessageType.CALL, self._seqid)
-        args = searchSquares_args()
-        args.request = request
+    def send_getSetBuddyOnAirResult(self, setBuddyOnAirRequestId):
+        self._oprot.writeMessageBegin('getSetBuddyOnAirResult', TMessageType.CALL, self._seqid)
+        args = getSetBuddyOnAirResult_args()
+        args.setBuddyOnAirRequestId = setBuddyOnAirRequestId
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_searchSquares(self):
+    def recv_getSetBuddyOnAirResult(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1089,32 +1131,32 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = searchSquares_result()
+        result = getSetBuddyOnAirResult_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "searchSquares failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "getSetBuddyOnAirResult failed: unknown result")
 
-    def updateSquare(self, request):
+    def getUpdateBuddyProfileResult(self, updateBuddyProfileRequestId):
         """
         Parameters:
-         - request
+         - updateBuddyProfileRequestId
         """
-        self.send_updateSquare(request)
-        return self.recv_updateSquare()
+        self.send_getUpdateBuddyProfileResult(updateBuddyProfileRequestId)
+        return self.recv_getUpdateBuddyProfileResult()
 
-    def send_updateSquare(self, request):
-        self._oprot.writeMessageBegin('updateSquare', TMessageType.CALL, self._seqid)
-        args = updateSquare_args()
-        args.request = request
+    def send_getUpdateBuddyProfileResult(self, updateBuddyProfileRequestId):
+        self._oprot.writeMessageBegin('getUpdateBuddyProfileResult', TMessageType.CALL, self._seqid)
+        args = getUpdateBuddyProfileResult_args()
+        args.updateBuddyProfileRequestId = updateBuddyProfileRequestId
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_updateSquare(self):
+    def recv_getUpdateBuddyProfileResult(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1122,32 +1164,32 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = updateSquare_result()
+        result = getUpdateBuddyProfileResult_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "updateSquare failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "getUpdateBuddyProfileResult failed: unknown result")
 
-    def getCategories(self, request):
+    def isBuddyOnAirByMid(self, buddyMid):
         """
         Parameters:
-         - request
+         - buddyMid
         """
-        self.send_getCategories(request)
-        return self.recv_getCategories()
+        self.send_isBuddyOnAirByMid(buddyMid)
+        return self.recv_isBuddyOnAirByMid()
 
-    def send_getCategories(self, request):
-        self._oprot.writeMessageBegin('getCategories', TMessageType.CALL, self._seqid)
-        args = getCategories_args()
-        args.request = request
+    def send_isBuddyOnAirByMid(self, buddyMid):
+        self._oprot.writeMessageBegin('isBuddyOnAirByMid', TMessageType.CALL, self._seqid)
+        args = isBuddyOnAirByMid_args()
+        args.buddyMid = buddyMid
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_getCategories(self):
+    def recv_isBuddyOnAirByMid(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1155,32 +1197,36 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = getCategories_result()
+        result = isBuddyOnAirByMid_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getCategories failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "isBuddyOnAirByMid failed: unknown result")
 
-    def searchSquareMembers(self, request):
+    def linkAndSendBuddyContentMessageToAllAsync(self, requestId, msg, sourceContentId):
         """
         Parameters:
-         - request
+         - requestId
+         - msg
+         - sourceContentId
         """
-        self.send_searchSquareMembers(request)
-        return self.recv_searchSquareMembers()
+        self.send_linkAndSendBuddyContentMessageToAllAsync(requestId, msg, sourceContentId)
+        return self.recv_linkAndSendBuddyContentMessageToAllAsync()
 
-    def send_searchSquareMembers(self, request):
-        self._oprot.writeMessageBegin('searchSquareMembers', TMessageType.CALL, self._seqid)
-        args = searchSquareMembers_args()
-        args.request = request
+    def send_linkAndSendBuddyContentMessageToAllAsync(self, requestId, msg, sourceContentId):
+        self._oprot.writeMessageBegin('linkAndSendBuddyContentMessageToAllAsync', TMessageType.CALL, self._seqid)
+        args = linkAndSendBuddyContentMessageToAllAsync_args()
+        args.requestId = requestId
+        args.msg = msg
+        args.sourceContentId = sourceContentId
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_searchSquareMembers(self):
+    def recv_linkAndSendBuddyContentMessageToAllAsync(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1188,32 +1234,38 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = searchSquareMembers_result()
+        result = linkAndSendBuddyContentMessageToAllAsync_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "searchSquareMembers failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "linkAndSendBuddyContentMessageToAllAsync failed: unknown result")
 
-    def fetchSquareChatEvents(self, request):
+    def linkAndSendBuddyContentMessageToMids(self, requestId, msg, sourceContentId, mids):
         """
         Parameters:
-         - request
+         - requestId
+         - msg
+         - sourceContentId
+         - mids
         """
-        self.send_fetchSquareChatEvents(request)
-        return self.recv_fetchSquareChatEvents()
+        self.send_linkAndSendBuddyContentMessageToMids(requestId, msg, sourceContentId, mids)
+        return self.recv_linkAndSendBuddyContentMessageToMids()
 
-    def send_fetchSquareChatEvents(self, request):
-        self._oprot.writeMessageBegin('fetchSquareChatEvents', TMessageType.CALL, self._seqid)
-        args = fetchSquareChatEvents_args()
-        args.request = request
+    def send_linkAndSendBuddyContentMessageToMids(self, requestId, msg, sourceContentId, mids):
+        self._oprot.writeMessageBegin('linkAndSendBuddyContentMessageToMids', TMessageType.CALL, self._seqid)
+        args = linkAndSendBuddyContentMessageToMids_args()
+        args.requestId = requestId
+        args.msg = msg
+        args.sourceContentId = sourceContentId
+        args.mids = mids
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_fetchSquareChatEvents(self):
+    def recv_linkAndSendBuddyContentMessageToMids(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1221,32 +1273,34 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = fetchSquareChatEvents_result()
+        result = linkAndSendBuddyContentMessageToMids_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "fetchSquareChatEvents failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "linkAndSendBuddyContentMessageToMids failed: unknown result")
 
-    def fetchMyEvents(self, request):
+    def notifyBuddyBlocked(self, buddyMid, blockerMid):
         """
         Parameters:
-         - request
+         - buddyMid
+         - blockerMid
         """
-        self.send_fetchMyEvents(request)
-        return self.recv_fetchMyEvents()
+        self.send_notifyBuddyBlocked(buddyMid, blockerMid)
+        self.recv_notifyBuddyBlocked()
 
-    def send_fetchMyEvents(self, request):
-        self._oprot.writeMessageBegin('fetchMyEvents', TMessageType.CALL, self._seqid)
-        args = fetchMyEvents_args()
-        args.request = request
+    def send_notifyBuddyBlocked(self, buddyMid, blockerMid):
+        self._oprot.writeMessageBegin('notifyBuddyBlocked', TMessageType.CALL, self._seqid)
+        args = notifyBuddyBlocked_args()
+        args.buddyMid = buddyMid
+        args.blockerMid = blockerMid
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_fetchMyEvents(self):
+    def recv_notifyBuddyBlocked(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1254,32 +1308,32 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = fetchMyEvents_result()
+        result = notifyBuddyBlocked_result()
         result.read(iprot)
         iprot.readMessageEnd()
-        if result.success is not None:
-            return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "fetchMyEvents failed: unknown result")
+        return
 
-    def markAsRead(self, request):
+    def notifyBuddyUnblocked(self, buddyMid, blockerMid):
         """
         Parameters:
-         - request
+         - buddyMid
+         - blockerMid
         """
-        self.send_markAsRead(request)
-        return self.recv_markAsRead()
+        self.send_notifyBuddyUnblocked(buddyMid, blockerMid)
+        self.recv_notifyBuddyUnblocked()
 
-    def send_markAsRead(self, request):
-        self._oprot.writeMessageBegin('markAsRead', TMessageType.CALL, self._seqid)
-        args = markAsRead_args()
-        args.request = request
+    def send_notifyBuddyUnblocked(self, buddyMid, blockerMid):
+        self._oprot.writeMessageBegin('notifyBuddyUnblocked', TMessageType.CALL, self._seqid)
+        args = notifyBuddyUnblocked_args()
+        args.buddyMid = buddyMid
+        args.blockerMid = blockerMid
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_markAsRead(self):
+    def recv_notifyBuddyUnblocked(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1287,32 +1341,40 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = markAsRead_result()
+        result = notifyBuddyUnblocked_result()
         result.read(iprot)
         iprot.readMessageEnd()
-        if result.success is not None:
-            return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "markAsRead failed: unknown result")
+        return
 
-    def getSquareAuthority(self, request):
+    def registerBuddy(self, buddyId, searchId, displayName, statusMeessage, picture, settings):
         """
         Parameters:
-         - request
+         - buddyId
+         - searchId
+         - displayName
+         - statusMeessage
+         - picture
+         - settings
         """
-        self.send_getSquareAuthority(request)
-        return self.recv_getSquareAuthority()
+        self.send_registerBuddy(buddyId, searchId, displayName, statusMeessage, picture, settings)
+        return self.recv_registerBuddy()
 
-    def send_getSquareAuthority(self, request):
-        self._oprot.writeMessageBegin('getSquareAuthority', TMessageType.CALL, self._seqid)
-        args = getSquareAuthority_args()
-        args.request = request
+    def send_registerBuddy(self, buddyId, searchId, displayName, statusMeessage, picture, settings):
+        self._oprot.writeMessageBegin('registerBuddy', TMessageType.CALL, self._seqid)
+        args = registerBuddy_args()
+        args.buddyId = buddyId
+        args.searchId = searchId
+        args.displayName = displayName
+        args.statusMeessage = statusMeessage
+        args.picture = picture
+        args.settings = settings
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_getSquareAuthority(self):
+    def recv_registerBuddy(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1320,32 +1382,40 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = getSquareAuthority_result()
+        result = registerBuddy_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getSquareAuthority failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "registerBuddy failed: unknown result")
 
-    def sendMessage(self, request):
+    def registerBuddyAdmin(self, buddyId, searchId, displayName, statusMessage, picture):
         """
         Parameters:
-         - request
+         - buddyId
+         - searchId
+         - displayName
+         - statusMessage
+         - picture
         """
-        self.send_sendMessage(request)
-        return self.recv_sendMessage()
+        self.send_registerBuddyAdmin(buddyId, searchId, displayName, statusMessage, picture)
+        return self.recv_registerBuddyAdmin()
 
-    def send_sendMessage(self, request):
-        self._oprot.writeMessageBegin('sendMessage', TMessageType.CALL, self._seqid)
-        args = sendMessage_args()
-        args.request = request
+    def send_registerBuddyAdmin(self, buddyId, searchId, displayName, statusMessage, picture):
+        self._oprot.writeMessageBegin('registerBuddyAdmin', TMessageType.CALL, self._seqid)
+        args = registerBuddyAdmin_args()
+        args.buddyId = buddyId
+        args.searchId = searchId
+        args.displayName = displayName
+        args.statusMessage = statusMessage
+        args.picture = picture
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_sendMessage(self):
+    def recv_registerBuddyAdmin(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1353,32 +1423,34 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = sendMessage_result()
+        result = registerBuddyAdmin_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "sendMessage failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "registerBuddyAdmin failed: unknown result")
 
-    def leaveSquare(self, request):
+    def reissueContactTicket(self, expirationTime, maxUseCount):
         """
         Parameters:
-         - request
+         - expirationTime
+         - maxUseCount
         """
-        self.send_leaveSquare(request)
-        return self.recv_leaveSquare()
+        self.send_reissueContactTicket(expirationTime, maxUseCount)
+        return self.recv_reissueContactTicket()
 
-    def send_leaveSquare(self, request):
-        self._oprot.writeMessageBegin('leaveSquare', TMessageType.CALL, self._seqid)
-        args = leaveSquare_args()
-        args.request = request
+    def send_reissueContactTicket(self, expirationTime, maxUseCount):
+        self._oprot.writeMessageBegin('reissueContactTicket', TMessageType.CALL, self._seqid)
+        args = reissueContactTicket_args()
+        args.expirationTime = expirationTime
+        args.maxUseCount = maxUseCount
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_leaveSquare(self):
+    def recv_reissueContactTicket(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1386,32 +1458,34 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = leaveSquare_result()
+        result = reissueContactTicket_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "leaveSquare failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "reissueContactTicket failed: unknown result")
 
-    def leaveSquareChat(self, request):
+    def removeBuddyMember(self, requestId, userMid):
         """
         Parameters:
-         - request
+         - requestId
+         - userMid
         """
-        self.send_leaveSquareChat(request)
-        return self.recv_leaveSquareChat()
+        self.send_removeBuddyMember(requestId, userMid)
+        self.recv_removeBuddyMember()
 
-    def send_leaveSquareChat(self, request):
-        self._oprot.writeMessageBegin('leaveSquareChat', TMessageType.CALL, self._seqid)
-        args = leaveSquareChat_args()
-        args.request = request
+    def send_removeBuddyMember(self, requestId, userMid):
+        self._oprot.writeMessageBegin('removeBuddyMember', TMessageType.CALL, self._seqid)
+        args = removeBuddyMember_args()
+        args.requestId = requestId
+        args.userMid = userMid
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_leaveSquareChat(self):
+    def recv_removeBuddyMember(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1419,32 +1493,32 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = leaveSquareChat_result()
+        result = removeBuddyMember_result()
         result.read(iprot)
         iprot.readMessageEnd()
-        if result.success is not None:
-            return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "leaveSquareChat failed: unknown result")
+        return
 
-    def joinSquareChat(self, request):
+    def removeBuddyMembers(self, requestId, userMids):
         """
         Parameters:
-         - request
+         - requestId
+         - userMids
         """
-        self.send_joinSquareChat(request)
-        return self.recv_joinSquareChat()
+        self.send_removeBuddyMembers(requestId, userMids)
+        self.recv_removeBuddyMembers()
 
-    def send_joinSquareChat(self, request):
-        self._oprot.writeMessageBegin('joinSquareChat', TMessageType.CALL, self._seqid)
-        args = joinSquareChat_args()
-        args.request = request
+    def send_removeBuddyMembers(self, requestId, userMids):
+        self._oprot.writeMessageBegin('removeBuddyMembers', TMessageType.CALL, self._seqid)
+        args = removeBuddyMembers_args()
+        args.requestId = requestId
+        args.userMids = userMids
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_joinSquareChat(self):
+    def recv_removeBuddyMembers(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1452,32 +1526,34 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = joinSquareChat_result()
+        result = removeBuddyMembers_result()
         result.read(iprot)
         iprot.readMessageEnd()
-        if result.success is not None:
-            return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "joinSquareChat failed: unknown result")
+        return
 
-    def joinSquare(self, request):
+    def sendBuddyContentMessageToAll(self, requestId, msg, content):
         """
         Parameters:
-         - request
+         - requestId
+         - msg
+         - content
         """
-        self.send_joinSquare(request)
-        return self.recv_joinSquare()
+        self.send_sendBuddyContentMessageToAll(requestId, msg, content)
+        return self.recv_sendBuddyContentMessageToAll()
 
-    def send_joinSquare(self, request):
-        self._oprot.writeMessageBegin('joinSquare', TMessageType.CALL, self._seqid)
-        args = joinSquare_args()
-        args.request = request
+    def send_sendBuddyContentMessageToAll(self, requestId, msg, content):
+        self._oprot.writeMessageBegin('sendBuddyContentMessageToAll', TMessageType.CALL, self._seqid)
+        args = sendBuddyContentMessageToAll_args()
+        args.requestId = requestId
+        args.msg = msg
+        args.content = content
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_joinSquare(self):
+    def recv_sendBuddyContentMessageToAll(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1485,32 +1561,36 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = joinSquare_result()
+        result = sendBuddyContentMessageToAll_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "joinSquare failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "sendBuddyContentMessageToAll failed: unknown result")
 
-    def inviteToSquare(self, request):
+    def sendBuddyContentMessageToAllAsync(self, requestId, msg, content):
         """
         Parameters:
-         - request
+         - requestId
+         - msg
+         - content
         """
-        self.send_inviteToSquare(request)
-        return self.recv_inviteToSquare()
+        self.send_sendBuddyContentMessageToAllAsync(requestId, msg, content)
+        return self.recv_sendBuddyContentMessageToAllAsync()
 
-    def send_inviteToSquare(self, request):
-        self._oprot.writeMessageBegin('inviteToSquare', TMessageType.CALL, self._seqid)
-        args = inviteToSquare_args()
-        args.request = request
+    def send_sendBuddyContentMessageToAllAsync(self, requestId, msg, content):
+        self._oprot.writeMessageBegin('sendBuddyContentMessageToAllAsync', TMessageType.CALL, self._seqid)
+        args = sendBuddyContentMessageToAllAsync_args()
+        args.requestId = requestId
+        args.msg = msg
+        args.content = content
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_inviteToSquare(self):
+    def recv_sendBuddyContentMessageToAllAsync(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1518,32 +1598,38 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = inviteToSquare_result()
+        result = sendBuddyContentMessageToAllAsync_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "inviteToSquare failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "sendBuddyContentMessageToAllAsync failed: unknown result")
 
-    def inviteToSquareChat(self, request):
+    def sendBuddyContentMessageToMids(self, requestId, msg, content, mids):
         """
         Parameters:
-         - request
+         - requestId
+         - msg
+         - content
+         - mids
         """
-        self.send_inviteToSquareChat(request)
-        return self.recv_inviteToSquareChat()
+        self.send_sendBuddyContentMessageToMids(requestId, msg, content, mids)
+        return self.recv_sendBuddyContentMessageToMids()
 
-    def send_inviteToSquareChat(self, request):
-        self._oprot.writeMessageBegin('inviteToSquareChat', TMessageType.CALL, self._seqid)
-        args = inviteToSquareChat_args()
-        args.request = request
+    def send_sendBuddyContentMessageToMids(self, requestId, msg, content, mids):
+        self._oprot.writeMessageBegin('sendBuddyContentMessageToMids', TMessageType.CALL, self._seqid)
+        args = sendBuddyContentMessageToMids_args()
+        args.requestId = requestId
+        args.msg = msg
+        args.content = content
+        args.mids = mids
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_inviteToSquareChat(self):
+    def recv_sendBuddyContentMessageToMids(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1551,32 +1637,38 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = inviteToSquareChat_result()
+        result = sendBuddyContentMessageToMids_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "inviteToSquareChat failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "sendBuddyContentMessageToMids failed: unknown result")
 
-    def getSquareMember(self, request):
+    def sendBuddyContentMessageToMidsAsync(self, requestId, msg, content, mids):
         """
         Parameters:
-         - request
+         - requestId
+         - msg
+         - content
+         - mids
         """
-        self.send_getSquareMember(request)
-        return self.recv_getSquareMember()
+        self.send_sendBuddyContentMessageToMidsAsync(requestId, msg, content, mids)
+        return self.recv_sendBuddyContentMessageToMidsAsync()
 
-    def send_getSquareMember(self, request):
-        self._oprot.writeMessageBegin('getSquareMember', TMessageType.CALL, self._seqid)
-        args = getSquareMember_args()
-        args.request = request
+    def send_sendBuddyContentMessageToMidsAsync(self, requestId, msg, content, mids):
+        self._oprot.writeMessageBegin('sendBuddyContentMessageToMidsAsync', TMessageType.CALL, self._seqid)
+        args = sendBuddyContentMessageToMidsAsync_args()
+        args.requestId = requestId
+        args.msg = msg
+        args.content = content
+        args.mids = mids
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_getSquareMember(self):
+    def recv_sendBuddyContentMessageToMidsAsync(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1584,32 +1676,34 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = getSquareMember_result()
+        result = sendBuddyContentMessageToMidsAsync_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getSquareMember failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "sendBuddyContentMessageToMidsAsync failed: unknown result")
 
-    def getSquareMembers(self, request):
+    def sendBuddyMessageToAll(self, requestId, msg):
         """
         Parameters:
-         - request
+         - requestId
+         - msg
         """
-        self.send_getSquareMembers(request)
-        return self.recv_getSquareMembers()
+        self.send_sendBuddyMessageToAll(requestId, msg)
+        return self.recv_sendBuddyMessageToAll()
 
-    def send_getSquareMembers(self, request):
-        self._oprot.writeMessageBegin('getSquareMembers', TMessageType.CALL, self._seqid)
-        args = getSquareMembers_args()
-        args.request = request
+    def send_sendBuddyMessageToAll(self, requestId, msg):
+        self._oprot.writeMessageBegin('sendBuddyMessageToAll', TMessageType.CALL, self._seqid)
+        args = sendBuddyMessageToAll_args()
+        args.requestId = requestId
+        args.msg = msg
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_getSquareMembers(self):
+    def recv_sendBuddyMessageToAll(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1617,32 +1711,34 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = getSquareMembers_result()
+        result = sendBuddyMessageToAll_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getSquareMembers failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "sendBuddyMessageToAll failed: unknown result")
 
-    def getSquareMemberRelation(self, request):
+    def sendBuddyMessageToAllAsync(self, requestId, msg):
         """
         Parameters:
-         - request
+         - requestId
+         - msg
         """
-        self.send_getSquareMemberRelation(request)
-        return self.recv_getSquareMemberRelation()
+        self.send_sendBuddyMessageToAllAsync(requestId, msg)
+        return self.recv_sendBuddyMessageToAllAsync()
 
-    def send_getSquareMemberRelation(self, request):
-        self._oprot.writeMessageBegin('getSquareMemberRelation', TMessageType.CALL, self._seqid)
-        args = getSquareMemberRelation_args()
-        args.request = request
+    def send_sendBuddyMessageToAllAsync(self, requestId, msg):
+        self._oprot.writeMessageBegin('sendBuddyMessageToAllAsync', TMessageType.CALL, self._seqid)
+        args = sendBuddyMessageToAllAsync_args()
+        args.requestId = requestId
+        args.msg = msg
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_getSquareMemberRelation(self):
+    def recv_sendBuddyMessageToAllAsync(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1650,32 +1746,36 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = getSquareMemberRelation_result()
+        result = sendBuddyMessageToAllAsync_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getSquareMemberRelation failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "sendBuddyMessageToAllAsync failed: unknown result")
 
-    def getSquareMemberRelations(self, request):
+    def sendBuddyMessageToMids(self, requestId, msg, mids):
         """
         Parameters:
-         - request
+         - requestId
+         - msg
+         - mids
         """
-        self.send_getSquareMemberRelations(request)
-        return self.recv_getSquareMemberRelations()
+        self.send_sendBuddyMessageToMids(requestId, msg, mids)
+        return self.recv_sendBuddyMessageToMids()
 
-    def send_getSquareMemberRelations(self, request):
-        self._oprot.writeMessageBegin('getSquareMemberRelations', TMessageType.CALL, self._seqid)
-        args = getSquareMemberRelations_args()
-        args.request = request
+    def send_sendBuddyMessageToMids(self, requestId, msg, mids):
+        self._oprot.writeMessageBegin('sendBuddyMessageToMids', TMessageType.CALL, self._seqid)
+        args = sendBuddyMessageToMids_args()
+        args.requestId = requestId
+        args.msg = msg
+        args.mids = mids
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_getSquareMemberRelations(self):
+    def recv_sendBuddyMessageToMids(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1683,32 +1783,36 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = getSquareMemberRelations_result()
+        result = sendBuddyMessageToMids_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getSquareMemberRelations failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "sendBuddyMessageToMids failed: unknown result")
 
-    def getSquareChatMembers(self, request):
+    def sendBuddyMessageToMidsAsync(self, requestId, msg, mids):
         """
         Parameters:
-         - request
+         - requestId
+         - msg
+         - mids
         """
-        self.send_getSquareChatMembers(request)
-        return self.recv_getSquareChatMembers()
+        self.send_sendBuddyMessageToMidsAsync(requestId, msg, mids)
+        return self.recv_sendBuddyMessageToMidsAsync()
 
-    def send_getSquareChatMembers(self, request):
-        self._oprot.writeMessageBegin('getSquareChatMembers', TMessageType.CALL, self._seqid)
-        args = getSquareChatMembers_args()
-        args.request = request
+    def send_sendBuddyMessageToMidsAsync(self, requestId, msg, mids):
+        self._oprot.writeMessageBegin('sendBuddyMessageToMidsAsync', TMessageType.CALL, self._seqid)
+        args = sendBuddyMessageToMidsAsync_args()
+        args.requestId = requestId
+        args.msg = msg
+        args.mids = mids
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_getSquareChatMembers(self):
+    def recv_sendBuddyMessageToMidsAsync(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1716,32 +1820,36 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = getSquareChatMembers_result()
+        result = sendBuddyMessageToMidsAsync_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getSquareChatMembers failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "sendBuddyMessageToMidsAsync failed: unknown result")
 
-    def getSquareChatStatus(self, request):
+    def sendIndividualEventToAllAsync(self, requestId, buddyMid, notificationStatus):
         """
         Parameters:
-         - request
+         - requestId
+         - buddyMid
+         - notificationStatus
         """
-        self.send_getSquareChatStatus(request)
-        return self.recv_getSquareChatStatus()
+        self.send_sendIndividualEventToAllAsync(requestId, buddyMid, notificationStatus)
+        self.recv_sendIndividualEventToAllAsync()
 
-    def send_getSquareChatStatus(self, request):
-        self._oprot.writeMessageBegin('getSquareChatStatus', TMessageType.CALL, self._seqid)
-        args = getSquareChatStatus_args()
-        args.request = request
+    def send_sendIndividualEventToAllAsync(self, requestId, buddyMid, notificationStatus):
+        self._oprot.writeMessageBegin('sendIndividualEventToAllAsync', TMessageType.CALL, self._seqid)
+        args = sendIndividualEventToAllAsync_args()
+        args.requestId = requestId
+        args.buddyMid = buddyMid
+        args.notificationStatus = notificationStatus
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_getSquareChatStatus(self):
+    def recv_sendIndividualEventToAllAsync(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1749,32 +1857,32 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = getSquareChatStatus_result()
+        result = sendIndividualEventToAllAsync_result()
         result.read(iprot)
         iprot.readMessageEnd()
-        if result.success is not None:
-            return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getSquareChatStatus failed: unknown result")
+        return
 
-    def getSquareChat(self, request):
+    def setBuddyOnAir(self, requestId, onAir):
         """
         Parameters:
-         - request
+         - requestId
+         - onAir
         """
-        self.send_getSquareChat(request)
-        return self.recv_getSquareChat()
+        self.send_setBuddyOnAir(requestId, onAir)
+        return self.recv_setBuddyOnAir()
 
-    def send_getSquareChat(self, request):
-        self._oprot.writeMessageBegin('getSquareChat', TMessageType.CALL, self._seqid)
-        args = getSquareChat_args()
-        args.request = request
+    def send_setBuddyOnAir(self, requestId, onAir):
+        self._oprot.writeMessageBegin('setBuddyOnAir', TMessageType.CALL, self._seqid)
+        args = setBuddyOnAir_args()
+        args.requestId = requestId
+        args.onAir = onAir
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_getSquareChat(self):
+    def recv_setBuddyOnAir(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1782,32 +1890,34 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = getSquareChat_result()
+        result = setBuddyOnAir_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getSquareChat failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "setBuddyOnAir failed: unknown result")
 
-    def getSquare(self, request):
+    def setBuddyOnAirAsync(self, requestId, onAir):
         """
         Parameters:
-         - request
+         - requestId
+         - onAir
         """
-        self.send_getSquare(request)
-        return self.recv_getSquare()
+        self.send_setBuddyOnAirAsync(requestId, onAir)
+        return self.recv_setBuddyOnAirAsync()
 
-    def send_getSquare(self, request):
-        self._oprot.writeMessageBegin('getSquare', TMessageType.CALL, self._seqid)
-        args = getSquare_args()
-        args.request = request
+    def send_setBuddyOnAirAsync(self, requestId, onAir):
+        self._oprot.writeMessageBegin('setBuddyOnAirAsync', TMessageType.CALL, self._seqid)
+        args = setBuddyOnAirAsync_args()
+        args.requestId = requestId
+        args.onAir = onAir
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_getSquare(self):
+    def recv_setBuddyOnAirAsync(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1815,32 +1925,34 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = getSquare_result()
+        result = setBuddyOnAirAsync_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getSquare failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "setBuddyOnAirAsync failed: unknown result")
 
-    def getJoinedSquares(self, request):
+    def storeMessage(self, requestId, messageRequest):
         """
         Parameters:
-         - request
+         - requestId
+         - messageRequest
         """
-        self.send_getJoinedSquares(request)
-        return self.recv_getJoinedSquares()
+        self.send_storeMessage(requestId, messageRequest)
+        return self.recv_storeMessage()
 
-    def send_getJoinedSquares(self, request):
-        self._oprot.writeMessageBegin('getJoinedSquares', TMessageType.CALL, self._seqid)
-        args = getJoinedSquares_args()
-        args.request = request
+    def send_storeMessage(self, requestId, messageRequest):
+        self._oprot.writeMessageBegin('storeMessage', TMessageType.CALL, self._seqid)
+        args = storeMessage_args()
+        args.requestId = requestId
+        args.messageRequest = messageRequest
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_getJoinedSquares(self):
+    def recv_storeMessage(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1848,32 +1960,34 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = getJoinedSquares_result()
+        result = storeMessage_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getJoinedSquares failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "storeMessage failed: unknown result")
 
-    def getJoinedSquareChats(self, request):
+    def unblockBuddyMember(self, requestId, mid):
         """
         Parameters:
-         - request
+         - requestId
+         - mid
         """
-        self.send_getJoinedSquareChats(request)
-        return self.recv_getJoinedSquareChats()
+        self.send_unblockBuddyMember(requestId, mid)
+        self.recv_unblockBuddyMember()
 
-    def send_getJoinedSquareChats(self, request):
-        self._oprot.writeMessageBegin('getJoinedSquareChats', TMessageType.CALL, self._seqid)
-        args = getJoinedSquareChats_args()
-        args.request = request
+    def send_unblockBuddyMember(self, requestId, mid):
+        self._oprot.writeMessageBegin('unblockBuddyMember', TMessageType.CALL, self._seqid)
+        args = unblockBuddyMember_args()
+        args.requestId = requestId
+        args.mid = mid
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_getJoinedSquareChats(self):
+    def recv_unblockBuddyMember(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1881,32 +1995,30 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = getJoinedSquareChats_result()
+        result = unblockBuddyMember_result()
         result.read(iprot)
         iprot.readMessageEnd()
-        if result.success is not None:
-            return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getJoinedSquareChats failed: unknown result")
+        return
 
-    def approveSquareMembers(self, request):
+    def unregisterBuddy(self, requestId):
         """
         Parameters:
-         - request
+         - requestId
         """
-        self.send_approveSquareMembers(request)
-        return self.recv_approveSquareMembers()
+        self.send_unregisterBuddy(requestId)
+        self.recv_unregisterBuddy()
 
-    def send_approveSquareMembers(self, request):
-        self._oprot.writeMessageBegin('approveSquareMembers', TMessageType.CALL, self._seqid)
-        args = approveSquareMembers_args()
-        args.request = request
+    def send_unregisterBuddy(self, requestId):
+        self._oprot.writeMessageBegin('unregisterBuddy', TMessageType.CALL, self._seqid)
+        args = unregisterBuddy_args()
+        args.requestId = requestId
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_approveSquareMembers(self):
+    def recv_unregisterBuddy(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1914,32 +2026,30 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = approveSquareMembers_result()
+        result = unregisterBuddy_result()
         result.read(iprot)
         iprot.readMessageEnd()
-        if result.success is not None:
-            return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "approveSquareMembers failed: unknown result")
+        return
 
-    def createSquareChat(self, request):
+    def unregisterBuddyAdmin(self, requestId):
         """
         Parameters:
-         - request
+         - requestId
         """
-        self.send_createSquareChat(request)
-        return self.recv_createSquareChat()
+        self.send_unregisterBuddyAdmin(requestId)
+        self.recv_unregisterBuddyAdmin()
 
-    def send_createSquareChat(self, request):
-        self._oprot.writeMessageBegin('createSquareChat', TMessageType.CALL, self._seqid)
-        args = createSquareChat_args()
-        args.request = request
+    def send_unregisterBuddyAdmin(self, requestId):
+        self._oprot.writeMessageBegin('unregisterBuddyAdmin', TMessageType.CALL, self._seqid)
+        args = unregisterBuddyAdmin_args()
+        args.requestId = requestId
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_createSquareChat(self):
+    def recv_unregisterBuddyAdmin(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1947,32 +2057,32 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = createSquareChat_result()
+        result = unregisterBuddyAdmin_result()
         result.read(iprot)
         iprot.readMessageEnd()
-        if result.success is not None:
-            return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "createSquareChat failed: unknown result")
+        return
 
-    def createSquare(self, request):
+    def updateBuddyAdminProfileAttribute(self, requestId, attributes):
         """
         Parameters:
-         - request
+         - requestId
+         - attributes
         """
-        self.send_createSquare(request)
-        return self.recv_createSquare()
+        self.send_updateBuddyAdminProfileAttribute(requestId, attributes)
+        self.recv_updateBuddyAdminProfileAttribute()
 
-    def send_createSquare(self, request):
-        self._oprot.writeMessageBegin('createSquare', TMessageType.CALL, self._seqid)
-        args = createSquare_args()
-        args.request = request
+    def send_updateBuddyAdminProfileAttribute(self, requestId, attributes):
+        self._oprot.writeMessageBegin('updateBuddyAdminProfileAttribute', TMessageType.CALL, self._seqid)
+        args = updateBuddyAdminProfileAttribute_args()
+        args.requestId = requestId
+        args.attributes = attributes
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_createSquare(self):
+    def recv_updateBuddyAdminProfileAttribute(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -1980,32 +2090,32 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = createSquare_result()
+        result = updateBuddyAdminProfileAttribute_result()
         result.read(iprot)
         iprot.readMessageEnd()
-        if result.success is not None:
-            return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "createSquare failed: unknown result")
+        return
 
-    def deleteSquareChat(self, request):
+    def updateBuddyAdminProfileImage(self, requestId, picture):
         """
         Parameters:
-         - request
+         - requestId
+         - picture
         """
-        self.send_deleteSquareChat(request)
-        return self.recv_deleteSquareChat()
+        self.send_updateBuddyAdminProfileImage(requestId, picture)
+        self.recv_updateBuddyAdminProfileImage()
 
-    def send_deleteSquareChat(self, request):
-        self._oprot.writeMessageBegin('deleteSquareChat', TMessageType.CALL, self._seqid)
-        args = deleteSquareChat_args()
-        args.request = request
+    def send_updateBuddyAdminProfileImage(self, requestId, picture):
+        self._oprot.writeMessageBegin('updateBuddyAdminProfileImage', TMessageType.CALL, self._seqid)
+        args = updateBuddyAdminProfileImage_args()
+        args.requestId = requestId
+        args.picture = picture
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_deleteSquareChat(self):
+    def recv_updateBuddyAdminProfileImage(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -2013,32 +2123,32 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = deleteSquareChat_result()
+        result = updateBuddyAdminProfileImage_result()
         result.read(iprot)
         iprot.readMessageEnd()
-        if result.success is not None:
-            return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "deleteSquareChat failed: unknown result")
+        return
 
-    def deleteSquare(self, request):
+    def updateBuddyProfileAttributes(self, requestId, attributes):
         """
         Parameters:
-         - request
+         - requestId
+         - attributes
         """
-        self.send_deleteSquare(request)
-        return self.recv_deleteSquare()
+        self.send_updateBuddyProfileAttributes(requestId, attributes)
+        return self.recv_updateBuddyProfileAttributes()
 
-    def send_deleteSquare(self, request):
-        self._oprot.writeMessageBegin('deleteSquare', TMessageType.CALL, self._seqid)
-        args = deleteSquare_args()
-        args.request = request
+    def send_updateBuddyProfileAttributes(self, requestId, attributes):
+        self._oprot.writeMessageBegin('updateBuddyProfileAttributes', TMessageType.CALL, self._seqid)
+        args = updateBuddyProfileAttributes_args()
+        args.requestId = requestId
+        args.attributes = attributes
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_deleteSquare(self):
+    def recv_updateBuddyProfileAttributes(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -2046,32 +2156,34 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = deleteSquare_result()
+        result = updateBuddyProfileAttributes_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "deleteSquare failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "updateBuddyProfileAttributes failed: unknown result")
 
-    def destroyMessage(self, request):
+    def updateBuddyProfileAttributesAsync(self, requestId, attributes):
         """
         Parameters:
-         - request
+         - requestId
+         - attributes
         """
-        self.send_destroyMessage(request)
-        return self.recv_destroyMessage()
+        self.send_updateBuddyProfileAttributesAsync(requestId, attributes)
+        return self.recv_updateBuddyProfileAttributesAsync()
 
-    def send_destroyMessage(self, request):
-        self._oprot.writeMessageBegin('destroyMessage', TMessageType.CALL, self._seqid)
-        args = destroyMessage_args()
-        args.request = request
+    def send_updateBuddyProfileAttributesAsync(self, requestId, attributes):
+        self._oprot.writeMessageBegin('updateBuddyProfileAttributesAsync', TMessageType.CALL, self._seqid)
+        args = updateBuddyProfileAttributesAsync_args()
+        args.requestId = requestId
+        args.attributes = attributes
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_destroyMessage(self):
+    def recv_updateBuddyProfileAttributesAsync(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -2079,32 +2191,34 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = destroyMessage_result()
+        result = updateBuddyProfileAttributesAsync_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "destroyMessage failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "updateBuddyProfileAttributesAsync failed: unknown result")
 
-    def getJoinableSquareChats(self, request):
+    def updateBuddyProfileImage(self, requestId, image):
         """
         Parameters:
-         - request
+         - requestId
+         - image
         """
-        self.send_getJoinableSquareChats(request)
-        return self.recv_getJoinableSquareChats()
+        self.send_updateBuddyProfileImage(requestId, image)
+        return self.recv_updateBuddyProfileImage()
 
-    def send_getJoinableSquareChats(self, request):
-        self._oprot.writeMessageBegin('getJoinableSquareChats', TMessageType.CALL, self._seqid)
-        args = getJoinableSquareChats_args()
-        args.request = request
+    def send_updateBuddyProfileImage(self, requestId, image):
+        self._oprot.writeMessageBegin('updateBuddyProfileImage', TMessageType.CALL, self._seqid)
+        args = updateBuddyProfileImage_args()
+        args.requestId = requestId
+        args.image = image
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_getJoinableSquareChats(self):
+    def recv_updateBuddyProfileImage(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -2112,32 +2226,34 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = getJoinableSquareChats_result()
+        result = updateBuddyProfileImage_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getJoinableSquareChats failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "updateBuddyProfileImage failed: unknown result")
 
-    def getInvitationTicketUrl(self, request):
+    def updateBuddyProfileImageAsync(self, requestId, image):
         """
         Parameters:
-         - request
+         - requestId
+         - image
         """
-        self.send_getInvitationTicketUrl(request)
-        return self.recv_getInvitationTicketUrl()
+        self.send_updateBuddyProfileImageAsync(requestId, image)
+        return self.recv_updateBuddyProfileImageAsync()
 
-    def send_getInvitationTicketUrl(self, request):
-        self._oprot.writeMessageBegin('getInvitationTicketUrl', TMessageType.CALL, self._seqid)
-        args = getInvitationTicketUrl_args()
-        args.request = request
+    def send_updateBuddyProfileImageAsync(self, requestId, image):
+        self._oprot.writeMessageBegin('updateBuddyProfileImageAsync', TMessageType.CALL, self._seqid)
+        args = updateBuddyProfileImageAsync_args()
+        args.requestId = requestId
+        args.image = image
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_getInvitationTicketUrl(self):
+    def recv_updateBuddyProfileImageAsync(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -2145,32 +2261,34 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = getInvitationTicketUrl_result()
+        result = updateBuddyProfileImageAsync_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "getInvitationTicketUrl failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "updateBuddyProfileImageAsync failed: unknown result")
 
-    def findSquareByInvitationTicket(self, request):
+    def updateBuddySearchId(self, requestId, searchId):
         """
         Parameters:
-         - request
+         - requestId
+         - searchId
         """
-        self.send_findSquareByInvitationTicket(request)
-        return self.recv_findSquareByInvitationTicket()
+        self.send_updateBuddySearchId(requestId, searchId)
+        self.recv_updateBuddySearchId()
 
-    def send_findSquareByInvitationTicket(self, request):
-        self._oprot.writeMessageBegin('findSquareByInvitationTicket', TMessageType.CALL, self._seqid)
-        args = findSquareByInvitationTicket_args()
-        args.request = request
+    def send_updateBuddySearchId(self, requestId, searchId):
+        self._oprot.writeMessageBegin('updateBuddySearchId', TMessageType.CALL, self._seqid)
+        args = updateBuddySearchId_args()
+        args.requestId = requestId
+        args.searchId = searchId
         args.write(self._oprot)
         self._oprot.writeMessageEnd()
         self._oprot.trans.flush()
 
-    def recv_findSquareByInvitationTicket(self):
+    def recv_updateBuddySearchId(self):
         iprot = self._iprot
         (fname, mtype, rseqid) = iprot.readMessageBegin()
         if mtype == TMessageType.EXCEPTION:
@@ -2178,74 +2296,140 @@ class Client(Iface):
             x.read(iprot)
             iprot.readMessageEnd()
             raise x
-        result = findSquareByInvitationTicket_result()
+        result = updateBuddySearchId_result()
+        result.read(iprot)
+        iprot.readMessageEnd()
+        if result.e is not None:
+            raise result.e
+        return
+
+    def updateBuddySettings(self, settings):
+        """
+        Parameters:
+         - settings
+        """
+        self.send_updateBuddySettings(settings)
+        self.recv_updateBuddySettings()
+
+    def send_updateBuddySettings(self, settings):
+        self._oprot.writeMessageBegin('updateBuddySettings', TMessageType.CALL, self._seqid)
+        args = updateBuddySettings_args()
+        args.settings = settings
+        args.write(self._oprot)
+        self._oprot.writeMessageEnd()
+        self._oprot.trans.flush()
+
+    def recv_updateBuddySettings(self):
+        iprot = self._iprot
+        (fname, mtype, rseqid) = iprot.readMessageBegin()
+        if mtype == TMessageType.EXCEPTION:
+            x = TApplicationException()
+            x.read(iprot)
+            iprot.readMessageEnd()
+            raise x
+        result = updateBuddySettings_result()
+        result.read(iprot)
+        iprot.readMessageEnd()
+        if result.e is not None:
+            raise result.e
+        return
+
+    def uploadBuddyContent(self, contentType, content):
+        """
+        Parameters:
+         - contentType
+         - content
+        """
+        self.send_uploadBuddyContent(contentType, content)
+        return self.recv_uploadBuddyContent()
+
+    def send_uploadBuddyContent(self, contentType, content):
+        self._oprot.writeMessageBegin('uploadBuddyContent', TMessageType.CALL, self._seqid)
+        args = uploadBuddyContent_args()
+        args.contentType = contentType
+        args.content = content
+        args.write(self._oprot)
+        self._oprot.writeMessageEnd()
+        self._oprot.trans.flush()
+
+    def recv_uploadBuddyContent(self):
+        iprot = self._iprot
+        (fname, mtype, rseqid) = iprot.readMessageBegin()
+        if mtype == TMessageType.EXCEPTION:
+            x = TApplicationException()
+            x.read(iprot)
+            iprot.readMessageEnd()
+            raise x
+        result = uploadBuddyContent_result()
         result.read(iprot)
         iprot.readMessageEnd()
         if result.success is not None:
             return result.success
         if result.e is not None:
             raise result.e
-        raise TApplicationException(TApplicationException.MISSING_RESULT, "findSquareByInvitationTicket failed: unknown result")
+        raise TApplicationException(TApplicationException.MISSING_RESULT, "uploadBuddyContent failed: unknown result")
 
 
 class Processor(Iface, TProcessor):
     def __init__(self, handler):
         self._handler = handler
         self._processMap = {}
-        self._processMap["getSquareChatAnnouncements"] = Processor.process_getSquareChatAnnouncements
-        self._processMap["deleteSquareChatAnnouncement"] = Processor.process_deleteSquareChatAnnouncement
-        self._processMap["createSquareChatAnnouncement"] = Processor.process_createSquareChatAnnouncement
-        self._processMap["getNoteStatus"] = Processor.process_getNoteStatus
-        self._processMap["getSquareStatus"] = Processor.process_getSquareStatus
-        self._processMap["reportSquareMember"] = Processor.process_reportSquareMember
-        self._processMap["reportSquareMessage"] = Processor.process_reportSquareMessage
-        self._processMap["reportSquareChat"] = Processor.process_reportSquareChat
-        self._processMap["reportSquare"] = Processor.process_reportSquare
-        self._processMap["updateSquareMemberRelation"] = Processor.process_updateSquareMemberRelation
-        self._processMap["updateSquareAuthority"] = Processor.process_updateSquareAuthority
-        self._processMap["updateSquareChatMember"] = Processor.process_updateSquareChatMember
-        self._processMap["updateSquareChat"] = Processor.process_updateSquareChat
-        self._processMap["refreshSubscriptions"] = Processor.process_refreshSubscriptions
-        self._processMap["removeSubscriptions"] = Processor.process_removeSubscriptions
-        self._processMap["rejectSquareMembers"] = Processor.process_rejectSquareMembers
-        self._processMap["updateSquareMembers"] = Processor.process_updateSquareMembers
-        self._processMap["updateSquareMember"] = Processor.process_updateSquareMember
-        self._processMap["updateSquareFeatureSet"] = Processor.process_updateSquareFeatureSet
-        self._processMap["getSquareFeatureSet"] = Processor.process_getSquareFeatureSet
-        self._processMap["searchSquares"] = Processor.process_searchSquares
-        self._processMap["updateSquare"] = Processor.process_updateSquare
-        self._processMap["getCategories"] = Processor.process_getCategories
-        self._processMap["searchSquareMembers"] = Processor.process_searchSquareMembers
-        self._processMap["fetchSquareChatEvents"] = Processor.process_fetchSquareChatEvents
-        self._processMap["fetchMyEvents"] = Processor.process_fetchMyEvents
-        self._processMap["markAsRead"] = Processor.process_markAsRead
-        self._processMap["getSquareAuthority"] = Processor.process_getSquareAuthority
-        self._processMap["sendMessage"] = Processor.process_sendMessage
-        self._processMap["leaveSquare"] = Processor.process_leaveSquare
-        self._processMap["leaveSquareChat"] = Processor.process_leaveSquareChat
-        self._processMap["joinSquareChat"] = Processor.process_joinSquareChat
-        self._processMap["joinSquare"] = Processor.process_joinSquare
-        self._processMap["inviteToSquare"] = Processor.process_inviteToSquare
-        self._processMap["inviteToSquareChat"] = Processor.process_inviteToSquareChat
-        self._processMap["getSquareMember"] = Processor.process_getSquareMember
-        self._processMap["getSquareMembers"] = Processor.process_getSquareMembers
-        self._processMap["getSquareMemberRelation"] = Processor.process_getSquareMemberRelation
-        self._processMap["getSquareMemberRelations"] = Processor.process_getSquareMemberRelations
-        self._processMap["getSquareChatMembers"] = Processor.process_getSquareChatMembers
-        self._processMap["getSquareChatStatus"] = Processor.process_getSquareChatStatus
-        self._processMap["getSquareChat"] = Processor.process_getSquareChat
-        self._processMap["getSquare"] = Processor.process_getSquare
-        self._processMap["getJoinedSquares"] = Processor.process_getJoinedSquares
-        self._processMap["getJoinedSquareChats"] = Processor.process_getJoinedSquareChats
-        self._processMap["approveSquareMembers"] = Processor.process_approveSquareMembers
-        self._processMap["createSquareChat"] = Processor.process_createSquareChat
-        self._processMap["createSquare"] = Processor.process_createSquare
-        self._processMap["deleteSquareChat"] = Processor.process_deleteSquareChat
-        self._processMap["deleteSquare"] = Processor.process_deleteSquare
-        self._processMap["destroyMessage"] = Processor.process_destroyMessage
-        self._processMap["getJoinableSquareChats"] = Processor.process_getJoinableSquareChats
-        self._processMap["getInvitationTicketUrl"] = Processor.process_getInvitationTicketUrl
-        self._processMap["findSquareByInvitationTicket"] = Processor.process_findSquareByInvitationTicket
+        self._processMap["addBuddyMember"] = Processor.process_addBuddyMember
+        self._processMap["addBuddyMembers"] = Processor.process_addBuddyMembers
+        self._processMap["blockBuddyMember"] = Processor.process_blockBuddyMember
+        self._processMap["commitSendMessagesToAll"] = Processor.process_commitSendMessagesToAll
+        self._processMap["commitSendMessagesToMids"] = Processor.process_commitSendMessagesToMids
+        self._processMap["containsBuddyMember"] = Processor.process_containsBuddyMember
+        self._processMap["downloadMessageContent"] = Processor.process_downloadMessageContent
+        self._processMap["downloadMessageContentPreview"] = Processor.process_downloadMessageContentPreview
+        self._processMap["downloadProfileImage"] = Processor.process_downloadProfileImage
+        self._processMap["downloadProfileImagePreview"] = Processor.process_downloadProfileImagePreview
+        self._processMap["getActiveMemberCountByBuddyMid"] = Processor.process_getActiveMemberCountByBuddyMid
+        self._processMap["getActiveMemberMidsByBuddyMid"] = Processor.process_getActiveMemberMidsByBuddyMid
+        self._processMap["getAllBuddyMembers"] = Processor.process_getAllBuddyMembers
+        self._processMap["getBlockedBuddyMembers"] = Processor.process_getBlockedBuddyMembers
+        self._processMap["getBlockerCountByBuddyMid"] = Processor.process_getBlockerCountByBuddyMid
+        self._processMap["getBuddyDetailByMid"] = Processor.process_getBuddyDetailByMid
+        self._processMap["getBuddyProfile"] = Processor.process_getBuddyProfile
+        self._processMap["getContactTicket"] = Processor.process_getContactTicket
+        self._processMap["getMemberCountByBuddyMid"] = Processor.process_getMemberCountByBuddyMid
+        self._processMap["getSendBuddyMessageResult"] = Processor.process_getSendBuddyMessageResult
+        self._processMap["getSetBuddyOnAirResult"] = Processor.process_getSetBuddyOnAirResult
+        self._processMap["getUpdateBuddyProfileResult"] = Processor.process_getUpdateBuddyProfileResult
+        self._processMap["isBuddyOnAirByMid"] = Processor.process_isBuddyOnAirByMid
+        self._processMap["linkAndSendBuddyContentMessageToAllAsync"] = Processor.process_linkAndSendBuddyContentMessageToAllAsync
+        self._processMap["linkAndSendBuddyContentMessageToMids"] = Processor.process_linkAndSendBuddyContentMessageToMids
+        self._processMap["notifyBuddyBlocked"] = Processor.process_notifyBuddyBlocked
+        self._processMap["notifyBuddyUnblocked"] = Processor.process_notifyBuddyUnblocked
+        self._processMap["registerBuddy"] = Processor.process_registerBuddy
+        self._processMap["registerBuddyAdmin"] = Processor.process_registerBuddyAdmin
+        self._processMap["reissueContactTicket"] = Processor.process_reissueContactTicket
+        self._processMap["removeBuddyMember"] = Processor.process_removeBuddyMember
+        self._processMap["removeBuddyMembers"] = Processor.process_removeBuddyMembers
+        self._processMap["sendBuddyContentMessageToAll"] = Processor.process_sendBuddyContentMessageToAll
+        self._processMap["sendBuddyContentMessageToAllAsync"] = Processor.process_sendBuddyContentMessageToAllAsync
+        self._processMap["sendBuddyContentMessageToMids"] = Processor.process_sendBuddyContentMessageToMids
+        self._processMap["sendBuddyContentMessageToMidsAsync"] = Processor.process_sendBuddyContentMessageToMidsAsync
+        self._processMap["sendBuddyMessageToAll"] = Processor.process_sendBuddyMessageToAll
+        self._processMap["sendBuddyMessageToAllAsync"] = Processor.process_sendBuddyMessageToAllAsync
+        self._processMap["sendBuddyMessageToMids"] = Processor.process_sendBuddyMessageToMids
+        self._processMap["sendBuddyMessageToMidsAsync"] = Processor.process_sendBuddyMessageToMidsAsync
+        self._processMap["sendIndividualEventToAllAsync"] = Processor.process_sendIndividualEventToAllAsync
+        self._processMap["setBuddyOnAir"] = Processor.process_setBuddyOnAir
+        self._processMap["setBuddyOnAirAsync"] = Processor.process_setBuddyOnAirAsync
+        self._processMap["storeMessage"] = Processor.process_storeMessage
+        self._processMap["unblockBuddyMember"] = Processor.process_unblockBuddyMember
+        self._processMap["unregisterBuddy"] = Processor.process_unregisterBuddy
+        self._processMap["unregisterBuddyAdmin"] = Processor.process_unregisterBuddyAdmin
+        self._processMap["updateBuddyAdminProfileAttribute"] = Processor.process_updateBuddyAdminProfileAttribute
+        self._processMap["updateBuddyAdminProfileImage"] = Processor.process_updateBuddyAdminProfileImage
+        self._processMap["updateBuddyProfileAttributes"] = Processor.process_updateBuddyProfileAttributes
+        self._processMap["updateBuddyProfileAttributesAsync"] = Processor.process_updateBuddyProfileAttributesAsync
+        self._processMap["updateBuddyProfileImage"] = Processor.process_updateBuddyProfileImage
+        self._processMap["updateBuddyProfileImageAsync"] = Processor.process_updateBuddyProfileImageAsync
+        self._processMap["updateBuddySearchId"] = Processor.process_updateBuddySearchId
+        self._processMap["updateBuddySettings"] = Processor.process_updateBuddySettings
+        self._processMap["uploadBuddyContent"] = Processor.process_uploadBuddyContent
 
     def process(self, iprot, oprot):
         (name, type, seqid) = iprot.readMessageBegin()
@@ -2262,17 +2446,17 @@ class Processor(Iface, TProcessor):
             self._processMap[name](self, seqid, iprot, oprot)
         return True
 
-    def process_getSquareChatAnnouncements(self, seqid, iprot, oprot):
-        args = getSquareChatAnnouncements_args()
+    def process_addBuddyMember(self, seqid, iprot, oprot):
+        args = addBuddyMember_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = getSquareChatAnnouncements_result()
+        result = addBuddyMember_result()
         try:
-            result.success = self._handler.getSquareChatAnnouncements(args.request)
+            self._handler.addBuddyMember(args.requestId, args.userMid)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2283,22 +2467,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("getSquareChatAnnouncements", msg_type, seqid)
+        oprot.writeMessageBegin("addBuddyMember", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_deleteSquareChatAnnouncement(self, seqid, iprot, oprot):
-        args = deleteSquareChatAnnouncement_args()
+    def process_addBuddyMembers(self, seqid, iprot, oprot):
+        args = addBuddyMembers_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = deleteSquareChatAnnouncement_result()
+        result = addBuddyMembers_result()
         try:
-            result.success = self._handler.deleteSquareChatAnnouncement(args.request)
+            self._handler.addBuddyMembers(args.requestId, args.userMids)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2309,22 +2493,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("deleteSquareChatAnnouncement", msg_type, seqid)
+        oprot.writeMessageBegin("addBuddyMembers", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_createSquareChatAnnouncement(self, seqid, iprot, oprot):
-        args = createSquareChatAnnouncement_args()
+    def process_blockBuddyMember(self, seqid, iprot, oprot):
+        args = blockBuddyMember_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = createSquareChatAnnouncement_result()
+        result = blockBuddyMember_result()
         try:
-            result.success = self._handler.createSquareChatAnnouncement(args.request)
+            self._handler.blockBuddyMember(args.requestId, args.mid)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2335,22 +2519,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("createSquareChatAnnouncement", msg_type, seqid)
+        oprot.writeMessageBegin("blockBuddyMember", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_getNoteStatus(self, seqid, iprot, oprot):
-        args = getNoteStatus_args()
+    def process_commitSendMessagesToAll(self, seqid, iprot, oprot):
+        args = commitSendMessagesToAll_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = getNoteStatus_result()
+        result = commitSendMessagesToAll_result()
         try:
-            result.success = self._handler.getNoteStatus(args.request)
+            result.success = self._handler.commitSendMessagesToAll(args.requestIdList)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2361,22 +2545,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("getNoteStatus", msg_type, seqid)
+        oprot.writeMessageBegin("commitSendMessagesToAll", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_getSquareStatus(self, seqid, iprot, oprot):
-        args = getSquareStatus_args()
+    def process_commitSendMessagesToMids(self, seqid, iprot, oprot):
+        args = commitSendMessagesToMids_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = getSquareStatus_result()
+        result = commitSendMessagesToMids_result()
         try:
-            result.success = self._handler.getSquareStatus(args.request)
+            result.success = self._handler.commitSendMessagesToMids(args.requestIdList, args.mids)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2387,22 +2571,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("getSquareStatus", msg_type, seqid)
+        oprot.writeMessageBegin("commitSendMessagesToMids", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_reportSquareMember(self, seqid, iprot, oprot):
-        args = reportSquareMember_args()
+    def process_containsBuddyMember(self, seqid, iprot, oprot):
+        args = containsBuddyMember_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = reportSquareMember_result()
+        result = containsBuddyMember_result()
         try:
-            result.success = self._handler.reportSquareMember(args.request)
+            result.success = self._handler.containsBuddyMember(args.requestId, args.userMid)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2413,22 +2597,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("reportSquareMember", msg_type, seqid)
+        oprot.writeMessageBegin("containsBuddyMember", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_reportSquareMessage(self, seqid, iprot, oprot):
-        args = reportSquareMessage_args()
+    def process_downloadMessageContent(self, seqid, iprot, oprot):
+        args = downloadMessageContent_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = reportSquareMessage_result()
+        result = downloadMessageContent_result()
         try:
-            result.success = self._handler.reportSquareMessage(args.request)
+            result.success = self._handler.downloadMessageContent(args.requestId, args.messageId)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2439,22 +2623,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("reportSquareMessage", msg_type, seqid)
+        oprot.writeMessageBegin("downloadMessageContent", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_reportSquareChat(self, seqid, iprot, oprot):
-        args = reportSquareChat_args()
+    def process_downloadMessageContentPreview(self, seqid, iprot, oprot):
+        args = downloadMessageContentPreview_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = reportSquareChat_result()
+        result = downloadMessageContentPreview_result()
         try:
-            result.success = self._handler.reportSquareChat(args.request)
+            result.success = self._handler.downloadMessageContentPreview(args.requestId, args.messageId)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2465,22 +2649,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("reportSquareChat", msg_type, seqid)
+        oprot.writeMessageBegin("downloadMessageContentPreview", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_reportSquare(self, seqid, iprot, oprot):
-        args = reportSquare_args()
+    def process_downloadProfileImage(self, seqid, iprot, oprot):
+        args = downloadProfileImage_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = reportSquare_result()
+        result = downloadProfileImage_result()
         try:
-            result.success = self._handler.reportSquare(args.request)
+            result.success = self._handler.downloadProfileImage(args.requestId)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2491,22 +2675,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("reportSquare", msg_type, seqid)
+        oprot.writeMessageBegin("downloadProfileImage", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_updateSquareMemberRelation(self, seqid, iprot, oprot):
-        args = updateSquareMemberRelation_args()
+    def process_downloadProfileImagePreview(self, seqid, iprot, oprot):
+        args = downloadProfileImagePreview_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = updateSquareMemberRelation_result()
+        result = downloadProfileImagePreview_result()
         try:
-            result.success = self._handler.updateSquareMemberRelation(args.request)
+            result.success = self._handler.downloadProfileImagePreview(args.requestId)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2517,22 +2701,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("updateSquareMemberRelation", msg_type, seqid)
+        oprot.writeMessageBegin("downloadProfileImagePreview", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_updateSquareAuthority(self, seqid, iprot, oprot):
-        args = updateSquareAuthority_args()
+    def process_getActiveMemberCountByBuddyMid(self, seqid, iprot, oprot):
+        args = getActiveMemberCountByBuddyMid_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = updateSquareAuthority_result()
+        result = getActiveMemberCountByBuddyMid_result()
         try:
-            result.success = self._handler.updateSquareAuthority(args.request)
+            result.success = self._handler.getActiveMemberCountByBuddyMid(args.buddyMid)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2543,22 +2727,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("updateSquareAuthority", msg_type, seqid)
+        oprot.writeMessageBegin("getActiveMemberCountByBuddyMid", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_updateSquareChatMember(self, seqid, iprot, oprot):
-        args = updateSquareChatMember_args()
+    def process_getActiveMemberMidsByBuddyMid(self, seqid, iprot, oprot):
+        args = getActiveMemberMidsByBuddyMid_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = updateSquareChatMember_result()
+        result = getActiveMemberMidsByBuddyMid_result()
         try:
-            result.success = self._handler.updateSquareChatMember(args.request)
+            result.success = self._handler.getActiveMemberMidsByBuddyMid(args.buddyMid)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2569,22 +2753,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("updateSquareChatMember", msg_type, seqid)
+        oprot.writeMessageBegin("getActiveMemberMidsByBuddyMid", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_updateSquareChat(self, seqid, iprot, oprot):
-        args = updateSquareChat_args()
+    def process_getAllBuddyMembers(self, seqid, iprot, oprot):
+        args = getAllBuddyMembers_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = updateSquareChat_result()
+        result = getAllBuddyMembers_result()
         try:
-            result.success = self._handler.updateSquareChat(args.request)
+            result.success = self._handler.getAllBuddyMembers()
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2595,22 +2779,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("updateSquareChat", msg_type, seqid)
+        oprot.writeMessageBegin("getAllBuddyMembers", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_refreshSubscriptions(self, seqid, iprot, oprot):
-        args = refreshSubscriptions_args()
+    def process_getBlockedBuddyMembers(self, seqid, iprot, oprot):
+        args = getBlockedBuddyMembers_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = refreshSubscriptions_result()
+        result = getBlockedBuddyMembers_result()
         try:
-            result.success = self._handler.refreshSubscriptions(args.request)
+            result.success = self._handler.getBlockedBuddyMembers()
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2621,22 +2805,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("refreshSubscriptions", msg_type, seqid)
+        oprot.writeMessageBegin("getBlockedBuddyMembers", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_removeSubscriptions(self, seqid, iprot, oprot):
-        args = removeSubscriptions_args()
+    def process_getBlockerCountByBuddyMid(self, seqid, iprot, oprot):
+        args = getBlockerCountByBuddyMid_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = removeSubscriptions_result()
+        result = getBlockerCountByBuddyMid_result()
         try:
-            result.success = self._handler.removeSubscriptions(args.request)
+            result.success = self._handler.getBlockerCountByBuddyMid(args.buddyMid)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2647,22 +2831,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("removeSubscriptions", msg_type, seqid)
+        oprot.writeMessageBegin("getBlockerCountByBuddyMid", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_rejectSquareMembers(self, seqid, iprot, oprot):
-        args = rejectSquareMembers_args()
+    def process_getBuddyDetailByMid(self, seqid, iprot, oprot):
+        args = getBuddyDetailByMid_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = rejectSquareMembers_result()
+        result = getBuddyDetailByMid_result()
         try:
-            result.success = self._handler.rejectSquareMembers(args.request)
+            result.success = self._handler.getBuddyDetailByMid(args.buddyMid)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2673,22 +2857,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("rejectSquareMembers", msg_type, seqid)
+        oprot.writeMessageBegin("getBuddyDetailByMid", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_updateSquareMembers(self, seqid, iprot, oprot):
-        args = updateSquareMembers_args()
+    def process_getBuddyProfile(self, seqid, iprot, oprot):
+        args = getBuddyProfile_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = updateSquareMembers_result()
+        result = getBuddyProfile_result()
         try:
-            result.success = self._handler.updateSquareMembers(args.request)
+            result.success = self._handler.getBuddyProfile()
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2699,22 +2883,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("updateSquareMembers", msg_type, seqid)
+        oprot.writeMessageBegin("getBuddyProfile", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_updateSquareMember(self, seqid, iprot, oprot):
-        args = updateSquareMember_args()
+    def process_getContactTicket(self, seqid, iprot, oprot):
+        args = getContactTicket_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = updateSquareMember_result()
+        result = getContactTicket_result()
         try:
-            result.success = self._handler.updateSquareMember(args.request)
+            result.success = self._handler.getContactTicket()
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2725,22 +2909,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("updateSquareMember", msg_type, seqid)
+        oprot.writeMessageBegin("getContactTicket", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_updateSquareFeatureSet(self, seqid, iprot, oprot):
-        args = updateSquareFeatureSet_args()
+    def process_getMemberCountByBuddyMid(self, seqid, iprot, oprot):
+        args = getMemberCountByBuddyMid_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = updateSquareFeatureSet_result()
+        result = getMemberCountByBuddyMid_result()
         try:
-            result.success = self._handler.updateSquareFeatureSet(args.request)
+            result.success = self._handler.getMemberCountByBuddyMid(args.buddyMid)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2751,22 +2935,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("updateSquareFeatureSet", msg_type, seqid)
+        oprot.writeMessageBegin("getMemberCountByBuddyMid", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_getSquareFeatureSet(self, seqid, iprot, oprot):
-        args = getSquareFeatureSet_args()
+    def process_getSendBuddyMessageResult(self, seqid, iprot, oprot):
+        args = getSendBuddyMessageResult_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = getSquareFeatureSet_result()
+        result = getSendBuddyMessageResult_result()
         try:
-            result.success = self._handler.getSquareFeatureSet(args.request)
+            result.success = self._handler.getSendBuddyMessageResult(args.sendBuddyMessageRequestId)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2777,22 +2961,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("getSquareFeatureSet", msg_type, seqid)
+        oprot.writeMessageBegin("getSendBuddyMessageResult", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_searchSquares(self, seqid, iprot, oprot):
-        args = searchSquares_args()
+    def process_getSetBuddyOnAirResult(self, seqid, iprot, oprot):
+        args = getSetBuddyOnAirResult_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = searchSquares_result()
+        result = getSetBuddyOnAirResult_result()
         try:
-            result.success = self._handler.searchSquares(args.request)
+            result.success = self._handler.getSetBuddyOnAirResult(args.setBuddyOnAirRequestId)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2803,22 +2987,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("searchSquares", msg_type, seqid)
+        oprot.writeMessageBegin("getSetBuddyOnAirResult", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_updateSquare(self, seqid, iprot, oprot):
-        args = updateSquare_args()
+    def process_getUpdateBuddyProfileResult(self, seqid, iprot, oprot):
+        args = getUpdateBuddyProfileResult_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = updateSquare_result()
+        result = getUpdateBuddyProfileResult_result()
         try:
-            result.success = self._handler.updateSquare(args.request)
+            result.success = self._handler.getUpdateBuddyProfileResult(args.updateBuddyProfileRequestId)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2829,22 +3013,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("updateSquare", msg_type, seqid)
+        oprot.writeMessageBegin("getUpdateBuddyProfileResult", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_getCategories(self, seqid, iprot, oprot):
-        args = getCategories_args()
+    def process_isBuddyOnAirByMid(self, seqid, iprot, oprot):
+        args = isBuddyOnAirByMid_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = getCategories_result()
+        result = isBuddyOnAirByMid_result()
         try:
-            result.success = self._handler.getCategories(args.request)
+            result.success = self._handler.isBuddyOnAirByMid(args.buddyMid)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2855,22 +3039,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("getCategories", msg_type, seqid)
+        oprot.writeMessageBegin("isBuddyOnAirByMid", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_searchSquareMembers(self, seqid, iprot, oprot):
-        args = searchSquareMembers_args()
+    def process_linkAndSendBuddyContentMessageToAllAsync(self, seqid, iprot, oprot):
+        args = linkAndSendBuddyContentMessageToAllAsync_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = searchSquareMembers_result()
+        result = linkAndSendBuddyContentMessageToAllAsync_result()
         try:
-            result.success = self._handler.searchSquareMembers(args.request)
+            result.success = self._handler.linkAndSendBuddyContentMessageToAllAsync(args.requestId, args.msg, args.sourceContentId)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2881,22 +3065,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("searchSquareMembers", msg_type, seqid)
+        oprot.writeMessageBegin("linkAndSendBuddyContentMessageToAllAsync", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_fetchSquareChatEvents(self, seqid, iprot, oprot):
-        args = fetchSquareChatEvents_args()
+    def process_linkAndSendBuddyContentMessageToMids(self, seqid, iprot, oprot):
+        args = linkAndSendBuddyContentMessageToMids_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = fetchSquareChatEvents_result()
+        result = linkAndSendBuddyContentMessageToMids_result()
         try:
-            result.success = self._handler.fetchSquareChatEvents(args.request)
+            result.success = self._handler.linkAndSendBuddyContentMessageToMids(args.requestId, args.msg, args.sourceContentId, args.mids)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2907,22 +3091,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("fetchSquareChatEvents", msg_type, seqid)
+        oprot.writeMessageBegin("linkAndSendBuddyContentMessageToMids", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_fetchMyEvents(self, seqid, iprot, oprot):
-        args = fetchMyEvents_args()
+    def process_notifyBuddyBlocked(self, seqid, iprot, oprot):
+        args = notifyBuddyBlocked_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = fetchMyEvents_result()
+        result = notifyBuddyBlocked_result()
         try:
-            result.success = self._handler.fetchMyEvents(args.request)
+            self._handler.notifyBuddyBlocked(args.buddyMid, args.blockerMid)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2933,22 +3117,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("fetchMyEvents", msg_type, seqid)
+        oprot.writeMessageBegin("notifyBuddyBlocked", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_markAsRead(self, seqid, iprot, oprot):
-        args = markAsRead_args()
+    def process_notifyBuddyUnblocked(self, seqid, iprot, oprot):
+        args = notifyBuddyUnblocked_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = markAsRead_result()
+        result = notifyBuddyUnblocked_result()
         try:
-            result.success = self._handler.markAsRead(args.request)
+            self._handler.notifyBuddyUnblocked(args.buddyMid, args.blockerMid)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2959,22 +3143,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("markAsRead", msg_type, seqid)
+        oprot.writeMessageBegin("notifyBuddyUnblocked", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_getSquareAuthority(self, seqid, iprot, oprot):
-        args = getSquareAuthority_args()
+    def process_registerBuddy(self, seqid, iprot, oprot):
+        args = registerBuddy_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = getSquareAuthority_result()
+        result = registerBuddy_result()
         try:
-            result.success = self._handler.getSquareAuthority(args.request)
+            result.success = self._handler.registerBuddy(args.buddyId, args.searchId, args.displayName, args.statusMeessage, args.picture, args.settings)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -2985,22 +3169,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("getSquareAuthority", msg_type, seqid)
+        oprot.writeMessageBegin("registerBuddy", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_sendMessage(self, seqid, iprot, oprot):
-        args = sendMessage_args()
+    def process_registerBuddyAdmin(self, seqid, iprot, oprot):
+        args = registerBuddyAdmin_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = sendMessage_result()
+        result = registerBuddyAdmin_result()
         try:
-            result.success = self._handler.sendMessage(args.request)
+            result.success = self._handler.registerBuddyAdmin(args.buddyId, args.searchId, args.displayName, args.statusMessage, args.picture)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3011,22 +3195,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("sendMessage", msg_type, seqid)
+        oprot.writeMessageBegin("registerBuddyAdmin", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_leaveSquare(self, seqid, iprot, oprot):
-        args = leaveSquare_args()
+    def process_reissueContactTicket(self, seqid, iprot, oprot):
+        args = reissueContactTicket_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = leaveSquare_result()
+        result = reissueContactTicket_result()
         try:
-            result.success = self._handler.leaveSquare(args.request)
+            result.success = self._handler.reissueContactTicket(args.expirationTime, args.maxUseCount)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3037,22 +3221,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("leaveSquare", msg_type, seqid)
+        oprot.writeMessageBegin("reissueContactTicket", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_leaveSquareChat(self, seqid, iprot, oprot):
-        args = leaveSquareChat_args()
+    def process_removeBuddyMember(self, seqid, iprot, oprot):
+        args = removeBuddyMember_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = leaveSquareChat_result()
+        result = removeBuddyMember_result()
         try:
-            result.success = self._handler.leaveSquareChat(args.request)
+            self._handler.removeBuddyMember(args.requestId, args.userMid)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3063,22 +3247,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("leaveSquareChat", msg_type, seqid)
+        oprot.writeMessageBegin("removeBuddyMember", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_joinSquareChat(self, seqid, iprot, oprot):
-        args = joinSquareChat_args()
+    def process_removeBuddyMembers(self, seqid, iprot, oprot):
+        args = removeBuddyMembers_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = joinSquareChat_result()
+        result = removeBuddyMembers_result()
         try:
-            result.success = self._handler.joinSquareChat(args.request)
+            self._handler.removeBuddyMembers(args.requestId, args.userMids)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3089,22 +3273,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("joinSquareChat", msg_type, seqid)
+        oprot.writeMessageBegin("removeBuddyMembers", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_joinSquare(self, seqid, iprot, oprot):
-        args = joinSquare_args()
+    def process_sendBuddyContentMessageToAll(self, seqid, iprot, oprot):
+        args = sendBuddyContentMessageToAll_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = joinSquare_result()
+        result = sendBuddyContentMessageToAll_result()
         try:
-            result.success = self._handler.joinSquare(args.request)
+            result.success = self._handler.sendBuddyContentMessageToAll(args.requestId, args.msg, args.content)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3115,22 +3299,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("joinSquare", msg_type, seqid)
+        oprot.writeMessageBegin("sendBuddyContentMessageToAll", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_inviteToSquare(self, seqid, iprot, oprot):
-        args = inviteToSquare_args()
+    def process_sendBuddyContentMessageToAllAsync(self, seqid, iprot, oprot):
+        args = sendBuddyContentMessageToAllAsync_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = inviteToSquare_result()
+        result = sendBuddyContentMessageToAllAsync_result()
         try:
-            result.success = self._handler.inviteToSquare(args.request)
+            result.success = self._handler.sendBuddyContentMessageToAllAsync(args.requestId, args.msg, args.content)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3141,22 +3325,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("inviteToSquare", msg_type, seqid)
+        oprot.writeMessageBegin("sendBuddyContentMessageToAllAsync", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_inviteToSquareChat(self, seqid, iprot, oprot):
-        args = inviteToSquareChat_args()
+    def process_sendBuddyContentMessageToMids(self, seqid, iprot, oprot):
+        args = sendBuddyContentMessageToMids_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = inviteToSquareChat_result()
+        result = sendBuddyContentMessageToMids_result()
         try:
-            result.success = self._handler.inviteToSquareChat(args.request)
+            result.success = self._handler.sendBuddyContentMessageToMids(args.requestId, args.msg, args.content, args.mids)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3167,22 +3351,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("inviteToSquareChat", msg_type, seqid)
+        oprot.writeMessageBegin("sendBuddyContentMessageToMids", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_getSquareMember(self, seqid, iprot, oprot):
-        args = getSquareMember_args()
+    def process_sendBuddyContentMessageToMidsAsync(self, seqid, iprot, oprot):
+        args = sendBuddyContentMessageToMidsAsync_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = getSquareMember_result()
+        result = sendBuddyContentMessageToMidsAsync_result()
         try:
-            result.success = self._handler.getSquareMember(args.request)
+            result.success = self._handler.sendBuddyContentMessageToMidsAsync(args.requestId, args.msg, args.content, args.mids)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3193,22 +3377,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("getSquareMember", msg_type, seqid)
+        oprot.writeMessageBegin("sendBuddyContentMessageToMidsAsync", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_getSquareMembers(self, seqid, iprot, oprot):
-        args = getSquareMembers_args()
+    def process_sendBuddyMessageToAll(self, seqid, iprot, oprot):
+        args = sendBuddyMessageToAll_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = getSquareMembers_result()
+        result = sendBuddyMessageToAll_result()
         try:
-            result.success = self._handler.getSquareMembers(args.request)
+            result.success = self._handler.sendBuddyMessageToAll(args.requestId, args.msg)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3219,22 +3403,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("getSquareMembers", msg_type, seqid)
+        oprot.writeMessageBegin("sendBuddyMessageToAll", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_getSquareMemberRelation(self, seqid, iprot, oprot):
-        args = getSquareMemberRelation_args()
+    def process_sendBuddyMessageToAllAsync(self, seqid, iprot, oprot):
+        args = sendBuddyMessageToAllAsync_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = getSquareMemberRelation_result()
+        result = sendBuddyMessageToAllAsync_result()
         try:
-            result.success = self._handler.getSquareMemberRelation(args.request)
+            result.success = self._handler.sendBuddyMessageToAllAsync(args.requestId, args.msg)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3245,22 +3429,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("getSquareMemberRelation", msg_type, seqid)
+        oprot.writeMessageBegin("sendBuddyMessageToAllAsync", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_getSquareMemberRelations(self, seqid, iprot, oprot):
-        args = getSquareMemberRelations_args()
+    def process_sendBuddyMessageToMids(self, seqid, iprot, oprot):
+        args = sendBuddyMessageToMids_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = getSquareMemberRelations_result()
+        result = sendBuddyMessageToMids_result()
         try:
-            result.success = self._handler.getSquareMemberRelations(args.request)
+            result.success = self._handler.sendBuddyMessageToMids(args.requestId, args.msg, args.mids)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3271,22 +3455,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("getSquareMemberRelations", msg_type, seqid)
+        oprot.writeMessageBegin("sendBuddyMessageToMids", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_getSquareChatMembers(self, seqid, iprot, oprot):
-        args = getSquareChatMembers_args()
+    def process_sendBuddyMessageToMidsAsync(self, seqid, iprot, oprot):
+        args = sendBuddyMessageToMidsAsync_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = getSquareChatMembers_result()
+        result = sendBuddyMessageToMidsAsync_result()
         try:
-            result.success = self._handler.getSquareChatMembers(args.request)
+            result.success = self._handler.sendBuddyMessageToMidsAsync(args.requestId, args.msg, args.mids)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3297,22 +3481,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("getSquareChatMembers", msg_type, seqid)
+        oprot.writeMessageBegin("sendBuddyMessageToMidsAsync", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_getSquareChatStatus(self, seqid, iprot, oprot):
-        args = getSquareChatStatus_args()
+    def process_sendIndividualEventToAllAsync(self, seqid, iprot, oprot):
+        args = sendIndividualEventToAllAsync_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = getSquareChatStatus_result()
+        result = sendIndividualEventToAllAsync_result()
         try:
-            result.success = self._handler.getSquareChatStatus(args.request)
+            self._handler.sendIndividualEventToAllAsync(args.requestId, args.buddyMid, args.notificationStatus)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3323,22 +3507,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("getSquareChatStatus", msg_type, seqid)
+        oprot.writeMessageBegin("sendIndividualEventToAllAsync", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_getSquareChat(self, seqid, iprot, oprot):
-        args = getSquareChat_args()
+    def process_setBuddyOnAir(self, seqid, iprot, oprot):
+        args = setBuddyOnAir_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = getSquareChat_result()
+        result = setBuddyOnAir_result()
         try:
-            result.success = self._handler.getSquareChat(args.request)
+            result.success = self._handler.setBuddyOnAir(args.requestId, args.onAir)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3349,22 +3533,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("getSquareChat", msg_type, seqid)
+        oprot.writeMessageBegin("setBuddyOnAir", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_getSquare(self, seqid, iprot, oprot):
-        args = getSquare_args()
+    def process_setBuddyOnAirAsync(self, seqid, iprot, oprot):
+        args = setBuddyOnAirAsync_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = getSquare_result()
+        result = setBuddyOnAirAsync_result()
         try:
-            result.success = self._handler.getSquare(args.request)
+            result.success = self._handler.setBuddyOnAirAsync(args.requestId, args.onAir)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3375,22 +3559,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("getSquare", msg_type, seqid)
+        oprot.writeMessageBegin("setBuddyOnAirAsync", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_getJoinedSquares(self, seqid, iprot, oprot):
-        args = getJoinedSquares_args()
+    def process_storeMessage(self, seqid, iprot, oprot):
+        args = storeMessage_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = getJoinedSquares_result()
+        result = storeMessage_result()
         try:
-            result.success = self._handler.getJoinedSquares(args.request)
+            result.success = self._handler.storeMessage(args.requestId, args.messageRequest)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3401,22 +3585,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("getJoinedSquares", msg_type, seqid)
+        oprot.writeMessageBegin("storeMessage", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_getJoinedSquareChats(self, seqid, iprot, oprot):
-        args = getJoinedSquareChats_args()
+    def process_unblockBuddyMember(self, seqid, iprot, oprot):
+        args = unblockBuddyMember_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = getJoinedSquareChats_result()
+        result = unblockBuddyMember_result()
         try:
-            result.success = self._handler.getJoinedSquareChats(args.request)
+            self._handler.unblockBuddyMember(args.requestId, args.mid)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3427,22 +3611,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("getJoinedSquareChats", msg_type, seqid)
+        oprot.writeMessageBegin("unblockBuddyMember", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_approveSquareMembers(self, seqid, iprot, oprot):
-        args = approveSquareMembers_args()
+    def process_unregisterBuddy(self, seqid, iprot, oprot):
+        args = unregisterBuddy_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = approveSquareMembers_result()
+        result = unregisterBuddy_result()
         try:
-            result.success = self._handler.approveSquareMembers(args.request)
+            self._handler.unregisterBuddy(args.requestId)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3453,22 +3637,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("approveSquareMembers", msg_type, seqid)
+        oprot.writeMessageBegin("unregisterBuddy", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_createSquareChat(self, seqid, iprot, oprot):
-        args = createSquareChat_args()
+    def process_unregisterBuddyAdmin(self, seqid, iprot, oprot):
+        args = unregisterBuddyAdmin_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = createSquareChat_result()
+        result = unregisterBuddyAdmin_result()
         try:
-            result.success = self._handler.createSquareChat(args.request)
+            self._handler.unregisterBuddyAdmin(args.requestId)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3479,22 +3663,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("createSquareChat", msg_type, seqid)
+        oprot.writeMessageBegin("unregisterBuddyAdmin", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_createSquare(self, seqid, iprot, oprot):
-        args = createSquare_args()
+    def process_updateBuddyAdminProfileAttribute(self, seqid, iprot, oprot):
+        args = updateBuddyAdminProfileAttribute_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = createSquare_result()
+        result = updateBuddyAdminProfileAttribute_result()
         try:
-            result.success = self._handler.createSquare(args.request)
+            self._handler.updateBuddyAdminProfileAttribute(args.requestId, args.attributes)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3505,22 +3689,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("createSquare", msg_type, seqid)
+        oprot.writeMessageBegin("updateBuddyAdminProfileAttribute", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_deleteSquareChat(self, seqid, iprot, oprot):
-        args = deleteSquareChat_args()
+    def process_updateBuddyAdminProfileImage(self, seqid, iprot, oprot):
+        args = updateBuddyAdminProfileImage_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = deleteSquareChat_result()
+        result = updateBuddyAdminProfileImage_result()
         try:
-            result.success = self._handler.deleteSquareChat(args.request)
+            self._handler.updateBuddyAdminProfileImage(args.requestId, args.picture)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3531,22 +3715,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("deleteSquareChat", msg_type, seqid)
+        oprot.writeMessageBegin("updateBuddyAdminProfileImage", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_deleteSquare(self, seqid, iprot, oprot):
-        args = deleteSquare_args()
+    def process_updateBuddyProfileAttributes(self, seqid, iprot, oprot):
+        args = updateBuddyProfileAttributes_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = deleteSquare_result()
+        result = updateBuddyProfileAttributes_result()
         try:
-            result.success = self._handler.deleteSquare(args.request)
+            result.success = self._handler.updateBuddyProfileAttributes(args.requestId, args.attributes)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3557,22 +3741,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("deleteSquare", msg_type, seqid)
+        oprot.writeMessageBegin("updateBuddyProfileAttributes", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_destroyMessage(self, seqid, iprot, oprot):
-        args = destroyMessage_args()
+    def process_updateBuddyProfileAttributesAsync(self, seqid, iprot, oprot):
+        args = updateBuddyProfileAttributesAsync_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = destroyMessage_result()
+        result = updateBuddyProfileAttributesAsync_result()
         try:
-            result.success = self._handler.destroyMessage(args.request)
+            result.success = self._handler.updateBuddyProfileAttributesAsync(args.requestId, args.attributes)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3583,22 +3767,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("destroyMessage", msg_type, seqid)
+        oprot.writeMessageBegin("updateBuddyProfileAttributesAsync", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_getJoinableSquareChats(self, seqid, iprot, oprot):
-        args = getJoinableSquareChats_args()
+    def process_updateBuddyProfileImage(self, seqid, iprot, oprot):
+        args = updateBuddyProfileImage_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = getJoinableSquareChats_result()
+        result = updateBuddyProfileImage_result()
         try:
-            result.success = self._handler.getJoinableSquareChats(args.request)
+            result.success = self._handler.updateBuddyProfileImage(args.requestId, args.image)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3609,22 +3793,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("getJoinableSquareChats", msg_type, seqid)
+        oprot.writeMessageBegin("updateBuddyProfileImage", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_getInvitationTicketUrl(self, seqid, iprot, oprot):
-        args = getInvitationTicketUrl_args()
+    def process_updateBuddyProfileImageAsync(self, seqid, iprot, oprot):
+        args = updateBuddyProfileImageAsync_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = getInvitationTicketUrl_result()
+        result = updateBuddyProfileImageAsync_result()
         try:
-            result.success = self._handler.getInvitationTicketUrl(args.request)
+            result.success = self._handler.updateBuddyProfileImageAsync(args.requestId, args.image)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3635,22 +3819,22 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("getInvitationTicketUrl", msg_type, seqid)
+        oprot.writeMessageBegin("updateBuddyProfileImageAsync", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
 
-    def process_findSquareByInvitationTicket(self, seqid, iprot, oprot):
-        args = findSquareByInvitationTicket_args()
+    def process_updateBuddySearchId(self, seqid, iprot, oprot):
+        args = updateBuddySearchId_args()
         args.read(iprot)
         iprot.readMessageEnd()
-        result = findSquareByInvitationTicket_result()
+        result = updateBuddySearchId_result()
         try:
-            result.success = self._handler.findSquareByInvitationTicket(args.request)
+            self._handler.updateBuddySearchId(args.requestId, args.searchId)
             msg_type = TMessageType.REPLY
         except TTransport.TTransportException:
             raise
-        except SquareException as e:
+        except TalkException as e:
             msg_type = TMessageType.REPLY
             result.e = e
         except TApplicationException as ex:
@@ -3661,7 +3845,59 @@ class Processor(Iface, TProcessor):
             logging.exception('Unexpected exception in handler')
             msg_type = TMessageType.EXCEPTION
             result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
-        oprot.writeMessageBegin("findSquareByInvitationTicket", msg_type, seqid)
+        oprot.writeMessageBegin("updateBuddySearchId", msg_type, seqid)
+        result.write(oprot)
+        oprot.writeMessageEnd()
+        oprot.trans.flush()
+
+    def process_updateBuddySettings(self, seqid, iprot, oprot):
+        args = updateBuddySettings_args()
+        args.read(iprot)
+        iprot.readMessageEnd()
+        result = updateBuddySettings_result()
+        try:
+            self._handler.updateBuddySettings(args.settings)
+            msg_type = TMessageType.REPLY
+        except TTransport.TTransportException:
+            raise
+        except TalkException as e:
+            msg_type = TMessageType.REPLY
+            result.e = e
+        except TApplicationException as ex:
+            logging.exception('TApplication exception in handler')
+            msg_type = TMessageType.EXCEPTION
+            result = ex
+        except Exception:
+            logging.exception('Unexpected exception in handler')
+            msg_type = TMessageType.EXCEPTION
+            result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
+        oprot.writeMessageBegin("updateBuddySettings", msg_type, seqid)
+        result.write(oprot)
+        oprot.writeMessageEnd()
+        oprot.trans.flush()
+
+    def process_uploadBuddyContent(self, seqid, iprot, oprot):
+        args = uploadBuddyContent_args()
+        args.read(iprot)
+        iprot.readMessageEnd()
+        result = uploadBuddyContent_result()
+        try:
+            result.success = self._handler.uploadBuddyContent(args.contentType, args.content)
+            msg_type = TMessageType.REPLY
+        except TTransport.TTransportException:
+            raise
+        except TalkException as e:
+            msg_type = TMessageType.REPLY
+            result.e = e
+        except TApplicationException as ex:
+            logging.exception('TApplication exception in handler')
+            msg_type = TMessageType.EXCEPTION
+            result = ex
+        except Exception:
+            logging.exception('Unexpected exception in handler')
+            msg_type = TMessageType.EXCEPTION
+            result = TApplicationException(TApplicationException.INTERNAL_ERROR, 'Internal error')
+        oprot.writeMessageBegin("uploadBuddyContent", msg_type, seqid)
         result.write(oprot)
         oprot.writeMessageEnd()
         oprot.trans.flush()
@@ -3669,15 +3905,17 @@ class Processor(Iface, TProcessor):
 # HELPER FUNCTIONS AND STRUCTURES
 
 
-class getSquareChatAnnouncements_args(object):
+class addBuddyMember_args(object):
     """
     Attributes:
-     - request
+     - requestId
+     - userMid
     """
 
 
-    def __init__(self, request=None,):
-        self.request = request
+    def __init__(self, requestId=None, userMid=None,):
+        self.requestId = requestId
+        self.userMid = userMid
 
     def read(self, iprot):
         if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
@@ -3689,9 +3927,13 @@ class getSquareChatAnnouncements_args(object):
             if ftype == TType.STOP:
                 break
             if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = GetSquareChatAnnouncementsRequest()
-                    self.request.read(iprot)
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRING:
+                    self.userMid = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
                 else:
                     iprot.skip(ftype)
             else:
@@ -3703,10 +3945,14 @@ class getSquareChatAnnouncements_args(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('getSquareChatAnnouncements_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
+        oprot.writeStructBegin('addBuddyMember_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.userMid is not None:
+            oprot.writeFieldBegin('userMid', TType.STRING, 2)
+            oprot.writeString(self.userMid.encode('utf-8') if sys.version_info[0] == 2 else self.userMid)
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
@@ -3724,14 +3970,2106 @@ class getSquareChatAnnouncements_args(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(getSquareChatAnnouncements_args)
-getSquareChatAnnouncements_args.thrift_spec = (
+all_structs.append(addBuddyMember_args)
+addBuddyMember_args.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'request', [GetSquareChatAnnouncementsRequest, None], None, ),  # 1
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRING, 'userMid', 'UTF8', None, ),  # 2
 )
 
 
-class getSquareChatAnnouncements_result(object):
+class addBuddyMember_result(object):
+    """
+    Attributes:
+     - e
+    """
+
+
+    def __init__(self, e=None,):
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('addBuddyMember_result')
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(addBuddyMember_result)
+addBuddyMember_result.thrift_spec = (
+    None,  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class addBuddyMembers_args(object):
+    """
+    Attributes:
+     - requestId
+     - userMids
+    """
+
+
+    def __init__(self, requestId=None, userMids=None,):
+        self.requestId = requestId
+        self.userMids = userMids
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.LIST:
+                    self.userMids = []
+                    (_etype973, _size970) = iprot.readListBegin()
+                    for _i974 in range(_size970):
+                        _elem975 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.userMids.append(_elem975)
+                    iprot.readListEnd()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('addBuddyMembers_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.userMids is not None:
+            oprot.writeFieldBegin('userMids', TType.LIST, 2)
+            oprot.writeListBegin(TType.STRING, len(self.userMids))
+            for iter976 in self.userMids:
+                oprot.writeString(iter976.encode('utf-8') if sys.version_info[0] == 2 else iter976)
+            oprot.writeListEnd()
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(addBuddyMembers_args)
+addBuddyMembers_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.LIST, 'userMids', (TType.STRING, 'UTF8', False), None, ),  # 2
+)
+
+
+class addBuddyMembers_result(object):
+    """
+    Attributes:
+     - e
+    """
+
+
+    def __init__(self, e=None,):
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('addBuddyMembers_result')
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(addBuddyMembers_result)
+addBuddyMembers_result.thrift_spec = (
+    None,  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class blockBuddyMember_args(object):
+    """
+    Attributes:
+     - requestId
+     - mid
+    """
+
+
+    def __init__(self, requestId=None, mid=None,):
+        self.requestId = requestId
+        self.mid = mid
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRING:
+                    self.mid = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('blockBuddyMember_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.mid is not None:
+            oprot.writeFieldBegin('mid', TType.STRING, 2)
+            oprot.writeString(self.mid.encode('utf-8') if sys.version_info[0] == 2 else self.mid)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(blockBuddyMember_args)
+blockBuddyMember_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRING, 'mid', 'UTF8', None, ),  # 2
+)
+
+
+class blockBuddyMember_result(object):
+    """
+    Attributes:
+     - e
+    """
+
+
+    def __init__(self, e=None,):
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('blockBuddyMember_result')
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(blockBuddyMember_result)
+blockBuddyMember_result.thrift_spec = (
+    None,  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class commitSendMessagesToAll_args(object):
+    """
+    Attributes:
+     - requestIdList
+    """
+
+
+    def __init__(self, requestIdList=None,):
+        self.requestIdList = requestIdList
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.LIST:
+                    self.requestIdList = []
+                    (_etype980, _size977) = iprot.readListBegin()
+                    for _i981 in range(_size977):
+                        _elem982 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.requestIdList.append(_elem982)
+                    iprot.readListEnd()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('commitSendMessagesToAll_args')
+        if self.requestIdList is not None:
+            oprot.writeFieldBegin('requestIdList', TType.LIST, 1)
+            oprot.writeListBegin(TType.STRING, len(self.requestIdList))
+            for iter983 in self.requestIdList:
+                oprot.writeString(iter983.encode('utf-8') if sys.version_info[0] == 2 else iter983)
+            oprot.writeListEnd()
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(commitSendMessagesToAll_args)
+commitSendMessagesToAll_args.thrift_spec = (
+    None,  # 0
+    (1, TType.LIST, 'requestIdList', (TType.STRING, 'UTF8', False), None, ),  # 1
+)
+
+
+class commitSendMessagesToAll_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.LIST:
+                    self.success = []
+                    (_etype987, _size984) = iprot.readListBegin()
+                    for _i988 in range(_size984):
+                        _elem989 = SendBuddyMessageResult()
+                        _elem989.read(iprot)
+                        self.success.append(_elem989)
+                    iprot.readListEnd()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('commitSendMessagesToAll_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.LIST, 0)
+            oprot.writeListBegin(TType.STRUCT, len(self.success))
+            for iter990 in self.success:
+                iter990.write(oprot)
+            oprot.writeListEnd()
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(commitSendMessagesToAll_result)
+commitSendMessagesToAll_result.thrift_spec = (
+    (0, TType.LIST, 'success', (TType.STRUCT, [SendBuddyMessageResult, None], False), None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class commitSendMessagesToMids_args(object):
+    """
+    Attributes:
+     - requestIdList
+     - mids
+    """
+
+
+    def __init__(self, requestIdList=None, mids=None,):
+        self.requestIdList = requestIdList
+        self.mids = mids
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.LIST:
+                    self.requestIdList = []
+                    (_etype994, _size991) = iprot.readListBegin()
+                    for _i995 in range(_size991):
+                        _elem996 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.requestIdList.append(_elem996)
+                    iprot.readListEnd()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.LIST:
+                    self.mids = []
+                    (_etype1000, _size997) = iprot.readListBegin()
+                    for _i1001 in range(_size997):
+                        _elem1002 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.mids.append(_elem1002)
+                    iprot.readListEnd()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('commitSendMessagesToMids_args')
+        if self.requestIdList is not None:
+            oprot.writeFieldBegin('requestIdList', TType.LIST, 1)
+            oprot.writeListBegin(TType.STRING, len(self.requestIdList))
+            for iter1003 in self.requestIdList:
+                oprot.writeString(iter1003.encode('utf-8') if sys.version_info[0] == 2 else iter1003)
+            oprot.writeListEnd()
+            oprot.writeFieldEnd()
+        if self.mids is not None:
+            oprot.writeFieldBegin('mids', TType.LIST, 2)
+            oprot.writeListBegin(TType.STRING, len(self.mids))
+            for iter1004 in self.mids:
+                oprot.writeString(iter1004.encode('utf-8') if sys.version_info[0] == 2 else iter1004)
+            oprot.writeListEnd()
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(commitSendMessagesToMids_args)
+commitSendMessagesToMids_args.thrift_spec = (
+    None,  # 0
+    (1, TType.LIST, 'requestIdList', (TType.STRING, 'UTF8', False), None, ),  # 1
+    (2, TType.LIST, 'mids', (TType.STRING, 'UTF8', False), None, ),  # 2
+)
+
+
+class commitSendMessagesToMids_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.LIST:
+                    self.success = []
+                    (_etype1008, _size1005) = iprot.readListBegin()
+                    for _i1009 in range(_size1005):
+                        _elem1010 = SendBuddyMessageResult()
+                        _elem1010.read(iprot)
+                        self.success.append(_elem1010)
+                    iprot.readListEnd()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('commitSendMessagesToMids_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.LIST, 0)
+            oprot.writeListBegin(TType.STRUCT, len(self.success))
+            for iter1011 in self.success:
+                iter1011.write(oprot)
+            oprot.writeListEnd()
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(commitSendMessagesToMids_result)
+commitSendMessagesToMids_result.thrift_spec = (
+    (0, TType.LIST, 'success', (TType.STRUCT, [SendBuddyMessageResult, None], False), None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class containsBuddyMember_args(object):
+    """
+    Attributes:
+     - requestId
+     - userMid
+    """
+
+
+    def __init__(self, requestId=None, userMid=None,):
+        self.requestId = requestId
+        self.userMid = userMid
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRING:
+                    self.userMid = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('containsBuddyMember_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.userMid is not None:
+            oprot.writeFieldBegin('userMid', TType.STRING, 2)
+            oprot.writeString(self.userMid.encode('utf-8') if sys.version_info[0] == 2 else self.userMid)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(containsBuddyMember_args)
+containsBuddyMember_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRING, 'userMid', 'UTF8', None, ),  # 2
+)
+
+
+class containsBuddyMember_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.BOOL:
+                    self.success = iprot.readBool()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('containsBuddyMember_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.BOOL, 0)
+            oprot.writeBool(self.success)
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(containsBuddyMember_result)
+containsBuddyMember_result.thrift_spec = (
+    (0, TType.BOOL, 'success', None, None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class downloadMessageContent_args(object):
+    """
+    Attributes:
+     - requestId
+     - messageId
+    """
+
+
+    def __init__(self, requestId=None, messageId=None,):
+        self.requestId = requestId
+        self.messageId = messageId
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRING:
+                    self.messageId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('downloadMessageContent_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.messageId is not None:
+            oprot.writeFieldBegin('messageId', TType.STRING, 2)
+            oprot.writeString(self.messageId.encode('utf-8') if sys.version_info[0] == 2 else self.messageId)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(downloadMessageContent_args)
+downloadMessageContent_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRING, 'messageId', 'UTF8', None, ),  # 2
+)
+
+
+class downloadMessageContent_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.STRING:
+                    self.success = iprot.readBinary()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('downloadMessageContent_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.STRING, 0)
+            oprot.writeBinary(self.success)
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(downloadMessageContent_result)
+downloadMessageContent_result.thrift_spec = (
+    (0, TType.STRING, 'success', 'BINARY', None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class downloadMessageContentPreview_args(object):
+    """
+    Attributes:
+     - requestId
+     - messageId
+    """
+
+
+    def __init__(self, requestId=None, messageId=None,):
+        self.requestId = requestId
+        self.messageId = messageId
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRING:
+                    self.messageId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('downloadMessageContentPreview_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.messageId is not None:
+            oprot.writeFieldBegin('messageId', TType.STRING, 2)
+            oprot.writeString(self.messageId.encode('utf-8') if sys.version_info[0] == 2 else self.messageId)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(downloadMessageContentPreview_args)
+downloadMessageContentPreview_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRING, 'messageId', 'UTF8', None, ),  # 2
+)
+
+
+class downloadMessageContentPreview_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.STRING:
+                    self.success = iprot.readBinary()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('downloadMessageContentPreview_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.STRING, 0)
+            oprot.writeBinary(self.success)
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(downloadMessageContentPreview_result)
+downloadMessageContentPreview_result.thrift_spec = (
+    (0, TType.STRING, 'success', 'BINARY', None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class downloadProfileImage_args(object):
+    """
+    Attributes:
+     - requestId
+    """
+
+
+    def __init__(self, requestId=None,):
+        self.requestId = requestId
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('downloadProfileImage_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(downloadProfileImage_args)
+downloadProfileImage_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+)
+
+
+class downloadProfileImage_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.STRING:
+                    self.success = iprot.readBinary()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('downloadProfileImage_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.STRING, 0)
+            oprot.writeBinary(self.success)
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(downloadProfileImage_result)
+downloadProfileImage_result.thrift_spec = (
+    (0, TType.STRING, 'success', 'BINARY', None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class downloadProfileImagePreview_args(object):
+    """
+    Attributes:
+     - requestId
+    """
+
+
+    def __init__(self, requestId=None,):
+        self.requestId = requestId
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('downloadProfileImagePreview_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(downloadProfileImagePreview_args)
+downloadProfileImagePreview_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+)
+
+
+class downloadProfileImagePreview_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.STRING:
+                    self.success = iprot.readBinary()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('downloadProfileImagePreview_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.STRING, 0)
+            oprot.writeBinary(self.success)
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(downloadProfileImagePreview_result)
+downloadProfileImagePreview_result.thrift_spec = (
+    (0, TType.STRING, 'success', 'BINARY', None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class getActiveMemberCountByBuddyMid_args(object):
+    """
+    Attributes:
+     - buddyMid
+    """
+
+
+    def __init__(self, buddyMid=None,):
+        self.buddyMid = buddyMid
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 2:
+                if ftype == TType.STRING:
+                    self.buddyMid = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('getActiveMemberCountByBuddyMid_args')
+        if self.buddyMid is not None:
+            oprot.writeFieldBegin('buddyMid', TType.STRING, 2)
+            oprot.writeString(self.buddyMid.encode('utf-8') if sys.version_info[0] == 2 else self.buddyMid)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(getActiveMemberCountByBuddyMid_args)
+getActiveMemberCountByBuddyMid_args.thrift_spec = (
+    None,  # 0
+    None,  # 1
+    (2, TType.STRING, 'buddyMid', 'UTF8', None, ),  # 2
+)
+
+
+class getActiveMemberCountByBuddyMid_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.I64:
+                    self.success = iprot.readI64()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('getActiveMemberCountByBuddyMid_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.I64, 0)
+            oprot.writeI64(self.success)
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(getActiveMemberCountByBuddyMid_result)
+getActiveMemberCountByBuddyMid_result.thrift_spec = (
+    (0, TType.I64, 'success', None, None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class getActiveMemberMidsByBuddyMid_args(object):
+    """
+    Attributes:
+     - buddyMid
+    """
+
+
+    def __init__(self, buddyMid=None,):
+        self.buddyMid = buddyMid
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 2:
+                if ftype == TType.STRING:
+                    self.buddyMid = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('getActiveMemberMidsByBuddyMid_args')
+        if self.buddyMid is not None:
+            oprot.writeFieldBegin('buddyMid', TType.STRING, 2)
+            oprot.writeString(self.buddyMid.encode('utf-8') if sys.version_info[0] == 2 else self.buddyMid)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(getActiveMemberMidsByBuddyMid_args)
+getActiveMemberMidsByBuddyMid_args.thrift_spec = (
+    None,  # 0
+    None,  # 1
+    (2, TType.STRING, 'buddyMid', 'UTF8', None, ),  # 2
+)
+
+
+class getActiveMemberMidsByBuddyMid_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.LIST:
+                    self.success = []
+                    (_etype1015, _size1012) = iprot.readListBegin()
+                    for _i1016 in range(_size1012):
+                        _elem1017 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.success.append(_elem1017)
+                    iprot.readListEnd()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('getActiveMemberMidsByBuddyMid_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.LIST, 0)
+            oprot.writeListBegin(TType.STRING, len(self.success))
+            for iter1018 in self.success:
+                oprot.writeString(iter1018.encode('utf-8') if sys.version_info[0] == 2 else iter1018)
+            oprot.writeListEnd()
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(getActiveMemberMidsByBuddyMid_result)
+getActiveMemberMidsByBuddyMid_result.thrift_spec = (
+    (0, TType.LIST, 'success', (TType.STRING, 'UTF8', False), None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class getAllBuddyMembers_args(object):
+
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('getAllBuddyMembers_args')
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(getAllBuddyMembers_args)
+getAllBuddyMembers_args.thrift_spec = (
+)
+
+
+class getAllBuddyMembers_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.LIST:
+                    self.success = []
+                    (_etype1022, _size1019) = iprot.readListBegin()
+                    for _i1023 in range(_size1019):
+                        _elem1024 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.success.append(_elem1024)
+                    iprot.readListEnd()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('getAllBuddyMembers_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.LIST, 0)
+            oprot.writeListBegin(TType.STRING, len(self.success))
+            for iter1025 in self.success:
+                oprot.writeString(iter1025.encode('utf-8') if sys.version_info[0] == 2 else iter1025)
+            oprot.writeListEnd()
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(getAllBuddyMembers_result)
+getAllBuddyMembers_result.thrift_spec = (
+    (0, TType.LIST, 'success', (TType.STRING, 'UTF8', False), None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class getBlockedBuddyMembers_args(object):
+
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('getBlockedBuddyMembers_args')
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(getBlockedBuddyMembers_args)
+getBlockedBuddyMembers_args.thrift_spec = (
+)
+
+
+class getBlockedBuddyMembers_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.LIST:
+                    self.success = []
+                    (_etype1029, _size1026) = iprot.readListBegin()
+                    for _i1030 in range(_size1026):
+                        _elem1031 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.success.append(_elem1031)
+                    iprot.readListEnd()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('getBlockedBuddyMembers_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.LIST, 0)
+            oprot.writeListBegin(TType.STRING, len(self.success))
+            for iter1032 in self.success:
+                oprot.writeString(iter1032.encode('utf-8') if sys.version_info[0] == 2 else iter1032)
+            oprot.writeListEnd()
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(getBlockedBuddyMembers_result)
+getBlockedBuddyMembers_result.thrift_spec = (
+    (0, TType.LIST, 'success', (TType.STRING, 'UTF8', False), None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class getBlockerCountByBuddyMid_args(object):
+    """
+    Attributes:
+     - buddyMid
+    """
+
+
+    def __init__(self, buddyMid=None,):
+        self.buddyMid = buddyMid
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 2:
+                if ftype == TType.STRING:
+                    self.buddyMid = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('getBlockerCountByBuddyMid_args')
+        if self.buddyMid is not None:
+            oprot.writeFieldBegin('buddyMid', TType.STRING, 2)
+            oprot.writeString(self.buddyMid.encode('utf-8') if sys.version_info[0] == 2 else self.buddyMid)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(getBlockerCountByBuddyMid_args)
+getBlockerCountByBuddyMid_args.thrift_spec = (
+    None,  # 0
+    None,  # 1
+    (2, TType.STRING, 'buddyMid', 'UTF8', None, ),  # 2
+)
+
+
+class getBlockerCountByBuddyMid_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.I64:
+                    self.success = iprot.readI64()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('getBlockerCountByBuddyMid_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.I64, 0)
+            oprot.writeI64(self.success)
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(getBlockerCountByBuddyMid_result)
+getBlockerCountByBuddyMid_result.thrift_spec = (
+    (0, TType.I64, 'success', None, None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class getBuddyDetailByMid_args(object):
+    """
+    Attributes:
+     - buddyMid
+    """
+
+
+    def __init__(self, buddyMid=None,):
+        self.buddyMid = buddyMid
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 2:
+                if ftype == TType.STRING:
+                    self.buddyMid = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('getBuddyDetailByMid_args')
+        if self.buddyMid is not None:
+            oprot.writeFieldBegin('buddyMid', TType.STRING, 2)
+            oprot.writeString(self.buddyMid.encode('utf-8') if sys.version_info[0] == 2 else self.buddyMid)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(getBuddyDetailByMid_args)
+getBuddyDetailByMid_args.thrift_spec = (
+    None,  # 0
+    None,  # 1
+    (2, TType.STRING, 'buddyMid', 'UTF8', None, ),  # 2
+)
+
+
+class getBuddyDetailByMid_result(object):
     """
     Attributes:
      - success
@@ -3754,13 +6092,13 @@ class getSquareChatAnnouncements_result(object):
                 break
             if fid == 0:
                 if ftype == TType.STRUCT:
-                    self.success = GetSquareChatAnnouncementsResponse()
+                    self.success = BuddyDetail()
                     self.success.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 1:
                 if ftype == TType.STRUCT:
-                    self.e = SquareException()
+                    self.e = TalkException()
                     self.e.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -3773,7 +6111,7 @@ class getSquareChatAnnouncements_result(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('getSquareChatAnnouncements_result')
+        oprot.writeStructBegin('getBuddyDetailByMid_result')
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.STRUCT, 0)
             self.success.write(oprot)
@@ -3798,22 +6136,15 @@ class getSquareChatAnnouncements_result(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(getSquareChatAnnouncements_result)
-getSquareChatAnnouncements_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [GetSquareChatAnnouncementsResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
+all_structs.append(getBuddyDetailByMid_result)
+getBuddyDetailByMid_result.thrift_spec = (
+    (0, TType.STRUCT, 'success', [BuddyDetail, None], None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
 )
 
 
-class deleteSquareChatAnnouncement_args(object):
-    """
-    Attributes:
-     - request
-    """
+class getBuddyProfile_args(object):
 
-
-    def __init__(self, request=None,):
-        self.request = request
 
     def read(self, iprot):
         if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
@@ -3824,12 +6155,6 @@ class deleteSquareChatAnnouncement_args(object):
             (fname, ftype, fid) = iprot.readFieldBegin()
             if ftype == TType.STOP:
                 break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = DeleteSquareChatAnnouncementRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
             else:
                 iprot.skip(ftype)
             iprot.readFieldEnd()
@@ -3839,11 +6164,7 @@ class deleteSquareChatAnnouncement_args(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('deleteSquareChatAnnouncement_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
+        oprot.writeStructBegin('getBuddyProfile_args')
         oprot.writeFieldStop()
         oprot.writeStructEnd()
 
@@ -3860,14 +6181,12 @@ class deleteSquareChatAnnouncement_args(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(deleteSquareChatAnnouncement_args)
-deleteSquareChatAnnouncement_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [DeleteSquareChatAnnouncementRequest, None], None, ),  # 1
+all_structs.append(getBuddyProfile_args)
+getBuddyProfile_args.thrift_spec = (
 )
 
 
-class deleteSquareChatAnnouncement_result(object):
+class getBuddyProfile_result(object):
     """
     Attributes:
      - success
@@ -3890,13 +6209,13 @@ class deleteSquareChatAnnouncement_result(object):
                 break
             if fid == 0:
                 if ftype == TType.STRUCT:
-                    self.success = DeleteSquareChatAnnouncementResponse()
+                    self.success = BuddyProfile()
                     self.success.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 1:
                 if ftype == TType.STRUCT:
-                    self.e = SquareException()
+                    self.e = TalkException()
                     self.e.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -3909,7 +6228,7 @@ class deleteSquareChatAnnouncement_result(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('deleteSquareChatAnnouncement_result')
+        oprot.writeStructBegin('getBuddyProfile_result')
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.STRUCT, 0)
             self.success.write(oprot)
@@ -3934,22 +6253,15 @@ class deleteSquareChatAnnouncement_result(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(deleteSquareChatAnnouncement_result)
-deleteSquareChatAnnouncement_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [DeleteSquareChatAnnouncementResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
+all_structs.append(getBuddyProfile_result)
+getBuddyProfile_result.thrift_spec = (
+    (0, TType.STRUCT, 'success', [BuddyProfile, None], None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
 )
 
 
-class createSquareChatAnnouncement_args(object):
-    """
-    Attributes:
-     - request
-    """
+class getContactTicket_args(object):
 
-
-    def __init__(self, request=None,):
-        self.request = request
 
     def read(self, iprot):
         if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
@@ -3960,12 +6272,6 @@ class createSquareChatAnnouncement_args(object):
             (fname, ftype, fid) = iprot.readFieldBegin()
             if ftype == TType.STOP:
                 break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = CreateSquareChatAnnouncementRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
             else:
                 iprot.skip(ftype)
             iprot.readFieldEnd()
@@ -3975,11 +6281,7 @@ class createSquareChatAnnouncement_args(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('createSquareChatAnnouncement_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
+        oprot.writeStructBegin('getContactTicket_args')
         oprot.writeFieldStop()
         oprot.writeStructEnd()
 
@@ -3996,14 +6298,12 @@ class createSquareChatAnnouncement_args(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(createSquareChatAnnouncement_args)
-createSquareChatAnnouncement_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [CreateSquareChatAnnouncementRequest, None], None, ),  # 1
+all_structs.append(getContactTicket_args)
+getContactTicket_args.thrift_spec = (
 )
 
 
-class createSquareChatAnnouncement_result(object):
+class getContactTicket_result(object):
     """
     Attributes:
      - success
@@ -4026,13 +6326,13 @@ class createSquareChatAnnouncement_result(object):
                 break
             if fid == 0:
                 if ftype == TType.STRUCT:
-                    self.success = CreateSquareChatAnnouncementResponse()
+                    self.success = Ticket()
                     self.success.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 1:
                 if ftype == TType.STRUCT:
-                    self.e = SquareException()
+                    self.e = TalkException()
                     self.e.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -4045,7 +6345,7 @@ class createSquareChatAnnouncement_result(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('createSquareChatAnnouncement_result')
+        oprot.writeStructBegin('getContactTicket_result')
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.STRUCT, 0)
             self.success.write(oprot)
@@ -4070,22 +6370,22 @@ class createSquareChatAnnouncement_result(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(createSquareChatAnnouncement_result)
-createSquareChatAnnouncement_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [CreateSquareChatAnnouncementResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
+all_structs.append(getContactTicket_result)
+getContactTicket_result.thrift_spec = (
+    (0, TType.STRUCT, 'success', [Ticket, None], None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
 )
 
 
-class getNoteStatus_args(object):
+class getMemberCountByBuddyMid_args(object):
     """
     Attributes:
-     - request
+     - buddyMid
     """
 
 
-    def __init__(self, request=None,):
-        self.request = request
+    def __init__(self, buddyMid=None,):
+        self.buddyMid = buddyMid
 
     def read(self, iprot):
         if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
@@ -4096,10 +6396,9 @@ class getNoteStatus_args(object):
             (fname, ftype, fid) = iprot.readFieldBegin()
             if ftype == TType.STOP:
                 break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = GetNoteStatusRequest()
-                    self.request.read(iprot)
+            if fid == 2:
+                if ftype == TType.STRING:
+                    self.buddyMid = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
                 else:
                     iprot.skip(ftype)
             else:
@@ -4111,10 +6410,10 @@ class getNoteStatus_args(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('getNoteStatus_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
+        oprot.writeStructBegin('getMemberCountByBuddyMid_args')
+        if self.buddyMid is not None:
+            oprot.writeFieldBegin('buddyMid', TType.STRING, 2)
+            oprot.writeString(self.buddyMid.encode('utf-8') if sys.version_info[0] == 2 else self.buddyMid)
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
@@ -4132,14 +6431,149 @@ class getNoteStatus_args(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(getNoteStatus_args)
-getNoteStatus_args.thrift_spec = (
+all_structs.append(getMemberCountByBuddyMid_args)
+getMemberCountByBuddyMid_args.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'request', [GetNoteStatusRequest, None], None, ),  # 1
+    None,  # 1
+    (2, TType.STRING, 'buddyMid', 'UTF8', None, ),  # 2
 )
 
 
-class getNoteStatus_result(object):
+class getMemberCountByBuddyMid_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.I64:
+                    self.success = iprot.readI64()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('getMemberCountByBuddyMid_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.I64, 0)
+            oprot.writeI64(self.success)
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(getMemberCountByBuddyMid_result)
+getMemberCountByBuddyMid_result.thrift_spec = (
+    (0, TType.I64, 'success', None, None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class getSendBuddyMessageResult_args(object):
+    """
+    Attributes:
+     - sendBuddyMessageRequestId
+    """
+
+
+    def __init__(self, sendBuddyMessageRequestId=None,):
+        self.sendBuddyMessageRequestId = sendBuddyMessageRequestId
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.sendBuddyMessageRequestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('getSendBuddyMessageResult_args')
+        if self.sendBuddyMessageRequestId is not None:
+            oprot.writeFieldBegin('sendBuddyMessageRequestId', TType.STRING, 1)
+            oprot.writeString(self.sendBuddyMessageRequestId.encode('utf-8') if sys.version_info[0] == 2 else self.sendBuddyMessageRequestId)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(getSendBuddyMessageResult_args)
+getSendBuddyMessageResult_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'sendBuddyMessageRequestId', 'UTF8', None, ),  # 1
+)
+
+
+class getSendBuddyMessageResult_result(object):
     """
     Attributes:
      - success
@@ -4162,13 +6596,13 @@ class getNoteStatus_result(object):
                 break
             if fid == 0:
                 if ftype == TType.STRUCT:
-                    self.success = GetNoteStatusResponse()
+                    self.success = SendBuddyMessageResult()
                     self.success.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 1:
                 if ftype == TType.STRUCT:
-                    self.e = SquareException()
+                    self.e = TalkException()
                     self.e.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -4181,7 +6615,7 @@ class getNoteStatus_result(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('getNoteStatus_result')
+        oprot.writeStructBegin('getSendBuddyMessageResult_result')
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.STRUCT, 0)
             self.success.write(oprot)
@@ -4206,22 +6640,22 @@ class getNoteStatus_result(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(getNoteStatus_result)
-getNoteStatus_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [GetNoteStatusResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
+all_structs.append(getSendBuddyMessageResult_result)
+getSendBuddyMessageResult_result.thrift_spec = (
+    (0, TType.STRUCT, 'success', [SendBuddyMessageResult, None], None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
 )
 
 
-class getSquareStatus_args(object):
+class getSetBuddyOnAirResult_args(object):
     """
     Attributes:
-     - request
+     - setBuddyOnAirRequestId
     """
 
 
-    def __init__(self, request=None,):
-        self.request = request
+    def __init__(self, setBuddyOnAirRequestId=None,):
+        self.setBuddyOnAirRequestId = setBuddyOnAirRequestId
 
     def read(self, iprot):
         if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
@@ -4233,9 +6667,8 @@ class getSquareStatus_args(object):
             if ftype == TType.STOP:
                 break
             if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = GetSquareStatusRequest()
-                    self.request.read(iprot)
+                if ftype == TType.STRING:
+                    self.setBuddyOnAirRequestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
                 else:
                     iprot.skip(ftype)
             else:
@@ -4247,10 +6680,10 @@ class getSquareStatus_args(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('getSquareStatus_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
+        oprot.writeStructBegin('getSetBuddyOnAirResult_args')
+        if self.setBuddyOnAirRequestId is not None:
+            oprot.writeFieldBegin('setBuddyOnAirRequestId', TType.STRING, 1)
+            oprot.writeString(self.setBuddyOnAirRequestId.encode('utf-8') if sys.version_info[0] == 2 else self.setBuddyOnAirRequestId)
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
@@ -4268,14 +6701,14 @@ class getSquareStatus_args(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(getSquareStatus_args)
-getSquareStatus_args.thrift_spec = (
+all_structs.append(getSetBuddyOnAirResult_args)
+getSetBuddyOnAirResult_args.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'request', [GetSquareStatusRequest, None], None, ),  # 1
+    (1, TType.STRING, 'setBuddyOnAirRequestId', 'UTF8', None, ),  # 1
 )
 
 
-class getSquareStatus_result(object):
+class getSetBuddyOnAirResult_result(object):
     """
     Attributes:
      - success
@@ -4298,13 +6731,13 @@ class getSquareStatus_result(object):
                 break
             if fid == 0:
                 if ftype == TType.STRUCT:
-                    self.success = GetSquareStatusResponse()
+                    self.success = SetBuddyOnAirResult()
                     self.success.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 1:
                 if ftype == TType.STRUCT:
-                    self.e = SquareException()
+                    self.e = TalkException()
                     self.e.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -4317,7 +6750,7 @@ class getSquareStatus_result(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('getSquareStatus_result')
+        oprot.writeStructBegin('getSetBuddyOnAirResult_result')
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.STRUCT, 0)
             self.success.write(oprot)
@@ -4342,22 +6775,22 @@ class getSquareStatus_result(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(getSquareStatus_result)
-getSquareStatus_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [GetSquareStatusResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
+all_structs.append(getSetBuddyOnAirResult_result)
+getSetBuddyOnAirResult_result.thrift_spec = (
+    (0, TType.STRUCT, 'success', [SetBuddyOnAirResult, None], None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
 )
 
 
-class reportSquareMember_args(object):
+class getUpdateBuddyProfileResult_args(object):
     """
     Attributes:
-     - request
+     - updateBuddyProfileRequestId
     """
 
 
-    def __init__(self, request=None,):
-        self.request = request
+    def __init__(self, updateBuddyProfileRequestId=None,):
+        self.updateBuddyProfileRequestId = updateBuddyProfileRequestId
 
     def read(self, iprot):
         if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
@@ -4369,9 +6802,8 @@ class reportSquareMember_args(object):
             if ftype == TType.STOP:
                 break
             if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = ReportSquareMemberRequest()
-                    self.request.read(iprot)
+                if ftype == TType.STRING:
+                    self.updateBuddyProfileRequestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
                 else:
                     iprot.skip(ftype)
             else:
@@ -4383,10 +6815,10 @@ class reportSquareMember_args(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('reportSquareMember_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
+        oprot.writeStructBegin('getUpdateBuddyProfileResult_args')
+        if self.updateBuddyProfileRequestId is not None:
+            oprot.writeFieldBegin('updateBuddyProfileRequestId', TType.STRING, 1)
+            oprot.writeString(self.updateBuddyProfileRequestId.encode('utf-8') if sys.version_info[0] == 2 else self.updateBuddyProfileRequestId)
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
@@ -4404,14 +6836,14 @@ class reportSquareMember_args(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(reportSquareMember_args)
-reportSquareMember_args.thrift_spec = (
+all_structs.append(getUpdateBuddyProfileResult_args)
+getUpdateBuddyProfileResult_args.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'request', [ReportSquareMemberRequest, None], None, ),  # 1
+    (1, TType.STRING, 'updateBuddyProfileRequestId', 'UTF8', None, ),  # 1
 )
 
 
-class reportSquareMember_result(object):
+class getUpdateBuddyProfileResult_result(object):
     """
     Attributes:
      - success
@@ -4434,13 +6866,13 @@ class reportSquareMember_result(object):
                 break
             if fid == 0:
                 if ftype == TType.STRUCT:
-                    self.success = ReportSquareMemberResponse()
+                    self.success = UpdateBuddyProfileResult()
                     self.success.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 1:
                 if ftype == TType.STRUCT:
-                    self.e = SquareException()
+                    self.e = TalkException()
                     self.e.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -4453,7 +6885,7 @@ class reportSquareMember_result(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('reportSquareMember_result')
+        oprot.writeStructBegin('getUpdateBuddyProfileResult_result')
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.STRUCT, 0)
             self.success.write(oprot)
@@ -4478,22 +6910,22 @@ class reportSquareMember_result(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(reportSquareMember_result)
-reportSquareMember_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [ReportSquareMemberResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
+all_structs.append(getUpdateBuddyProfileResult_result)
+getUpdateBuddyProfileResult_result.thrift_spec = (
+    (0, TType.STRUCT, 'success', [UpdateBuddyProfileResult, None], None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
 )
 
 
-class reportSquareMessage_args(object):
+class isBuddyOnAirByMid_args(object):
     """
     Attributes:
-     - request
+     - buddyMid
     """
 
 
-    def __init__(self, request=None,):
-        self.request = request
+    def __init__(self, buddyMid=None,):
+        self.buddyMid = buddyMid
 
     def read(self, iprot):
         if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
@@ -4504,10 +6936,9 @@ class reportSquareMessage_args(object):
             (fname, ftype, fid) = iprot.readFieldBegin()
             if ftype == TType.STOP:
                 break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = ReportSquareMessageRequest()
-                    self.request.read(iprot)
+            if fid == 2:
+                if ftype == TType.STRING:
+                    self.buddyMid = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
                 else:
                     iprot.skip(ftype)
             else:
@@ -4519,10 +6950,10 @@ class reportSquareMessage_args(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('reportSquareMessage_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
+        oprot.writeStructBegin('isBuddyOnAirByMid_args')
+        if self.buddyMid is not None:
+            oprot.writeFieldBegin('buddyMid', TType.STRING, 2)
+            oprot.writeString(self.buddyMid.encode('utf-8') if sys.version_info[0] == 2 else self.buddyMid)
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
@@ -4540,14 +6971,353 @@ class reportSquareMessage_args(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(reportSquareMessage_args)
-reportSquareMessage_args.thrift_spec = (
+all_structs.append(isBuddyOnAirByMid_args)
+isBuddyOnAirByMid_args.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'request', [ReportSquareMessageRequest, None], None, ),  # 1
+    None,  # 1
+    (2, TType.STRING, 'buddyMid', 'UTF8', None, ),  # 2
 )
 
 
-class reportSquareMessage_result(object):
+class isBuddyOnAirByMid_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.BOOL:
+                    self.success = iprot.readBool()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('isBuddyOnAirByMid_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.BOOL, 0)
+            oprot.writeBool(self.success)
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(isBuddyOnAirByMid_result)
+isBuddyOnAirByMid_result.thrift_spec = (
+    (0, TType.BOOL, 'success', None, None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class linkAndSendBuddyContentMessageToAllAsync_args(object):
+    """
+    Attributes:
+     - requestId
+     - msg
+     - sourceContentId
+    """
+
+
+    def __init__(self, requestId=None, msg=None, sourceContentId=None,):
+        self.requestId = requestId
+        self.msg = msg
+        self.sourceContentId = sourceContentId
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRUCT:
+                    self.msg = Message()
+                    self.msg.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            elif fid == 3:
+                if ftype == TType.STRING:
+                    self.sourceContentId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('linkAndSendBuddyContentMessageToAllAsync_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.msg is not None:
+            oprot.writeFieldBegin('msg', TType.STRUCT, 2)
+            self.msg.write(oprot)
+            oprot.writeFieldEnd()
+        if self.sourceContentId is not None:
+            oprot.writeFieldBegin('sourceContentId', TType.STRING, 3)
+            oprot.writeString(self.sourceContentId.encode('utf-8') if sys.version_info[0] == 2 else self.sourceContentId)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(linkAndSendBuddyContentMessageToAllAsync_args)
+linkAndSendBuddyContentMessageToAllAsync_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRUCT, 'msg', [Message, None], None, ),  # 2
+    (3, TType.STRING, 'sourceContentId', 'UTF8', None, ),  # 3
+)
+
+
+class linkAndSendBuddyContentMessageToAllAsync_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.STRING:
+                    self.success = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('linkAndSendBuddyContentMessageToAllAsync_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.STRING, 0)
+            oprot.writeString(self.success.encode('utf-8') if sys.version_info[0] == 2 else self.success)
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(linkAndSendBuddyContentMessageToAllAsync_result)
+linkAndSendBuddyContentMessageToAllAsync_result.thrift_spec = (
+    (0, TType.STRING, 'success', 'UTF8', None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class linkAndSendBuddyContentMessageToMids_args(object):
+    """
+    Attributes:
+     - requestId
+     - msg
+     - sourceContentId
+     - mids
+    """
+
+
+    def __init__(self, requestId=None, msg=None, sourceContentId=None, mids=None,):
+        self.requestId = requestId
+        self.msg = msg
+        self.sourceContentId = sourceContentId
+        self.mids = mids
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRUCT:
+                    self.msg = Message()
+                    self.msg.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            elif fid == 3:
+                if ftype == TType.STRING:
+                    self.sourceContentId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 4:
+                if ftype == TType.LIST:
+                    self.mids = []
+                    (_etype1036, _size1033) = iprot.readListBegin()
+                    for _i1037 in range(_size1033):
+                        _elem1038 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.mids.append(_elem1038)
+                    iprot.readListEnd()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('linkAndSendBuddyContentMessageToMids_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.msg is not None:
+            oprot.writeFieldBegin('msg', TType.STRUCT, 2)
+            self.msg.write(oprot)
+            oprot.writeFieldEnd()
+        if self.sourceContentId is not None:
+            oprot.writeFieldBegin('sourceContentId', TType.STRING, 3)
+            oprot.writeString(self.sourceContentId.encode('utf-8') if sys.version_info[0] == 2 else self.sourceContentId)
+            oprot.writeFieldEnd()
+        if self.mids is not None:
+            oprot.writeFieldBegin('mids', TType.LIST, 4)
+            oprot.writeListBegin(TType.STRING, len(self.mids))
+            for iter1039 in self.mids:
+                oprot.writeString(iter1039.encode('utf-8') if sys.version_info[0] == 2 else iter1039)
+            oprot.writeListEnd()
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(linkAndSendBuddyContentMessageToMids_args)
+linkAndSendBuddyContentMessageToMids_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRUCT, 'msg', [Message, None], None, ),  # 2
+    (3, TType.STRING, 'sourceContentId', 'UTF8', None, ),  # 3
+    (4, TType.LIST, 'mids', (TType.STRING, 'UTF8', False), None, ),  # 4
+)
+
+
+class linkAndSendBuddyContentMessageToMids_result(object):
     """
     Attributes:
      - success
@@ -4570,13 +7340,13 @@ class reportSquareMessage_result(object):
                 break
             if fid == 0:
                 if ftype == TType.STRUCT:
-                    self.success = ReportSquareMessageResponse()
+                    self.success = SendBuddyMessageResult()
                     self.success.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 1:
                 if ftype == TType.STRUCT:
-                    self.e = SquareException()
+                    self.e = TalkException()
                     self.e.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -4589,7 +7359,7 @@ class reportSquareMessage_result(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('reportSquareMessage_result')
+        oprot.writeStructBegin('linkAndSendBuddyContentMessageToMids_result')
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.STRUCT, 0)
             self.success.write(oprot)
@@ -4614,22 +7384,24 @@ class reportSquareMessage_result(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(reportSquareMessage_result)
-reportSquareMessage_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [ReportSquareMessageResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
+all_structs.append(linkAndSendBuddyContentMessageToMids_result)
+linkAndSendBuddyContentMessageToMids_result.thrift_spec = (
+    (0, TType.STRUCT, 'success', [SendBuddyMessageResult, None], None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
 )
 
 
-class reportSquareChat_args(object):
+class notifyBuddyBlocked_args(object):
     """
     Attributes:
-     - request
+     - buddyMid
+     - blockerMid
     """
 
 
-    def __init__(self, request=None,):
-        self.request = request
+    def __init__(self, buddyMid=None, blockerMid=None,):
+        self.buddyMid = buddyMid
+        self.blockerMid = blockerMid
 
     def read(self, iprot):
         if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
@@ -4641,9 +7413,13 @@ class reportSquareChat_args(object):
             if ftype == TType.STOP:
                 break
             if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = ReportSquareChatRequest()
-                    self.request.read(iprot)
+                if ftype == TType.STRING:
+                    self.buddyMid = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRING:
+                    self.blockerMid = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
                 else:
                     iprot.skip(ftype)
             else:
@@ -4655,10 +7431,14 @@ class reportSquareChat_args(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('reportSquareChat_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
+        oprot.writeStructBegin('notifyBuddyBlocked_args')
+        if self.buddyMid is not None:
+            oprot.writeFieldBegin('buddyMid', TType.STRING, 1)
+            oprot.writeString(self.buddyMid.encode('utf-8') if sys.version_info[0] == 2 else self.buddyMid)
+            oprot.writeFieldEnd()
+        if self.blockerMid is not None:
+            oprot.writeFieldBegin('blockerMid', TType.STRING, 2)
+            oprot.writeString(self.blockerMid.encode('utf-8') if sys.version_info[0] == 2 else self.blockerMid)
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
@@ -4676,14 +7456,1112 @@ class reportSquareChat_args(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(reportSquareChat_args)
-reportSquareChat_args.thrift_spec = (
+all_structs.append(notifyBuddyBlocked_args)
+notifyBuddyBlocked_args.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'request', [ReportSquareChatRequest, None], None, ),  # 1
+    (1, TType.STRING, 'buddyMid', 'UTF8', None, ),  # 1
+    (2, TType.STRING, 'blockerMid', 'UTF8', None, ),  # 2
 )
 
 
-class reportSquareChat_result(object):
+class notifyBuddyBlocked_result(object):
+    """
+    Attributes:
+     - e
+    """
+
+
+    def __init__(self, e=None,):
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('notifyBuddyBlocked_result')
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(notifyBuddyBlocked_result)
+notifyBuddyBlocked_result.thrift_spec = (
+    None,  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class notifyBuddyUnblocked_args(object):
+    """
+    Attributes:
+     - buddyMid
+     - blockerMid
+    """
+
+
+    def __init__(self, buddyMid=None, blockerMid=None,):
+        self.buddyMid = buddyMid
+        self.blockerMid = blockerMid
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.buddyMid = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRING:
+                    self.blockerMid = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('notifyBuddyUnblocked_args')
+        if self.buddyMid is not None:
+            oprot.writeFieldBegin('buddyMid', TType.STRING, 1)
+            oprot.writeString(self.buddyMid.encode('utf-8') if sys.version_info[0] == 2 else self.buddyMid)
+            oprot.writeFieldEnd()
+        if self.blockerMid is not None:
+            oprot.writeFieldBegin('blockerMid', TType.STRING, 2)
+            oprot.writeString(self.blockerMid.encode('utf-8') if sys.version_info[0] == 2 else self.blockerMid)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(notifyBuddyUnblocked_args)
+notifyBuddyUnblocked_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'buddyMid', 'UTF8', None, ),  # 1
+    (2, TType.STRING, 'blockerMid', 'UTF8', None, ),  # 2
+)
+
+
+class notifyBuddyUnblocked_result(object):
+    """
+    Attributes:
+     - e
+    """
+
+
+    def __init__(self, e=None,):
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('notifyBuddyUnblocked_result')
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(notifyBuddyUnblocked_result)
+notifyBuddyUnblocked_result.thrift_spec = (
+    None,  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class registerBuddy_args(object):
+    """
+    Attributes:
+     - buddyId
+     - searchId
+     - displayName
+     - statusMeessage
+     - picture
+     - settings
+    """
+
+
+    def __init__(self, buddyId=None, searchId=None, displayName=None, statusMeessage=None, picture=None, settings=None,):
+        self.buddyId = buddyId
+        self.searchId = searchId
+        self.displayName = displayName
+        self.statusMeessage = statusMeessage
+        self.picture = picture
+        self.settings = settings
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 2:
+                if ftype == TType.STRING:
+                    self.buddyId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 3:
+                if ftype == TType.STRING:
+                    self.searchId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 4:
+                if ftype == TType.STRING:
+                    self.displayName = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 5:
+                if ftype == TType.STRING:
+                    self.statusMeessage = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 6:
+                if ftype == TType.STRING:
+                    self.picture = iprot.readBinary()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 7:
+                if ftype == TType.MAP:
+                    self.settings = {}
+                    (_ktype1041, _vtype1042, _size1040) = iprot.readMapBegin()
+                    for _i1044 in range(_size1040):
+                        _key1045 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        _val1046 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.settings[_key1045] = _val1046
+                    iprot.readMapEnd()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('registerBuddy_args')
+        if self.buddyId is not None:
+            oprot.writeFieldBegin('buddyId', TType.STRING, 2)
+            oprot.writeString(self.buddyId.encode('utf-8') if sys.version_info[0] == 2 else self.buddyId)
+            oprot.writeFieldEnd()
+        if self.searchId is not None:
+            oprot.writeFieldBegin('searchId', TType.STRING, 3)
+            oprot.writeString(self.searchId.encode('utf-8') if sys.version_info[0] == 2 else self.searchId)
+            oprot.writeFieldEnd()
+        if self.displayName is not None:
+            oprot.writeFieldBegin('displayName', TType.STRING, 4)
+            oprot.writeString(self.displayName.encode('utf-8') if sys.version_info[0] == 2 else self.displayName)
+            oprot.writeFieldEnd()
+        if self.statusMeessage is not None:
+            oprot.writeFieldBegin('statusMeessage', TType.STRING, 5)
+            oprot.writeString(self.statusMeessage.encode('utf-8') if sys.version_info[0] == 2 else self.statusMeessage)
+            oprot.writeFieldEnd()
+        if self.picture is not None:
+            oprot.writeFieldBegin('picture', TType.STRING, 6)
+            oprot.writeBinary(self.picture)
+            oprot.writeFieldEnd()
+        if self.settings is not None:
+            oprot.writeFieldBegin('settings', TType.MAP, 7)
+            oprot.writeMapBegin(TType.STRING, TType.STRING, len(self.settings))
+            for kiter1047, viter1048 in self.settings.items():
+                oprot.writeString(kiter1047.encode('utf-8') if sys.version_info[0] == 2 else kiter1047)
+                oprot.writeString(viter1048.encode('utf-8') if sys.version_info[0] == 2 else viter1048)
+            oprot.writeMapEnd()
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(registerBuddy_args)
+registerBuddy_args.thrift_spec = (
+    None,  # 0
+    None,  # 1
+    (2, TType.STRING, 'buddyId', 'UTF8', None, ),  # 2
+    (3, TType.STRING, 'searchId', 'UTF8', None, ),  # 3
+    (4, TType.STRING, 'displayName', 'UTF8', None, ),  # 4
+    (5, TType.STRING, 'statusMeessage', 'UTF8', None, ),  # 5
+    (6, TType.STRING, 'picture', 'BINARY', None, ),  # 6
+    (7, TType.MAP, 'settings', (TType.STRING, 'UTF8', TType.STRING, 'UTF8', False), None, ),  # 7
+)
+
+
+class registerBuddy_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.STRING:
+                    self.success = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('registerBuddy_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.STRING, 0)
+            oprot.writeString(self.success.encode('utf-8') if sys.version_info[0] == 2 else self.success)
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(registerBuddy_result)
+registerBuddy_result.thrift_spec = (
+    (0, TType.STRING, 'success', 'UTF8', None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class registerBuddyAdmin_args(object):
+    """
+    Attributes:
+     - buddyId
+     - searchId
+     - displayName
+     - statusMessage
+     - picture
+    """
+
+
+    def __init__(self, buddyId=None, searchId=None, displayName=None, statusMessage=None, picture=None,):
+        self.buddyId = buddyId
+        self.searchId = searchId
+        self.displayName = displayName
+        self.statusMessage = statusMessage
+        self.picture = picture
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 2:
+                if ftype == TType.STRING:
+                    self.buddyId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 3:
+                if ftype == TType.STRING:
+                    self.searchId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 4:
+                if ftype == TType.STRING:
+                    self.displayName = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 5:
+                if ftype == TType.STRING:
+                    self.statusMessage = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 6:
+                if ftype == TType.STRING:
+                    self.picture = iprot.readBinary()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('registerBuddyAdmin_args')
+        if self.buddyId is not None:
+            oprot.writeFieldBegin('buddyId', TType.STRING, 2)
+            oprot.writeString(self.buddyId.encode('utf-8') if sys.version_info[0] == 2 else self.buddyId)
+            oprot.writeFieldEnd()
+        if self.searchId is not None:
+            oprot.writeFieldBegin('searchId', TType.STRING, 3)
+            oprot.writeString(self.searchId.encode('utf-8') if sys.version_info[0] == 2 else self.searchId)
+            oprot.writeFieldEnd()
+        if self.displayName is not None:
+            oprot.writeFieldBegin('displayName', TType.STRING, 4)
+            oprot.writeString(self.displayName.encode('utf-8') if sys.version_info[0] == 2 else self.displayName)
+            oprot.writeFieldEnd()
+        if self.statusMessage is not None:
+            oprot.writeFieldBegin('statusMessage', TType.STRING, 5)
+            oprot.writeString(self.statusMessage.encode('utf-8') if sys.version_info[0] == 2 else self.statusMessage)
+            oprot.writeFieldEnd()
+        if self.picture is not None:
+            oprot.writeFieldBegin('picture', TType.STRING, 6)
+            oprot.writeBinary(self.picture)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(registerBuddyAdmin_args)
+registerBuddyAdmin_args.thrift_spec = (
+    None,  # 0
+    None,  # 1
+    (2, TType.STRING, 'buddyId', 'UTF8', None, ),  # 2
+    (3, TType.STRING, 'searchId', 'UTF8', None, ),  # 3
+    (4, TType.STRING, 'displayName', 'UTF8', None, ),  # 4
+    (5, TType.STRING, 'statusMessage', 'UTF8', None, ),  # 5
+    (6, TType.STRING, 'picture', 'BINARY', None, ),  # 6
+)
+
+
+class registerBuddyAdmin_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.STRING:
+                    self.success = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('registerBuddyAdmin_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.STRING, 0)
+            oprot.writeString(self.success.encode('utf-8') if sys.version_info[0] == 2 else self.success)
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(registerBuddyAdmin_result)
+registerBuddyAdmin_result.thrift_spec = (
+    (0, TType.STRING, 'success', 'UTF8', None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class reissueContactTicket_args(object):
+    """
+    Attributes:
+     - expirationTime
+     - maxUseCount
+    """
+
+
+    def __init__(self, expirationTime=None, maxUseCount=None,):
+        self.expirationTime = expirationTime
+        self.maxUseCount = maxUseCount
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 3:
+                if ftype == TType.I64:
+                    self.expirationTime = iprot.readI64()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 4:
+                if ftype == TType.I32:
+                    self.maxUseCount = iprot.readI32()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('reissueContactTicket_args')
+        if self.expirationTime is not None:
+            oprot.writeFieldBegin('expirationTime', TType.I64, 3)
+            oprot.writeI64(self.expirationTime)
+            oprot.writeFieldEnd()
+        if self.maxUseCount is not None:
+            oprot.writeFieldBegin('maxUseCount', TType.I32, 4)
+            oprot.writeI32(self.maxUseCount)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(reissueContactTicket_args)
+reissueContactTicket_args.thrift_spec = (
+    None,  # 0
+    None,  # 1
+    None,  # 2
+    (3, TType.I64, 'expirationTime', None, None, ),  # 3
+    (4, TType.I32, 'maxUseCount', None, None, ),  # 4
+)
+
+
+class reissueContactTicket_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.STRING:
+                    self.success = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('reissueContactTicket_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.STRING, 0)
+            oprot.writeString(self.success.encode('utf-8') if sys.version_info[0] == 2 else self.success)
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(reissueContactTicket_result)
+reissueContactTicket_result.thrift_spec = (
+    (0, TType.STRING, 'success', 'UTF8', None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class removeBuddyMember_args(object):
+    """
+    Attributes:
+     - requestId
+     - userMid
+    """
+
+
+    def __init__(self, requestId=None, userMid=None,):
+        self.requestId = requestId
+        self.userMid = userMid
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRING:
+                    self.userMid = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('removeBuddyMember_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.userMid is not None:
+            oprot.writeFieldBegin('userMid', TType.STRING, 2)
+            oprot.writeString(self.userMid.encode('utf-8') if sys.version_info[0] == 2 else self.userMid)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(removeBuddyMember_args)
+removeBuddyMember_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRING, 'userMid', 'UTF8', None, ),  # 2
+)
+
+
+class removeBuddyMember_result(object):
+    """
+    Attributes:
+     - e
+    """
+
+
+    def __init__(self, e=None,):
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('removeBuddyMember_result')
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(removeBuddyMember_result)
+removeBuddyMember_result.thrift_spec = (
+    None,  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class removeBuddyMembers_args(object):
+    """
+    Attributes:
+     - requestId
+     - userMids
+    """
+
+
+    def __init__(self, requestId=None, userMids=None,):
+        self.requestId = requestId
+        self.userMids = userMids
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.LIST:
+                    self.userMids = []
+                    (_etype1052, _size1049) = iprot.readListBegin()
+                    for _i1053 in range(_size1049):
+                        _elem1054 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.userMids.append(_elem1054)
+                    iprot.readListEnd()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('removeBuddyMembers_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.userMids is not None:
+            oprot.writeFieldBegin('userMids', TType.LIST, 2)
+            oprot.writeListBegin(TType.STRING, len(self.userMids))
+            for iter1055 in self.userMids:
+                oprot.writeString(iter1055.encode('utf-8') if sys.version_info[0] == 2 else iter1055)
+            oprot.writeListEnd()
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(removeBuddyMembers_args)
+removeBuddyMembers_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.LIST, 'userMids', (TType.STRING, 'UTF8', False), None, ),  # 2
+)
+
+
+class removeBuddyMembers_result(object):
+    """
+    Attributes:
+     - e
+    """
+
+
+    def __init__(self, e=None,):
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('removeBuddyMembers_result')
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(removeBuddyMembers_result)
+removeBuddyMembers_result.thrift_spec = (
+    None,  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class sendBuddyContentMessageToAll_args(object):
+    """
+    Attributes:
+     - requestId
+     - msg
+     - content
+    """
+
+
+    def __init__(self, requestId=None, msg=None, content=None,):
+        self.requestId = requestId
+        self.msg = msg
+        self.content = content
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRUCT:
+                    self.msg = Message()
+                    self.msg.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            elif fid == 3:
+                if ftype == TType.STRING:
+                    self.content = iprot.readBinary()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('sendBuddyContentMessageToAll_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.msg is not None:
+            oprot.writeFieldBegin('msg', TType.STRUCT, 2)
+            self.msg.write(oprot)
+            oprot.writeFieldEnd()
+        if self.content is not None:
+            oprot.writeFieldBegin('content', TType.STRING, 3)
+            oprot.writeBinary(self.content)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(sendBuddyContentMessageToAll_args)
+sendBuddyContentMessageToAll_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRUCT, 'msg', [Message, None], None, ),  # 2
+    (3, TType.STRING, 'content', 'BINARY', None, ),  # 3
+)
+
+
+class sendBuddyContentMessageToAll_result(object):
     """
     Attributes:
      - success
@@ -4706,13 +8584,13 @@ class reportSquareChat_result(object):
                 break
             if fid == 0:
                 if ftype == TType.STRUCT:
-                    self.success = ReportSquareChatResponse()
+                    self.success = SendBuddyMessageResult()
                     self.success.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 1:
                 if ftype == TType.STRUCT:
-                    self.e = SquareException()
+                    self.e = TalkException()
                     self.e.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -4725,7 +8603,7 @@ class reportSquareChat_result(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('reportSquareChat_result')
+        oprot.writeStructBegin('sendBuddyContentMessageToAll_result')
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.STRUCT, 0)
             self.success.write(oprot)
@@ -4750,22 +8628,26 @@ class reportSquareChat_result(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(reportSquareChat_result)
-reportSquareChat_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [ReportSquareChatResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
+all_structs.append(sendBuddyContentMessageToAll_result)
+sendBuddyContentMessageToAll_result.thrift_spec = (
+    (0, TType.STRUCT, 'success', [SendBuddyMessageResult, None], None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
 )
 
 
-class reportSquare_args(object):
+class sendBuddyContentMessageToAllAsync_args(object):
     """
     Attributes:
-     - request
+     - requestId
+     - msg
+     - content
     """
 
 
-    def __init__(self, request=None,):
-        self.request = request
+    def __init__(self, requestId=None, msg=None, content=None,):
+        self.requestId = requestId
+        self.msg = msg
+        self.content = content
 
     def read(self, iprot):
         if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
@@ -4777,9 +8659,19 @@ class reportSquare_args(object):
             if ftype == TType.STOP:
                 break
             if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
                 if ftype == TType.STRUCT:
-                    self.request = ReportSquareRequest()
-                    self.request.read(iprot)
+                    self.msg = Message()
+                    self.msg.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            elif fid == 3:
+                if ftype == TType.STRING:
+                    self.content = iprot.readBinary()
                 else:
                     iprot.skip(ftype)
             else:
@@ -4791,10 +8683,18 @@ class reportSquare_args(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('reportSquare_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
+        oprot.writeStructBegin('sendBuddyContentMessageToAllAsync_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.msg is not None:
+            oprot.writeFieldBegin('msg', TType.STRUCT, 2)
+            self.msg.write(oprot)
+            oprot.writeFieldEnd()
+        if self.content is not None:
+            oprot.writeFieldBegin('content', TType.STRING, 3)
+            oprot.writeBinary(self.content)
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
@@ -4812,14 +8712,195 @@ class reportSquare_args(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(reportSquare_args)
-reportSquare_args.thrift_spec = (
+all_structs.append(sendBuddyContentMessageToAllAsync_args)
+sendBuddyContentMessageToAllAsync_args.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'request', [ReportSquareRequest, None], None, ),  # 1
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRUCT, 'msg', [Message, None], None, ),  # 2
+    (3, TType.STRING, 'content', 'BINARY', None, ),  # 3
 )
 
 
-class reportSquare_result(object):
+class sendBuddyContentMessageToAllAsync_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.STRING:
+                    self.success = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('sendBuddyContentMessageToAllAsync_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.STRING, 0)
+            oprot.writeString(self.success.encode('utf-8') if sys.version_info[0] == 2 else self.success)
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(sendBuddyContentMessageToAllAsync_result)
+sendBuddyContentMessageToAllAsync_result.thrift_spec = (
+    (0, TType.STRING, 'success', 'UTF8', None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class sendBuddyContentMessageToMids_args(object):
+    """
+    Attributes:
+     - requestId
+     - msg
+     - content
+     - mids
+    """
+
+
+    def __init__(self, requestId=None, msg=None, content=None, mids=None,):
+        self.requestId = requestId
+        self.msg = msg
+        self.content = content
+        self.mids = mids
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRUCT:
+                    self.msg = Message()
+                    self.msg.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            elif fid == 3:
+                if ftype == TType.STRING:
+                    self.content = iprot.readBinary()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 4:
+                if ftype == TType.LIST:
+                    self.mids = []
+                    (_etype1059, _size1056) = iprot.readListBegin()
+                    for _i1060 in range(_size1056):
+                        _elem1061 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.mids.append(_elem1061)
+                    iprot.readListEnd()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('sendBuddyContentMessageToMids_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.msg is not None:
+            oprot.writeFieldBegin('msg', TType.STRUCT, 2)
+            self.msg.write(oprot)
+            oprot.writeFieldEnd()
+        if self.content is not None:
+            oprot.writeFieldBegin('content', TType.STRING, 3)
+            oprot.writeBinary(self.content)
+            oprot.writeFieldEnd()
+        if self.mids is not None:
+            oprot.writeFieldBegin('mids', TType.LIST, 4)
+            oprot.writeListBegin(TType.STRING, len(self.mids))
+            for iter1062 in self.mids:
+                oprot.writeString(iter1062.encode('utf-8') if sys.version_info[0] == 2 else iter1062)
+            oprot.writeListEnd()
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(sendBuddyContentMessageToMids_args)
+sendBuddyContentMessageToMids_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRUCT, 'msg', [Message, None], None, ),  # 2
+    (3, TType.STRING, 'content', 'BINARY', None, ),  # 3
+    (4, TType.LIST, 'mids', (TType.STRING, 'UTF8', False), None, ),  # 4
+)
+
+
+class sendBuddyContentMessageToMids_result(object):
     """
     Attributes:
      - success
@@ -4842,13 +8923,13 @@ class reportSquare_result(object):
                 break
             if fid == 0:
                 if ftype == TType.STRUCT:
-                    self.success = ReportSquareResponse()
+                    self.success = SendBuddyMessageResult()
                     self.success.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 1:
                 if ftype == TType.STRUCT:
-                    self.e = SquareException()
+                    self.e = TalkException()
                     self.e.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -4861,7 +8942,7 @@ class reportSquare_result(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('reportSquare_result')
+        oprot.writeStructBegin('sendBuddyContentMessageToMids_result')
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.STRUCT, 0)
             self.success.write(oprot)
@@ -4886,22 +8967,28 @@ class reportSquare_result(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(reportSquare_result)
-reportSquare_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [ReportSquareResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
+all_structs.append(sendBuddyContentMessageToMids_result)
+sendBuddyContentMessageToMids_result.thrift_spec = (
+    (0, TType.STRUCT, 'success', [SendBuddyMessageResult, None], None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
 )
 
 
-class updateSquareMemberRelation_args(object):
+class sendBuddyContentMessageToMidsAsync_args(object):
     """
     Attributes:
-     - request
+     - requestId
+     - msg
+     - content
+     - mids
     """
 
 
-    def __init__(self, request=None,):
-        self.request = request
+    def __init__(self, requestId=None, msg=None, content=None, mids=None,):
+        self.requestId = requestId
+        self.msg = msg
+        self.content = content
+        self.mids = mids
 
     def read(self, iprot):
         if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
@@ -4913,9 +9000,29 @@ class updateSquareMemberRelation_args(object):
             if ftype == TType.STOP:
                 break
             if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
                 if ftype == TType.STRUCT:
-                    self.request = UpdateSquareMemberRelationRequest()
-                    self.request.read(iprot)
+                    self.msg = Message()
+                    self.msg.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            elif fid == 3:
+                if ftype == TType.STRING:
+                    self.content = iprot.readBinary()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 4:
+                if ftype == TType.LIST:
+                    self.mids = []
+                    (_etype1066, _size1063) = iprot.readListBegin()
+                    for _i1067 in range(_size1063):
+                        _elem1068 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.mids.append(_elem1068)
+                    iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
             else:
@@ -4927,10 +9034,25 @@ class updateSquareMemberRelation_args(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('updateSquareMemberRelation_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
+        oprot.writeStructBegin('sendBuddyContentMessageToMidsAsync_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.msg is not None:
+            oprot.writeFieldBegin('msg', TType.STRUCT, 2)
+            self.msg.write(oprot)
+            oprot.writeFieldEnd()
+        if self.content is not None:
+            oprot.writeFieldBegin('content', TType.STRING, 3)
+            oprot.writeBinary(self.content)
+            oprot.writeFieldEnd()
+        if self.mids is not None:
+            oprot.writeFieldBegin('mids', TType.LIST, 4)
+            oprot.writeListBegin(TType.STRING, len(self.mids))
+            for iter1069 in self.mids:
+                oprot.writeString(iter1069.encode('utf-8') if sys.version_info[0] == 2 else iter1069)
+            oprot.writeListEnd()
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
@@ -4948,14 +9070,164 @@ class updateSquareMemberRelation_args(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(updateSquareMemberRelation_args)
-updateSquareMemberRelation_args.thrift_spec = (
+all_structs.append(sendBuddyContentMessageToMidsAsync_args)
+sendBuddyContentMessageToMidsAsync_args.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'request', [UpdateSquareMemberRelationRequest, None], None, ),  # 1
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRUCT, 'msg', [Message, None], None, ),  # 2
+    (3, TType.STRING, 'content', 'BINARY', None, ),  # 3
+    (4, TType.LIST, 'mids', (TType.STRING, 'UTF8', False), None, ),  # 4
 )
 
 
-class updateSquareMemberRelation_result(object):
+class sendBuddyContentMessageToMidsAsync_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.STRING:
+                    self.success = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('sendBuddyContentMessageToMidsAsync_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.STRING, 0)
+            oprot.writeString(self.success.encode('utf-8') if sys.version_info[0] == 2 else self.success)
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(sendBuddyContentMessageToMidsAsync_result)
+sendBuddyContentMessageToMidsAsync_result.thrift_spec = (
+    (0, TType.STRING, 'success', 'UTF8', None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class sendBuddyMessageToAll_args(object):
+    """
+    Attributes:
+     - requestId
+     - msg
+    """
+
+
+    def __init__(self, requestId=None, msg=None,):
+        self.requestId = requestId
+        self.msg = msg
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRUCT:
+                    self.msg = Message()
+                    self.msg.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('sendBuddyMessageToAll_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.msg is not None:
+            oprot.writeFieldBegin('msg', TType.STRUCT, 2)
+            self.msg.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(sendBuddyMessageToAll_args)
+sendBuddyMessageToAll_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRUCT, 'msg', [Message, None], None, ),  # 2
+)
+
+
+class sendBuddyMessageToAll_result(object):
     """
     Attributes:
      - success
@@ -4978,13 +9250,13 @@ class updateSquareMemberRelation_result(object):
                 break
             if fid == 0:
                 if ftype == TType.STRUCT:
-                    self.success = UpdateSquareMemberRelationResponse()
+                    self.success = SendBuddyMessageResult()
                     self.success.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 1:
                 if ftype == TType.STRUCT:
-                    self.e = SquareException()
+                    self.e = TalkException()
                     self.e.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -4997,7 +9269,7 @@ class updateSquareMemberRelation_result(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('updateSquareMemberRelation_result')
+        oprot.writeStructBegin('sendBuddyMessageToAll_result')
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.STRUCT, 0)
             self.success.write(oprot)
@@ -5022,22 +9294,24 @@ class updateSquareMemberRelation_result(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(updateSquareMemberRelation_result)
-updateSquareMemberRelation_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [UpdateSquareMemberRelationResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
+all_structs.append(sendBuddyMessageToAll_result)
+sendBuddyMessageToAll_result.thrift_spec = (
+    (0, TType.STRUCT, 'success', [SendBuddyMessageResult, None], None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
 )
 
 
-class updateSquareAuthority_args(object):
+class sendBuddyMessageToAllAsync_args(object):
     """
     Attributes:
-     - request
+     - requestId
+     - msg
     """
 
 
-    def __init__(self, request=None,):
-        self.request = request
+    def __init__(self, requestId=None, msg=None,):
+        self.requestId = requestId
+        self.msg = msg
 
     def read(self, iprot):
         if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
@@ -5049,9 +9323,14 @@ class updateSquareAuthority_args(object):
             if ftype == TType.STOP:
                 break
             if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
                 if ftype == TType.STRUCT:
-                    self.request = UpdateSquareAuthorityRequest()
-                    self.request.read(iprot)
+                    self.msg = Message()
+                    self.msg.read(iprot)
                 else:
                     iprot.skip(ftype)
             else:
@@ -5063,10 +9342,14 @@ class updateSquareAuthority_args(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('updateSquareAuthority_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
+        oprot.writeStructBegin('sendBuddyMessageToAllAsync_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.msg is not None:
+            oprot.writeFieldBegin('msg', TType.STRUCT, 2)
+            self.msg.write(oprot)
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
@@ -5084,14 +9367,182 @@ class updateSquareAuthority_args(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(updateSquareAuthority_args)
-updateSquareAuthority_args.thrift_spec = (
+all_structs.append(sendBuddyMessageToAllAsync_args)
+sendBuddyMessageToAllAsync_args.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'request', [UpdateSquareAuthorityRequest, None], None, ),  # 1
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRUCT, 'msg', [Message, None], None, ),  # 2
 )
 
 
-class updateSquareAuthority_result(object):
+class sendBuddyMessageToAllAsync_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.STRING:
+                    self.success = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('sendBuddyMessageToAllAsync_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.STRING, 0)
+            oprot.writeString(self.success.encode('utf-8') if sys.version_info[0] == 2 else self.success)
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(sendBuddyMessageToAllAsync_result)
+sendBuddyMessageToAllAsync_result.thrift_spec = (
+    (0, TType.STRING, 'success', 'UTF8', None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class sendBuddyMessageToMids_args(object):
+    """
+    Attributes:
+     - requestId
+     - msg
+     - mids
+    """
+
+
+    def __init__(self, requestId=None, msg=None, mids=None,):
+        self.requestId = requestId
+        self.msg = msg
+        self.mids = mids
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRUCT:
+                    self.msg = Message()
+                    self.msg.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            elif fid == 3:
+                if ftype == TType.LIST:
+                    self.mids = []
+                    (_etype1073, _size1070) = iprot.readListBegin()
+                    for _i1074 in range(_size1070):
+                        _elem1075 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.mids.append(_elem1075)
+                    iprot.readListEnd()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('sendBuddyMessageToMids_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.msg is not None:
+            oprot.writeFieldBegin('msg', TType.STRUCT, 2)
+            self.msg.write(oprot)
+            oprot.writeFieldEnd()
+        if self.mids is not None:
+            oprot.writeFieldBegin('mids', TType.LIST, 3)
+            oprot.writeListBegin(TType.STRING, len(self.mids))
+            for iter1076 in self.mids:
+                oprot.writeString(iter1076.encode('utf-8') if sys.version_info[0] == 2 else iter1076)
+            oprot.writeListEnd()
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(sendBuddyMessageToMids_args)
+sendBuddyMessageToMids_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRUCT, 'msg', [Message, None], None, ),  # 2
+    (3, TType.LIST, 'mids', (TType.STRING, 'UTF8', False), None, ),  # 3
+)
+
+
+class sendBuddyMessageToMids_result(object):
     """
     Attributes:
      - success
@@ -5114,13 +9565,13 @@ class updateSquareAuthority_result(object):
                 break
             if fid == 0:
                 if ftype == TType.STRUCT:
-                    self.success = UpdateSquareAuthorityResponse()
+                    self.success = SendBuddyMessageResult()
                     self.success.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 1:
                 if ftype == TType.STRUCT:
-                    self.e = SquareException()
+                    self.e = TalkException()
                     self.e.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -5133,7 +9584,7 @@ class updateSquareAuthority_result(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('updateSquareAuthority_result')
+        oprot.writeStructBegin('sendBuddyMessageToMids_result')
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.STRUCT, 0)
             self.success.write(oprot)
@@ -5158,22 +9609,26 @@ class updateSquareAuthority_result(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(updateSquareAuthority_result)
-updateSquareAuthority_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [UpdateSquareAuthorityResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
+all_structs.append(sendBuddyMessageToMids_result)
+sendBuddyMessageToMids_result.thrift_spec = (
+    (0, TType.STRUCT, 'success', [SendBuddyMessageResult, None], None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
 )
 
 
-class updateSquareChatMember_args(object):
+class sendBuddyMessageToMidsAsync_args(object):
     """
     Attributes:
-     - request
+     - requestId
+     - msg
+     - mids
     """
 
 
-    def __init__(self, request=None,):
-        self.request = request
+    def __init__(self, requestId=None, msg=None, mids=None,):
+        self.requestId = requestId
+        self.msg = msg
+        self.mids = mids
 
     def read(self, iprot):
         if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
@@ -5185,9 +9640,24 @@ class updateSquareChatMember_args(object):
             if ftype == TType.STOP:
                 break
             if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
                 if ftype == TType.STRUCT:
-                    self.request = UpdateSquareChatMemberRequest()
-                    self.request.read(iprot)
+                    self.msg = Message()
+                    self.msg.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            elif fid == 3:
+                if ftype == TType.LIST:
+                    self.mids = []
+                    (_etype1080, _size1077) = iprot.readListBegin()
+                    for _i1081 in range(_size1077):
+                        _elem1082 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.mids.append(_elem1082)
+                    iprot.readListEnd()
                 else:
                     iprot.skip(ftype)
             else:
@@ -5199,10 +9669,21 @@ class updateSquareChatMember_args(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('updateSquareChatMember_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
+        oprot.writeStructBegin('sendBuddyMessageToMidsAsync_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.msg is not None:
+            oprot.writeFieldBegin('msg', TType.STRUCT, 2)
+            self.msg.write(oprot)
+            oprot.writeFieldEnd()
+        if self.mids is not None:
+            oprot.writeFieldBegin('mids', TType.LIST, 3)
+            oprot.writeListBegin(TType.STRING, len(self.mids))
+            for iter1083 in self.mids:
+                oprot.writeString(iter1083.encode('utf-8') if sys.version_info[0] == 2 else iter1083)
+            oprot.writeListEnd()
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
@@ -5220,14 +9701,309 @@ class updateSquareChatMember_args(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(updateSquareChatMember_args)
-updateSquareChatMember_args.thrift_spec = (
+all_structs.append(sendBuddyMessageToMidsAsync_args)
+sendBuddyMessageToMidsAsync_args.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'request', [UpdateSquareChatMemberRequest, None], None, ),  # 1
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRUCT, 'msg', [Message, None], None, ),  # 2
+    (3, TType.LIST, 'mids', (TType.STRING, 'UTF8', False), None, ),  # 3
 )
 
 
-class updateSquareChatMember_result(object):
+class sendBuddyMessageToMidsAsync_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.STRING:
+                    self.success = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('sendBuddyMessageToMidsAsync_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.STRING, 0)
+            oprot.writeString(self.success.encode('utf-8') if sys.version_info[0] == 2 else self.success)
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(sendBuddyMessageToMidsAsync_result)
+sendBuddyMessageToMidsAsync_result.thrift_spec = (
+    (0, TType.STRING, 'success', 'UTF8', None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class sendIndividualEventToAllAsync_args(object):
+    """
+    Attributes:
+     - requestId
+     - buddyMid
+     - notificationStatus
+    """
+
+
+    def __init__(self, requestId=None, buddyMid=None, notificationStatus=None,):
+        self.requestId = requestId
+        self.buddyMid = buddyMid
+        self.notificationStatus = notificationStatus
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRING:
+                    self.buddyMid = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 3:
+                if ftype == TType.I32:
+                    self.notificationStatus = iprot.readI32()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('sendIndividualEventToAllAsync_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.buddyMid is not None:
+            oprot.writeFieldBegin('buddyMid', TType.STRING, 2)
+            oprot.writeString(self.buddyMid.encode('utf-8') if sys.version_info[0] == 2 else self.buddyMid)
+            oprot.writeFieldEnd()
+        if self.notificationStatus is not None:
+            oprot.writeFieldBegin('notificationStatus', TType.I32, 3)
+            oprot.writeI32(self.notificationStatus)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(sendIndividualEventToAllAsync_args)
+sendIndividualEventToAllAsync_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRING, 'buddyMid', 'UTF8', None, ),  # 2
+    (3, TType.I32, 'notificationStatus', None, None, ),  # 3
+)
+
+
+class sendIndividualEventToAllAsync_result(object):
+    """
+    Attributes:
+     - e
+    """
+
+
+    def __init__(self, e=None,):
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('sendIndividualEventToAllAsync_result')
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(sendIndividualEventToAllAsync_result)
+sendIndividualEventToAllAsync_result.thrift_spec = (
+    None,  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class setBuddyOnAir_args(object):
+    """
+    Attributes:
+     - requestId
+     - onAir
+    """
+
+
+    def __init__(self, requestId=None, onAir=None,):
+        self.requestId = requestId
+        self.onAir = onAir
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.BOOL:
+                    self.onAir = iprot.readBool()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('setBuddyOnAir_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.onAir is not None:
+            oprot.writeFieldBegin('onAir', TType.BOOL, 2)
+            oprot.writeBool(self.onAir)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(setBuddyOnAir_args)
+setBuddyOnAir_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.BOOL, 'onAir', None, None, ),  # 2
+)
+
+
+class setBuddyOnAir_result(object):
     """
     Attributes:
      - success
@@ -5250,13 +10026,13 @@ class updateSquareChatMember_result(object):
                 break
             if fid == 0:
                 if ftype == TType.STRUCT:
-                    self.success = UpdateSquareChatMemberResponse()
+                    self.success = SetBuddyOnAirResult()
                     self.success.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 1:
                 if ftype == TType.STRUCT:
-                    self.e = SquareException()
+                    self.e = TalkException()
                     self.e.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -5269,7 +10045,7 @@ class updateSquareChatMember_result(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('updateSquareChatMember_result')
+        oprot.writeStructBegin('setBuddyOnAir_result')
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.STRUCT, 0)
             self.success.write(oprot)
@@ -5294,22 +10070,24 @@ class updateSquareChatMember_result(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(updateSquareChatMember_result)
-updateSquareChatMember_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [UpdateSquareChatMemberResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
+all_structs.append(setBuddyOnAir_result)
+setBuddyOnAir_result.thrift_spec = (
+    (0, TType.STRUCT, 'success', [SetBuddyOnAirResult, None], None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
 )
 
 
-class updateSquareChat_args(object):
+class setBuddyOnAirAsync_args(object):
     """
     Attributes:
-     - request
+     - requestId
+     - onAir
     """
 
 
-    def __init__(self, request=None,):
-        self.request = request
+    def __init__(self, requestId=None, onAir=None,):
+        self.requestId = requestId
+        self.onAir = onAir
 
     def read(self, iprot):
         if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
@@ -5321,9 +10099,13 @@ class updateSquareChat_args(object):
             if ftype == TType.STOP:
                 break
             if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = UpdateSquareChatRequest()
-                    self.request.read(iprot)
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.BOOL:
+                    self.onAir = iprot.readBool()
                 else:
                     iprot.skip(ftype)
             else:
@@ -5335,10 +10117,14 @@ class updateSquareChat_args(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('updateSquareChat_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
+        oprot.writeStructBegin('setBuddyOnAirAsync_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.onAir is not None:
+            oprot.writeFieldBegin('onAir', TType.BOOL, 2)
+            oprot.writeBool(self.onAir)
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
@@ -5356,14 +10142,162 @@ class updateSquareChat_args(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(updateSquareChat_args)
-updateSquareChat_args.thrift_spec = (
+all_structs.append(setBuddyOnAirAsync_args)
+setBuddyOnAirAsync_args.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'request', [UpdateSquareChatRequest, None], None, ),  # 1
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.BOOL, 'onAir', None, None, ),  # 2
 )
 
 
-class updateSquareChat_result(object):
+class setBuddyOnAirAsync_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.STRING:
+                    self.success = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('setBuddyOnAirAsync_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.STRING, 0)
+            oprot.writeString(self.success.encode('utf-8') if sys.version_info[0] == 2 else self.success)
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(setBuddyOnAirAsync_result)
+setBuddyOnAirAsync_result.thrift_spec = (
+    (0, TType.STRING, 'success', 'UTF8', None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class storeMessage_args(object):
+    """
+    Attributes:
+     - requestId
+     - messageRequest
+    """
+
+
+    def __init__(self, requestId=None, messageRequest=None,):
+        self.requestId = requestId
+        self.messageRequest = messageRequest
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRUCT:
+                    self.messageRequest = BuddyMessageRequest()
+                    self.messageRequest.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('storeMessage_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.messageRequest is not None:
+            oprot.writeFieldBegin('messageRequest', TType.STRUCT, 2)
+            self.messageRequest.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(storeMessage_args)
+storeMessage_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRUCT, 'messageRequest', [BuddyMessageRequest, None], None, ),  # 2
+)
+
+
+class storeMessage_result(object):
     """
     Attributes:
      - success
@@ -5386,13 +10320,13 @@ class updateSquareChat_result(object):
                 break
             if fid == 0:
                 if ftype == TType.STRUCT:
-                    self.success = UpdateSquareChatResponse()
+                    self.success = SendBuddyMessageResult()
                     self.success.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 1:
                 if ftype == TType.STRUCT:
-                    self.e = SquareException()
+                    self.e = TalkException()
                     self.e.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -5405,7 +10339,7 @@ class updateSquareChat_result(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('updateSquareChat_result')
+        oprot.writeStructBegin('storeMessage_result')
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.STRUCT, 0)
             self.success.write(oprot)
@@ -5430,22 +10364,24 @@ class updateSquareChat_result(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(updateSquareChat_result)
-updateSquareChat_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [UpdateSquareChatResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
+all_structs.append(storeMessage_result)
+storeMessage_result.thrift_spec = (
+    (0, TType.STRUCT, 'success', [SendBuddyMessageResult, None], None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
 )
 
 
-class refreshSubscriptions_args(object):
+class unblockBuddyMember_args(object):
     """
     Attributes:
-     - request
+     - requestId
+     - mid
     """
 
 
-    def __init__(self, request=None,):
-        self.request = request
+    def __init__(self, requestId=None, mid=None,):
+        self.requestId = requestId
+        self.mid = mid
 
     def read(self, iprot):
         if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
@@ -5457,9 +10393,13 @@ class refreshSubscriptions_args(object):
             if ftype == TType.STOP:
                 break
             if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = RefreshSubscriptionsRequest()
-                    self.request.read(iprot)
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRING:
+                    self.mid = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
                 else:
                     iprot.skip(ftype)
             else:
@@ -5471,10 +10411,14 @@ class refreshSubscriptions_args(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('refreshSubscriptions_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
+        oprot.writeStructBegin('unblockBuddyMember_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.mid is not None:
+            oprot.writeFieldBegin('mid', TType.STRING, 2)
+            oprot.writeString(self.mid.encode('utf-8') if sys.version_info[0] == 2 else self.mid)
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
@@ -5492,14 +10436,686 @@ class refreshSubscriptions_args(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(refreshSubscriptions_args)
-refreshSubscriptions_args.thrift_spec = (
+all_structs.append(unblockBuddyMember_args)
+unblockBuddyMember_args.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'request', [RefreshSubscriptionsRequest, None], None, ),  # 1
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRING, 'mid', 'UTF8', None, ),  # 2
 )
 
 
-class refreshSubscriptions_result(object):
+class unblockBuddyMember_result(object):
+    """
+    Attributes:
+     - e
+    """
+
+
+    def __init__(self, e=None,):
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('unblockBuddyMember_result')
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(unblockBuddyMember_result)
+unblockBuddyMember_result.thrift_spec = (
+    None,  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class unregisterBuddy_args(object):
+    """
+    Attributes:
+     - requestId
+    """
+
+
+    def __init__(self, requestId=None,):
+        self.requestId = requestId
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('unregisterBuddy_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(unregisterBuddy_args)
+unregisterBuddy_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+)
+
+
+class unregisterBuddy_result(object):
+    """
+    Attributes:
+     - e
+    """
+
+
+    def __init__(self, e=None,):
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('unregisterBuddy_result')
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(unregisterBuddy_result)
+unregisterBuddy_result.thrift_spec = (
+    None,  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class unregisterBuddyAdmin_args(object):
+    """
+    Attributes:
+     - requestId
+    """
+
+
+    def __init__(self, requestId=None,):
+        self.requestId = requestId
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('unregisterBuddyAdmin_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(unregisterBuddyAdmin_args)
+unregisterBuddyAdmin_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+)
+
+
+class unregisterBuddyAdmin_result(object):
+    """
+    Attributes:
+     - e
+    """
+
+
+    def __init__(self, e=None,):
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('unregisterBuddyAdmin_result')
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(unregisterBuddyAdmin_result)
+unregisterBuddyAdmin_result.thrift_spec = (
+    None,  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class updateBuddyAdminProfileAttribute_args(object):
+    """
+    Attributes:
+     - requestId
+     - attributes
+    """
+
+
+    def __init__(self, requestId=None, attributes=None,):
+        self.requestId = requestId
+        self.attributes = attributes
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.MAP:
+                    self.attributes = {}
+                    (_ktype1085, _vtype1086, _size1084) = iprot.readMapBegin()
+                    for _i1088 in range(_size1084):
+                        _key1089 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        _val1090 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.attributes[_key1089] = _val1090
+                    iprot.readMapEnd()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('updateBuddyAdminProfileAttribute_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.attributes is not None:
+            oprot.writeFieldBegin('attributes', TType.MAP, 2)
+            oprot.writeMapBegin(TType.STRING, TType.STRING, len(self.attributes))
+            for kiter1091, viter1092 in self.attributes.items():
+                oprot.writeString(kiter1091.encode('utf-8') if sys.version_info[0] == 2 else kiter1091)
+                oprot.writeString(viter1092.encode('utf-8') if sys.version_info[0] == 2 else viter1092)
+            oprot.writeMapEnd()
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(updateBuddyAdminProfileAttribute_args)
+updateBuddyAdminProfileAttribute_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.MAP, 'attributes', (TType.STRING, 'UTF8', TType.STRING, 'UTF8', False), None, ),  # 2
+)
+
+
+class updateBuddyAdminProfileAttribute_result(object):
+    """
+    Attributes:
+     - e
+    """
+
+
+    def __init__(self, e=None,):
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('updateBuddyAdminProfileAttribute_result')
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(updateBuddyAdminProfileAttribute_result)
+updateBuddyAdminProfileAttribute_result.thrift_spec = (
+    None,  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class updateBuddyAdminProfileImage_args(object):
+    """
+    Attributes:
+     - requestId
+     - picture
+    """
+
+
+    def __init__(self, requestId=None, picture=None,):
+        self.requestId = requestId
+        self.picture = picture
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRING:
+                    self.picture = iprot.readBinary()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('updateBuddyAdminProfileImage_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.picture is not None:
+            oprot.writeFieldBegin('picture', TType.STRING, 2)
+            oprot.writeBinary(self.picture)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(updateBuddyAdminProfileImage_args)
+updateBuddyAdminProfileImage_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRING, 'picture', 'BINARY', None, ),  # 2
+)
+
+
+class updateBuddyAdminProfileImage_result(object):
+    """
+    Attributes:
+     - e
+    """
+
+
+    def __init__(self, e=None,):
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('updateBuddyAdminProfileImage_result')
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(updateBuddyAdminProfileImage_result)
+updateBuddyAdminProfileImage_result.thrift_spec = (
+    None,  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class updateBuddyProfileAttributes_args(object):
+    """
+    Attributes:
+     - requestId
+     - attributes
+    """
+
+
+    def __init__(self, requestId=None, attributes=None,):
+        self.requestId = requestId
+        self.attributes = attributes
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.MAP:
+                    self.attributes = {}
+                    (_ktype1094, _vtype1095, _size1093) = iprot.readMapBegin()
+                    for _i1097 in range(_size1093):
+                        _key1098 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        _val1099 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.attributes[_key1098] = _val1099
+                    iprot.readMapEnd()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('updateBuddyProfileAttributes_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.attributes is not None:
+            oprot.writeFieldBegin('attributes', TType.MAP, 2)
+            oprot.writeMapBegin(TType.STRING, TType.STRING, len(self.attributes))
+            for kiter1100, viter1101 in self.attributes.items():
+                oprot.writeString(kiter1100.encode('utf-8') if sys.version_info[0] == 2 else kiter1100)
+                oprot.writeString(viter1101.encode('utf-8') if sys.version_info[0] == 2 else viter1101)
+            oprot.writeMapEnd()
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(updateBuddyProfileAttributes_args)
+updateBuddyProfileAttributes_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.MAP, 'attributes', (TType.STRING, 'UTF8', TType.STRING, 'UTF8', False), None, ),  # 2
+)
+
+
+class updateBuddyProfileAttributes_result(object):
     """
     Attributes:
      - success
@@ -5522,13 +11138,13 @@ class refreshSubscriptions_result(object):
                 break
             if fid == 0:
                 if ftype == TType.STRUCT:
-                    self.success = RefreshSubscriptionsResponse()
+                    self.success = UpdateBuddyProfileResult()
                     self.success.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 1:
                 if ftype == TType.STRUCT:
-                    self.e = SquareException()
+                    self.e = TalkException()
                     self.e.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -5541,7 +11157,7 @@ class refreshSubscriptions_result(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('refreshSubscriptions_result')
+        oprot.writeStructBegin('updateBuddyProfileAttributes_result')
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.STRUCT, 0)
             self.success.write(oprot)
@@ -5566,22 +11182,24 @@ class refreshSubscriptions_result(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(refreshSubscriptions_result)
-refreshSubscriptions_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [RefreshSubscriptionsResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
+all_structs.append(updateBuddyProfileAttributes_result)
+updateBuddyProfileAttributes_result.thrift_spec = (
+    (0, TType.STRUCT, 'success', [UpdateBuddyProfileResult, None], None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
 )
 
 
-class removeSubscriptions_args(object):
+class updateBuddyProfileAttributesAsync_args(object):
     """
     Attributes:
-     - request
+     - requestId
+     - attributes
     """
 
 
-    def __init__(self, request=None,):
-        self.request = request
+    def __init__(self, requestId=None, attributes=None,):
+        self.requestId = requestId
+        self.attributes = attributes
 
     def read(self, iprot):
         if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
@@ -5593,9 +11211,19 @@ class removeSubscriptions_args(object):
             if ftype == TType.STOP:
                 break
             if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = RemoveSubscriptionsRequest()
-                    self.request.read(iprot)
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.MAP:
+                    self.attributes = {}
+                    (_ktype1103, _vtype1104, _size1102) = iprot.readMapBegin()
+                    for _i1106 in range(_size1102):
+                        _key1107 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        _val1108 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.attributes[_key1107] = _val1108
+                    iprot.readMapEnd()
                 else:
                     iprot.skip(ftype)
             else:
@@ -5607,10 +11235,18 @@ class removeSubscriptions_args(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('removeSubscriptions_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
+        oprot.writeStructBegin('updateBuddyProfileAttributesAsync_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.attributes is not None:
+            oprot.writeFieldBegin('attributes', TType.MAP, 2)
+            oprot.writeMapBegin(TType.STRING, TType.STRING, len(self.attributes))
+            for kiter1109, viter1110 in self.attributes.items():
+                oprot.writeString(kiter1109.encode('utf-8') if sys.version_info[0] == 2 else kiter1109)
+                oprot.writeString(viter1110.encode('utf-8') if sys.version_info[0] == 2 else viter1110)
+            oprot.writeMapEnd()
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
@@ -5628,14 +11264,161 @@ class removeSubscriptions_args(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(removeSubscriptions_args)
-removeSubscriptions_args.thrift_spec = (
+all_structs.append(updateBuddyProfileAttributesAsync_args)
+updateBuddyProfileAttributesAsync_args.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'request', [RemoveSubscriptionsRequest, None], None, ),  # 1
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.MAP, 'attributes', (TType.STRING, 'UTF8', TType.STRING, 'UTF8', False), None, ),  # 2
 )
 
 
-class removeSubscriptions_result(object):
+class updateBuddyProfileAttributesAsync_result(object):
+    """
+    Attributes:
+     - success
+     - e
+    """
+
+
+    def __init__(self, success=None, e=None,):
+        self.success = success
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 0:
+                if ftype == TType.STRING:
+                    self.success = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('updateBuddyProfileAttributesAsync_result')
+        if self.success is not None:
+            oprot.writeFieldBegin('success', TType.STRING, 0)
+            oprot.writeString(self.success.encode('utf-8') if sys.version_info[0] == 2 else self.success)
+            oprot.writeFieldEnd()
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(updateBuddyProfileAttributesAsync_result)
+updateBuddyProfileAttributesAsync_result.thrift_spec = (
+    (0, TType.STRING, 'success', 'UTF8', None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class updateBuddyProfileImage_args(object):
+    """
+    Attributes:
+     - requestId
+     - image
+    """
+
+
+    def __init__(self, requestId=None, image=None,):
+        self.requestId = requestId
+        self.image = image
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRING:
+                    self.image = iprot.readBinary()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('updateBuddyProfileImage_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.image is not None:
+            oprot.writeFieldBegin('image', TType.STRING, 2)
+            oprot.writeBinary(self.image)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(updateBuddyProfileImage_args)
+updateBuddyProfileImage_args.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRING, 'image', 'BINARY', None, ),  # 2
+)
+
+
+class updateBuddyProfileImage_result(object):
     """
     Attributes:
      - success
@@ -5658,13 +11441,13 @@ class removeSubscriptions_result(object):
                 break
             if fid == 0:
                 if ftype == TType.STRUCT:
-                    self.success = RemoveSubscriptionsResponse()
+                    self.success = UpdateBuddyProfileResult()
                     self.success.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 1:
                 if ftype == TType.STRUCT:
-                    self.e = SquareException()
+                    self.e = TalkException()
                     self.e.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -5677,7 +11460,7 @@ class removeSubscriptions_result(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('removeSubscriptions_result')
+        oprot.writeStructBegin('updateBuddyProfileImage_result')
         if self.success is not None:
             oprot.writeFieldBegin('success', TType.STRUCT, 0)
             self.success.write(oprot)
@@ -5702,22 +11485,24 @@ class removeSubscriptions_result(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(removeSubscriptions_result)
-removeSubscriptions_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [RemoveSubscriptionsResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
+all_structs.append(updateBuddyProfileImage_result)
+updateBuddyProfileImage_result.thrift_spec = (
+    (0, TType.STRUCT, 'success', [UpdateBuddyProfileResult, None], None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
 )
 
 
-class rejectSquareMembers_args(object):
+class updateBuddyProfileImageAsync_args(object):
     """
     Attributes:
-     - request
+     - requestId
+     - image
     """
 
 
-    def __init__(self, request=None,):
-        self.request = request
+    def __init__(self, requestId=None, image=None,):
+        self.requestId = requestId
+        self.image = image
 
     def read(self, iprot):
         if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
@@ -5729,9 +11514,13 @@ class rejectSquareMembers_args(object):
             if ftype == TType.STOP:
                 break
             if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = RejectSquareMembersRequest()
-                    self.request.read(iprot)
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRING:
+                    self.image = iprot.readBinary()
                 else:
                     iprot.skip(ftype)
             else:
@@ -5743,10 +11532,14 @@ class rejectSquareMembers_args(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('rejectSquareMembers_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
+        oprot.writeStructBegin('updateBuddyProfileImageAsync_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.image is not None:
+            oprot.writeFieldBegin('image', TType.STRING, 2)
+            oprot.writeBinary(self.image)
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
@@ -5764,14 +11557,15 @@ class rejectSquareMembers_args(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(rejectSquareMembers_args)
-rejectSquareMembers_args.thrift_spec = (
+all_structs.append(updateBuddyProfileImageAsync_args)
+updateBuddyProfileImageAsync_args.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'request', [RejectSquareMembersRequest, None], None, ),  # 1
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRING, 'image', 'BINARY', None, ),  # 2
 )
 
 
-class rejectSquareMembers_result(object):
+class updateBuddyProfileImageAsync_result(object):
     """
     Attributes:
      - success
@@ -5793,14 +11587,13 @@ class rejectSquareMembers_result(object):
             if ftype == TType.STOP:
                 break
             if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = RejectSquareMembersResponse()
-                    self.success.read(iprot)
+                if ftype == TType.STRING:
+                    self.success = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
                 else:
                     iprot.skip(ftype)
             elif fid == 1:
                 if ftype == TType.STRUCT:
-                    self.e = SquareException()
+                    self.e = TalkException()
                     self.e.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -5813,10 +11606,10 @@ class rejectSquareMembers_result(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('rejectSquareMembers_result')
+        oprot.writeStructBegin('updateBuddyProfileImageAsync_result')
         if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
+            oprot.writeFieldBegin('success', TType.STRING, 0)
+            oprot.writeString(self.success.encode('utf-8') if sys.version_info[0] == 2 else self.success)
             oprot.writeFieldEnd()
         if self.e is not None:
             oprot.writeFieldBegin('e', TType.STRUCT, 1)
@@ -5838,22 +11631,24 @@ class rejectSquareMembers_result(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(rejectSquareMembers_result)
-rejectSquareMembers_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [RejectSquareMembersResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
+all_structs.append(updateBuddyProfileImageAsync_result)
+updateBuddyProfileImageAsync_result.thrift_spec = (
+    (0, TType.STRING, 'success', 'UTF8', None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
 )
 
 
-class updateSquareMembers_args(object):
+class updateBuddySearchId_args(object):
     """
     Attributes:
-     - request
+     - requestId
+     - searchId
     """
 
 
-    def __init__(self, request=None,):
-        self.request = request
+    def __init__(self, requestId=None, searchId=None,):
+        self.requestId = requestId
+        self.searchId = searchId
 
     def read(self, iprot):
         if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
@@ -5865,9 +11660,13 @@ class updateSquareMembers_args(object):
             if ftype == TType.STOP:
                 break
             if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = UpdateSquareMembersRequest()
-                    self.request.read(iprot)
+                if ftype == TType.STRING:
+                    self.requestId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRING:
+                    self.searchId = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
                 else:
                     iprot.skip(ftype)
             else:
@@ -5879,10 +11678,14 @@ class updateSquareMembers_args(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('updateSquareMembers_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
+        oprot.writeStructBegin('updateBuddySearchId_args')
+        if self.requestId is not None:
+            oprot.writeFieldBegin('requestId', TType.STRING, 1)
+            oprot.writeString(self.requestId.encode('utf-8') if sys.version_info[0] == 2 else self.requestId)
+            oprot.writeFieldEnd()
+        if self.searchId is not None:
+            oprot.writeFieldBegin('searchId', TType.STRING, 2)
+            oprot.writeString(self.searchId.encode('utf-8') if sys.version_info[0] == 2 else self.searchId)
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
@@ -5900,14 +11703,285 @@ class updateSquareMembers_args(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(updateSquareMembers_args)
-updateSquareMembers_args.thrift_spec = (
+all_structs.append(updateBuddySearchId_args)
+updateBuddySearchId_args.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'request', [UpdateSquareMembersRequest, None], None, ),  # 1
+    (1, TType.STRING, 'requestId', 'UTF8', None, ),  # 1
+    (2, TType.STRING, 'searchId', 'UTF8', None, ),  # 2
 )
 
 
-class updateSquareMembers_result(object):
+class updateBuddySearchId_result(object):
+    """
+    Attributes:
+     - e
+    """
+
+
+    def __init__(self, e=None,):
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('updateBuddySearchId_result')
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(updateBuddySearchId_result)
+updateBuddySearchId_result.thrift_spec = (
+    None,  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class updateBuddySettings_args(object):
+    """
+    Attributes:
+     - settings
+    """
+
+
+    def __init__(self, settings=None,):
+        self.settings = settings
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 2:
+                if ftype == TType.MAP:
+                    self.settings = {}
+                    (_ktype1112, _vtype1113, _size1111) = iprot.readMapBegin()
+                    for _i1115 in range(_size1111):
+                        _key1116 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        _val1117 = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
+                        self.settings[_key1116] = _val1117
+                    iprot.readMapEnd()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('updateBuddySettings_args')
+        if self.settings is not None:
+            oprot.writeFieldBegin('settings', TType.MAP, 2)
+            oprot.writeMapBegin(TType.STRING, TType.STRING, len(self.settings))
+            for kiter1118, viter1119 in self.settings.items():
+                oprot.writeString(kiter1118.encode('utf-8') if sys.version_info[0] == 2 else kiter1118)
+                oprot.writeString(viter1119.encode('utf-8') if sys.version_info[0] == 2 else viter1119)
+            oprot.writeMapEnd()
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(updateBuddySettings_args)
+updateBuddySettings_args.thrift_spec = (
+    None,  # 0
+    None,  # 1
+    (2, TType.MAP, 'settings', (TType.STRING, 'UTF8', TType.STRING, 'UTF8', False), None, ),  # 2
+)
+
+
+class updateBuddySettings_result(object):
+    """
+    Attributes:
+     - e
+    """
+
+
+    def __init__(self, e=None,):
+        self.e = e
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRUCT:
+                    self.e = TalkException()
+                    self.e.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('updateBuddySettings_result')
+        if self.e is not None:
+            oprot.writeFieldBegin('e', TType.STRUCT, 1)
+            self.e.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(updateBuddySettings_result)
+updateBuddySettings_result.thrift_spec = (
+    None,  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
+)
+
+
+class uploadBuddyContent_args(object):
+    """
+    Attributes:
+     - contentType
+     - content
+    """
+
+
+    def __init__(self, contentType=None, content=None,):
+        self.contentType = contentType
+        self.content = content
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 2:
+                if ftype == TType.I32:
+                    self.contentType = iprot.readI32()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 3:
+                if ftype == TType.STRING:
+                    self.content = iprot.readBinary()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('uploadBuddyContent_args')
+        if self.contentType is not None:
+            oprot.writeFieldBegin('contentType', TType.I32, 2)
+            oprot.writeI32(self.contentType)
+            oprot.writeFieldEnd()
+        if self.content is not None:
+            oprot.writeFieldBegin('content', TType.STRING, 3)
+            oprot.writeBinary(self.content)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(uploadBuddyContent_args)
+uploadBuddyContent_args.thrift_spec = (
+    None,  # 0
+    None,  # 1
+    (2, TType.I32, 'contentType', None, None, ),  # 2
+    (3, TType.STRING, 'content', 'BINARY', None, ),  # 3
+)
+
+
+class uploadBuddyContent_result(object):
     """
     Attributes:
      - success
@@ -5929,14 +12003,13 @@ class updateSquareMembers_result(object):
             if ftype == TType.STOP:
                 break
             if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = UpdateSquareMembersResponse()
-                    self.success.read(iprot)
+                if ftype == TType.STRING:
+                    self.success = iprot.readString().decode('utf-8') if sys.version_info[0] == 2 else iprot.readString()
                 else:
                     iprot.skip(ftype)
             elif fid == 1:
                 if ftype == TType.STRUCT:
-                    self.e = SquareException()
+                    self.e = TalkException()
                     self.e.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -5949,10 +12022,10 @@ class updateSquareMembers_result(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('updateSquareMembers_result')
+        oprot.writeStructBegin('uploadBuddyContent_result')
         if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
+            oprot.writeFieldBegin('success', TType.STRING, 0)
+            oprot.writeString(self.success.encode('utf-8') if sys.version_info[0] == 2 else self.success)
             oprot.writeFieldEnd()
         if self.e is not None:
             oprot.writeFieldBegin('e', TType.STRUCT, 1)
@@ -5974,5042 +12047,10 @@ class updateSquareMembers_result(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(updateSquareMembers_result)
-updateSquareMembers_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [UpdateSquareMembersResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class updateSquareMember_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = UpdateSquareMemberRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('updateSquareMember_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(updateSquareMember_args)
-updateSquareMember_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [UpdateSquareMemberRequest, None], None, ),  # 1
-)
-
-
-class updateSquareMember_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = UpdateSquareMemberResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('updateSquareMember_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(updateSquareMember_result)
-updateSquareMember_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [UpdateSquareMemberResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class updateSquareFeatureSet_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = UpdateSquareFeatureSetRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('updateSquareFeatureSet_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(updateSquareFeatureSet_args)
-updateSquareFeatureSet_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [UpdateSquareFeatureSetRequest, None], None, ),  # 1
-)
-
-
-class updateSquareFeatureSet_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = UpdateSquareFeatureSetResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('updateSquareFeatureSet_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(updateSquareFeatureSet_result)
-updateSquareFeatureSet_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [UpdateSquareFeatureSetResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class getSquareFeatureSet_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = GetSquareFeatureSetRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSquareFeatureSet_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSquareFeatureSet_args)
-getSquareFeatureSet_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [GetSquareFeatureSetRequest, None], None, ),  # 1
-)
-
-
-class getSquareFeatureSet_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = GetSquareFeatureSetResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSquareFeatureSet_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSquareFeatureSet_result)
-getSquareFeatureSet_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [GetSquareFeatureSetResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class searchSquares_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = SearchSquaresRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('searchSquares_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(searchSquares_args)
-searchSquares_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [SearchSquaresRequest, None], None, ),  # 1
-)
-
-
-class searchSquares_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = SearchSquaresResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('searchSquares_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(searchSquares_result)
-searchSquares_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [SearchSquaresResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class updateSquare_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = UpdateSquareRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('updateSquare_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(updateSquare_args)
-updateSquare_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [UpdateSquareRequest, None], None, ),  # 1
-)
-
-
-class updateSquare_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = UpdateSquareResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('updateSquare_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(updateSquare_result)
-updateSquare_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [UpdateSquareResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class getCategories_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = GetSquareCategoriesRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getCategories_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getCategories_args)
-getCategories_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [GetSquareCategoriesRequest, None], None, ),  # 1
-)
-
-
-class getCategories_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = GetSquareCategoriesResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getCategories_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getCategories_result)
-getCategories_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [GetSquareCategoriesResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class searchSquareMembers_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = SearchSquareMembersRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('searchSquareMembers_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(searchSquareMembers_args)
-searchSquareMembers_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [SearchSquareMembersRequest, None], None, ),  # 1
-)
-
-
-class searchSquareMembers_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = SearchSquareMembersResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('searchSquareMembers_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(searchSquareMembers_result)
-searchSquareMembers_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [SearchSquareMembersResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class fetchSquareChatEvents_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = FetchSquareChatEventsRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('fetchSquareChatEvents_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(fetchSquareChatEvents_args)
-fetchSquareChatEvents_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [FetchSquareChatEventsRequest, None], None, ),  # 1
-)
-
-
-class fetchSquareChatEvents_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = FetchSquareChatEventsResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('fetchSquareChatEvents_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(fetchSquareChatEvents_result)
-fetchSquareChatEvents_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [FetchSquareChatEventsResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class fetchMyEvents_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = FetchMyEventsRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('fetchMyEvents_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(fetchMyEvents_args)
-fetchMyEvents_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [FetchMyEventsRequest, None], None, ),  # 1
-)
-
-
-class fetchMyEvents_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = FetchMyEventsResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('fetchMyEvents_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(fetchMyEvents_result)
-fetchMyEvents_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [FetchMyEventsResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class markAsRead_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = MarkAsReadRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('markAsRead_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(markAsRead_args)
-markAsRead_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [MarkAsReadRequest, None], None, ),  # 1
-)
-
-
-class markAsRead_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = MarkAsReadResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('markAsRead_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(markAsRead_result)
-markAsRead_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [MarkAsReadResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class getSquareAuthority_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = GetSquareAuthorityRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSquareAuthority_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSquareAuthority_args)
-getSquareAuthority_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [GetSquareAuthorityRequest, None], None, ),  # 1
-)
-
-
-class getSquareAuthority_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = GetSquareAuthorityResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSquareAuthority_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSquareAuthority_result)
-getSquareAuthority_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [GetSquareAuthorityResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class sendMessage_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = SendMessageRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('sendMessage_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(sendMessage_args)
-sendMessage_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [SendMessageRequest, None], None, ),  # 1
-)
-
-
-class sendMessage_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = SendMessageResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('sendMessage_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(sendMessage_result)
-sendMessage_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [SendMessageResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class leaveSquare_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = LeaveSquareRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('leaveSquare_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(leaveSquare_args)
-leaveSquare_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [LeaveSquareRequest, None], None, ),  # 1
-)
-
-
-class leaveSquare_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = LeaveSquareResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('leaveSquare_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(leaveSquare_result)
-leaveSquare_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [LeaveSquareResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class leaveSquareChat_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = LeaveSquareChatRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('leaveSquareChat_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(leaveSquareChat_args)
-leaveSquareChat_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [LeaveSquareChatRequest, None], None, ),  # 1
-)
-
-
-class leaveSquareChat_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = LeaveSquareChatResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('leaveSquareChat_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(leaveSquareChat_result)
-leaveSquareChat_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [LeaveSquareChatResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class joinSquareChat_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = JoinSquareChatRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('joinSquareChat_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(joinSquareChat_args)
-joinSquareChat_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [JoinSquareChatRequest, None], None, ),  # 1
-)
-
-
-class joinSquareChat_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = JoinSquareChatResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('joinSquareChat_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(joinSquareChat_result)
-joinSquareChat_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [JoinSquareChatResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class joinSquare_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = JoinSquareRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('joinSquare_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(joinSquare_args)
-joinSquare_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [JoinSquareRequest, None], None, ),  # 1
-)
-
-
-class joinSquare_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = JoinSquareResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('joinSquare_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(joinSquare_result)
-joinSquare_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [JoinSquareResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class inviteToSquare_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = InviteToSquareRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('inviteToSquare_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(inviteToSquare_args)
-inviteToSquare_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [InviteToSquareRequest, None], None, ),  # 1
-)
-
-
-class inviteToSquare_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = InviteToSquareResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('inviteToSquare_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(inviteToSquare_result)
-inviteToSquare_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [InviteToSquareResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class inviteToSquareChat_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = InviteToSquareChatRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('inviteToSquareChat_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(inviteToSquareChat_args)
-inviteToSquareChat_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [InviteToSquareChatRequest, None], None, ),  # 1
-)
-
-
-class inviteToSquareChat_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = InviteToSquareChatResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('inviteToSquareChat_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(inviteToSquareChat_result)
-inviteToSquareChat_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [InviteToSquareChatResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class getSquareMember_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = GetSquareMemberRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSquareMember_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSquareMember_args)
-getSquareMember_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [GetSquareMemberRequest, None], None, ),  # 1
-)
-
-
-class getSquareMember_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = GetSquareMemberResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSquareMember_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSquareMember_result)
-getSquareMember_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [GetSquareMemberResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class getSquareMembers_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = GetSquareMembersRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSquareMembers_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSquareMembers_args)
-getSquareMembers_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [GetSquareMembersRequest, None], None, ),  # 1
-)
-
-
-class getSquareMembers_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = GetSquareMembersResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSquareMembers_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSquareMembers_result)
-getSquareMembers_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [GetSquareMembersResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class getSquareMemberRelation_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = GetSquareMemberRelationRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSquareMemberRelation_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSquareMemberRelation_args)
-getSquareMemberRelation_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [GetSquareMemberRelationRequest, None], None, ),  # 1
-)
-
-
-class getSquareMemberRelation_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = GetSquareMemberRelationResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSquareMemberRelation_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSquareMemberRelation_result)
-getSquareMemberRelation_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [GetSquareMemberRelationResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class getSquareMemberRelations_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = GetSquareMemberRelationsRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSquareMemberRelations_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSquareMemberRelations_args)
-getSquareMemberRelations_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [GetSquareMemberRelationsRequest, None], None, ),  # 1
-)
-
-
-class getSquareMemberRelations_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = GetSquareMemberRelationsResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSquareMemberRelations_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSquareMemberRelations_result)
-getSquareMemberRelations_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [GetSquareMemberRelationsResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class getSquareChatMembers_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = GetSquareChatMembersRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSquareChatMembers_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSquareChatMembers_args)
-getSquareChatMembers_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [GetSquareChatMembersRequest, None], None, ),  # 1
-)
-
-
-class getSquareChatMembers_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = GetSquareChatMembersResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSquareChatMembers_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSquareChatMembers_result)
-getSquareChatMembers_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [GetSquareChatMembersResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class getSquareChatStatus_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = GetSquareChatStatusRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSquareChatStatus_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSquareChatStatus_args)
-getSquareChatStatus_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [GetSquareChatStatusRequest, None], None, ),  # 1
-)
-
-
-class getSquareChatStatus_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = GetSquareChatStatusResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSquareChatStatus_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSquareChatStatus_result)
-getSquareChatStatus_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [GetSquareChatStatusResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class getSquareChat_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = GetSquareChatRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSquareChat_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSquareChat_args)
-getSquareChat_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [GetSquareChatRequest, None], None, ),  # 1
-)
-
-
-class getSquareChat_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = GetSquareChatResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSquareChat_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSquareChat_result)
-getSquareChat_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [GetSquareChatResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class getSquare_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = GetSquareRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSquare_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSquare_args)
-getSquare_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [GetSquareRequest, None], None, ),  # 1
-)
-
-
-class getSquare_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = GetSquareResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getSquare_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getSquare_result)
-getSquare_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [GetSquareResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class getJoinedSquares_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = GetJoinedSquaresRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getJoinedSquares_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getJoinedSquares_args)
-getJoinedSquares_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [GetJoinedSquaresRequest, None], None, ),  # 1
-)
-
-
-class getJoinedSquares_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = GetJoinedSquaresResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getJoinedSquares_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getJoinedSquares_result)
-getJoinedSquares_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [GetJoinedSquaresResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class getJoinedSquareChats_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = GetJoinedSquareChatsRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getJoinedSquareChats_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getJoinedSquareChats_args)
-getJoinedSquareChats_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [GetJoinedSquareChatsRequest, None], None, ),  # 1
-)
-
-
-class getJoinedSquareChats_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = GetJoinedSquareChatsResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getJoinedSquareChats_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getJoinedSquareChats_result)
-getJoinedSquareChats_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [GetJoinedSquareChatsResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class approveSquareMembers_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = ApproveSquareMembersRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('approveSquareMembers_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(approveSquareMembers_args)
-approveSquareMembers_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [ApproveSquareMembersRequest, None], None, ),  # 1
-)
-
-
-class approveSquareMembers_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = ApproveSquareMembersResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('approveSquareMembers_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(approveSquareMembers_result)
-approveSquareMembers_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [ApproveSquareMembersResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class createSquareChat_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = CreateSquareChatRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('createSquareChat_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(createSquareChat_args)
-createSquareChat_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [CreateSquareChatRequest, None], None, ),  # 1
-)
-
-
-class createSquareChat_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = CreateSquareChatResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('createSquareChat_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(createSquareChat_result)
-createSquareChat_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [CreateSquareChatResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class createSquare_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = CreateSquareRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('createSquare_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(createSquare_args)
-createSquare_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [CreateSquareRequest, None], None, ),  # 1
-)
-
-
-class createSquare_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = CreateSquareResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('createSquare_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(createSquare_result)
-createSquare_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [CreateSquareResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class deleteSquareChat_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = DeleteSquareChatRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('deleteSquareChat_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(deleteSquareChat_args)
-deleteSquareChat_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [DeleteSquareChatRequest, None], None, ),  # 1
-)
-
-
-class deleteSquareChat_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = DeleteSquareChatResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('deleteSquareChat_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(deleteSquareChat_result)
-deleteSquareChat_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [DeleteSquareChatResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class deleteSquare_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = DeleteSquareRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('deleteSquare_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(deleteSquare_args)
-deleteSquare_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [DeleteSquareRequest, None], None, ),  # 1
-)
-
-
-class deleteSquare_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = DeleteSquareResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('deleteSquare_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(deleteSquare_result)
-deleteSquare_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [DeleteSquareResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class destroyMessage_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = DestroyMessageRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('destroyMessage_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(destroyMessage_args)
-destroyMessage_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [DestroyMessageRequest, None], None, ),  # 1
-)
-
-
-class destroyMessage_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = DestroyMessageResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('destroyMessage_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(destroyMessage_result)
-destroyMessage_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [DestroyMessageResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class getJoinableSquareChats_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = GetJoinableSquareChatsRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getJoinableSquareChats_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getJoinableSquareChats_args)
-getJoinableSquareChats_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [GetJoinableSquareChatsRequest, None], None, ),  # 1
-)
-
-
-class getJoinableSquareChats_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = GetJoinableSquareChatsResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getJoinableSquareChats_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getJoinableSquareChats_result)
-getJoinableSquareChats_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [GetJoinableSquareChatsResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class getInvitationTicketUrl_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = GetInvitationTicketUrlRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getInvitationTicketUrl_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getInvitationTicketUrl_args)
-getInvitationTicketUrl_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [GetInvitationTicketUrlRequest, None], None, ),  # 1
-)
-
-
-class getInvitationTicketUrl_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = GetInvitationTicketUrlResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('getInvitationTicketUrl_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(getInvitationTicketUrl_result)
-getInvitationTicketUrl_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [GetInvitationTicketUrlResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
-)
-
-
-class findSquareByInvitationTicket_args(object):
-    """
-    Attributes:
-     - request
-    """
-
-
-    def __init__(self, request=None,):
-        self.request = request
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.request = FindSquareByInvitationTicketRequest()
-                    self.request.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('findSquareByInvitationTicket_args')
-        if self.request is not None:
-            oprot.writeFieldBegin('request', TType.STRUCT, 1)
-            self.request.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(findSquareByInvitationTicket_args)
-findSquareByInvitationTicket_args.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'request', [FindSquareByInvitationTicketRequest, None], None, ),  # 1
-)
-
-
-class findSquareByInvitationTicket_result(object):
-    """
-    Attributes:
-     - success
-     - e
-    """
-
-
-    def __init__(self, success=None, e=None,):
-        self.success = success
-        self.e = e
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 0:
-                if ftype == TType.STRUCT:
-                    self.success = FindSquareByInvitationTicketResponse()
-                    self.success.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 1:
-                if ftype == TType.STRUCT:
-                    self.e = SquareException()
-                    self.e.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('findSquareByInvitationTicket_result')
-        if self.success is not None:
-            oprot.writeFieldBegin('success', TType.STRUCT, 0)
-            self.success.write(oprot)
-            oprot.writeFieldEnd()
-        if self.e is not None:
-            oprot.writeFieldBegin('e', TType.STRUCT, 1)
-            self.e.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-all_structs.append(findSquareByInvitationTicket_result)
-findSquareByInvitationTicket_result.thrift_spec = (
-    (0, TType.STRUCT, 'success', [FindSquareByInvitationTicketResponse, None], None, ),  # 0
-    (1, TType.STRUCT, 'e', [SquareException, None], None, ),  # 1
+all_structs.append(uploadBuddyContent_result)
+uploadBuddyContent_result.thrift_spec = (
+    (0, TType.STRING, 'success', 'UTF8', None, ),  # 0
+    (1, TType.STRUCT, 'e', [TalkException, None], None, ),  # 1
 )
 fix_spec(all_structs)
 del all_structs
