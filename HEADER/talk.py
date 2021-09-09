@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from DATA.ttypes import Message, Location
+from akad.ttypes import Message, Location
 from random import randint
 
 import json, ntpath
@@ -9,7 +9,7 @@ def loggedIn(func):
         if args[0].isLogin:
             return func(*args, **kwargs)
         else:
-            args[0].callback.default('You want to call the function, you must login to LINE')
+            args[0].callback.other('You want to call the function, you must login to LINE')
     return checkLogin
 
 class Talk(object):
@@ -96,45 +96,248 @@ class Talk(object):
     """Message"""
 
     @loggedIn
-    def sendMessage(self, to="replyMessage", text=None, contentMetadata={}, contentType=0):
-        if to != "replyMessage":
-            msg = Message(
-                to = to,
-                text = text,
-                contentMetadata = contentMetadata,
-                contentType = contentType
-            )
+    def sendMessageaaaa(self, to, text, contentMetadata={}, contentType=0):
+        msg = Message()
+        msg.to, msg._from = to, self.profile.mid
+        msg.text = text
+        msg.contentType, msg.contentMetadata = contentType, contentMetadata
+        if to not in self._messageReq:
+            self._messageReq[to] = -1
+        self._messageReq[to] += 1
+        return self.talk.sendMessage(self._messageReq[to], msg)
+    def sendMessage(self, to, text, contentMetadata={}, contentType=0,msgid=None):
+        #msg = self.generateReplyMessage(relatedMessageId)
+        msg = Message()
+        if 'MENTION' in contentMetadata.keys()!=None:
+            try:
+                msg.relatedMessageId = str(self.talk.getRecentMessagesV2(to, 10)[0].id)
+                msg.relatedMessageServiceCode = 1
+                msg.messageRelationType = 3
+            except:
+                pass
+        if msgid != None:
+            msg.relatedMessageId = str(msgid)
+            msg.relatedMessageServiceCode = 1
+            msg.messageRelationType = 3
+        msg.to, msg._from = to, self.profile.mid
+        msg.text = text
+        msg.contentType, msg.contentMetadata = contentType, contentMetadata
+        if to not in self._messageReq:
+            self._messageReq[to] = -1
+        self._messageReq[to] += 1
+        return self.talk.sendMessage(self._messageReq[to], msg)
+    
+    def adityarequestweb(self,url):
+        r = requests.get("{}".format(url))
+        data = r.text
+        data = json.loads(data)
+        return data
+    
+    def templatefoot(self,link,AI,AN):
+        a={'AGENT_LINK': link,
+        'AGENT_ICON': AI,
+        'AGENT_NAME': AN}
+        return a
+    
+    def blekedok(self,t:int=None,tt:str=None):
+        r = requests.get('https://www.webtoons.com/id/genre')
+        soup = BeautifulSoup(r.text,'html5lib')
+        data = soup.find_all(class_='card_lst')
+        datea = data[t].find_all(class_='info')
+        if tt == 'data':
+            return datea
         else:
-            msg = Message(
-                to = self.to,
-                text = text,
-                contentMetadata = contentMetadata,
-                relatedMessageId = self.id,
-                messageRelationType = 3,
-                relatedMessageServiceCode = 1,
-                contentType = contentType
-            )
-        return self.talk.sendMessage(0, msg)
+            return data[t].find_all('a')
+    
+    def getalbum(self, to, wait):
+        #to = msg.to
+        ha = self.getGroupAlbum(to)
+        #msg.text = self.mycmd(msg.text,wait)
+        a = [a['title'] for a in ha['result']['items']];c=[a['photoCount'] for a in ha['result']['items']]
+        b = '╭「 Album Group 」'
+        no=0
+        for i in range(len(a)):
+            no+=1
+            if no == len(a):b+= '\n╰{}. {} | {}'.format(no,a[i],c[i])
+            else:b+= '\n│{}. {} | {}'.format(no,a[i],c[i])
+        self.sendMessage(to,"{}".format(b))
+    
+    def adityaarchi(self,wait,sd,dd,ss,split,msg,tex,nama=[]):
+        selection = MySplit(split,range(1,len(nama)+1))
+        k = len(nama)//20
+        for a in range(k+1):
+            if a == 0:eto='╭「 '+sd+' 」─'+tex
+            else:eto='├「 '+sd+' 」─'+tex
+            text = ''
+            mids = []
+            no = a
+            for i in selection.parse()[a*20 : (a+1)*20]:
+                mids.append(nama[i-1])
+                if dd == 'kick':self.kickoutFromGroup(ss,[nama[i-1]]);hh = ''
+                if dd == 'delfriend':
+                    try:self.AdityadeleteContact(nama[i-1]);hh = 'Del Friend'
+                    except:hh = 'Not Friend User'
+                if dd == 'delbl':
+                    try:wait['blacklist'].remove(nama[i-1]);hh = 'Del BL'
+                    except:hh = 'Not BL User'
+                if dd == 'delwl':
+                    try:wait['bots'].remove(nama[i-1]);hh = 'Del WL'
+                    except:hh = 'Not WL User'
+                if dd == 'delml':
+                    try:wait['target'].remove(nama[i-1]);hh = 'Del ML'
+                    except:hh = 'Not ML User'
+                if dd == 'delblock':
+                    try:self.unblockContact(nama[i-1]);hh = 'Del Block'
+                    except:hh = 'Not Block User'
+                if dd == '':hh = ''
+                if dd == 'tag':hh = ''
+                no+= 1
+                if no == len(selection.parse()):text+= "\n╰{}. @! {}".format(i,hh)
+                else:text+= "\n│{}. @! {}".format(i,hh)
+            if dd == 'tag':self.sendMention(ss,eto+text,sd,mids)
+            else:self.sendMention(msg.to,eto+text,sd,mids)
+        if dd == 'tag':self.sendMessage(msg.to,'╭「 Mention 」{}\n╰Status: Success tag {} mem'.format(tex,len(nama)-(len(nama)-len(selection.parse()))))
+        
+    def mentionmention(self, to, wait, text, dataMid=[], pl='', ps='', pg='', pt=[]):
+        arr = []
+        list_text=ps
+        i=0
+        no=pl
+        if pg == 'MENTIONALLUNSED':
+            for l in dataMid:
+                no+=1
+                if no == len(pt):list_text+='\nâ°'+str(no)+'. @[RhyN-'+str(i)+'] '
+                else:list_text+='\nâ'+str(no)+'. @[RhyN-'+str(i)+'] '
+                i=i+1
+            text=list_text+text
+        if pg == 'SIDERMES':
+            for l in dataMid:
+                chiya = []
+            for rom in wait["lurkt"][to][dataMid[0]].items():
+                chiya.append(rom[1])
+            for b in chiya:
+                a = '{}'.format(humanize.naturaltime(datetime.fromtimestamp(b/1000)))
+                no+=1
+                if no == len(pt):list_text+='\nâ'+str(no)+'. @[RhyN-'+str(i)+']\nâ°    ã '+a+" ã"
+                else:list_text+='\nâ'+str(no)+'. @[RhyN-'+str(i)+']\nâ    ã '+a+" ã"
+                i=i+1
+            text=list_text+text
+        if pg == 'DELFL':
+            for l in dataMid:
+                try:
+                    self.deleteContact(l)
+                    a = 'Del Friend'
+                except:
+                    a = 'Not Friend User'
+                no+=1
+                if no == len(pt):list_text+='\nâ°'+str(no)+'. @[RhyN-'+str(i)+'] '+a
+                else:list_text+='\nâ'+str(no)+'. @[RhyN-'+str(i)+'] '+a
+                i=i+1
+            text=text+list_text
+        if pg == 'DELML':
+            for l in dataMid:
+                if l not in settings["mimic"]["target"]:
+                    a = 'Not ML User'
+                else:
+                    a = 'DEL ML'
+                    settings["mimic"]["target"].remove(l)
+                no+=1
+                if no == len(pt):list_text+='\nâ°'+str(no)+'. @[RhyN-'+str(i)+'] '+a
+                else:list_text+='\nâ'+str(no)+'. @[RhyN-'+str(i)+'] '+a
+                i=i+1
+            text=list_text
+        i=0
+        for l in dataMid:
+            mid=l
+            name='@[RhyN-'+str(i)+']'
+            ln_text=text.replace('\n',' ')
+            if ln_text.find(name):
+                line_s=int( ln_text.index(name) )
+                line_e=(int(line_s)+int( len(name) ))
+            arrData={'S': str(line_s), 'E': str(line_e), 'M': mid}
+            arr.append(arrData)
+            i=i+1
+        contentMetadata={'MENTION':str('{"MENTIONEES":' + json.dumps(arr).replace(' ','') + '}')}
+        if pg == 'MENTIONALLUNSED':self.unsendMessage(self.sendMessage(to, text, contentMetadata).id)
+        else:self.sendMessage(to, text, contentMetadata)
+
+    def deletefriendnum(self, to, wait, cmd):
+        asd = self.refreshContacts()
+        selection = MySplit(self.adityasplittext(cmd,'s'),range(1,len(asd)+1))
+        k = len(asd)//20
+        d = []
+        for c in selection.parse():
+            d.append(asd[int(c)-1])
+        self.sendMessage(to,' ã Friendlist ã\nWaiting.....')
+        for a in range(k+1):
+            if a == 0:self.mentionmention(to=to,wait=wait,text='',dataMid=d[:20],pl=-0,ps='â­ã Friendlist ãâ\nâ Type: Delete Friendlist',pg='DELFL',pt=d)
+            else:self.mentionmention(to=to,wait=wait,text='',dataMid=d[a*20 : (a+1)*20],pl=a*20,ps='âã Friendlist ãâ\nâ Type: Delete Friendlist',pg='DELFL',pt=d)
+
+    def adityasuperdata(self,to,wait,text='',text1='',data=[]):
+        to = to
+        key = wait["setkey"].title()
+        if data == []:return self.sendMessage(to, "╭───「 {} 」─\n│{}: None\n│    | Command |  \n│Add {}\n│  Key:{} add{} [@]\n│Del {}\n│  Key:{} del{} [@]\n╰──────".format(text,text,text,key,text1,text,key,text1,key,text1))
+        self.datamention(to,'{}'.format(text),data)
+
+    def deletefriendnum(self, to, wait, cmd):
+        asd = self.refreshContacts()
+        selection = MySplit(self.adityasplittext(cmd,'s'),range(1,len(asd)+1))
+        k = len(asd)//20
+        d = []
+        for c in selection.parse():
+            d.append(asd[int(c)-1])
+        self.sendMessage(to,' 「 Friendlist 」\nWaiting.....')
+        for a in range(k+1):
+            if a == 0:self.mentionmention(to=to,wait=wait,text='',dataMid=d[:20],pl=-0,ps='╭「 Friendlist 」─\n├ Type: Delete Friendlist',pg='DELFL',pt=d)
+            else:self.mentionmention(to=to,wait=wait,text='',dataMid=d[a*20 : (a+1)*20],pl=a*20,ps='├「 Friendlist 」─\n├ Type: Delete Friendlist',pg='DELFL',pt=d)
+
+    def getalbum2(self, to, text, wait):
+        #to = msg.to
+        ha = self.getGroupAlbum(to)
+        a = [a['title'] for a in ha['result']['items']];c=[a['photoCount'] for a in ha['result']['items']]
+        a = text.split(' ')
+        selection = MySplit(a[3],range(1,len(ha['result']['items'])+1))
+        for i in selection.parse():
+            try:
+                b = random.randint(0,999)
+                self.getImageGroupAlbum(to,ha['result']['items'][int(a[2])-1]['id'], ha['result']['items'][int(a[2])-1]['recentPhotos'][i-1]['oid'], returnAs='path', saveAs='{}.png'.format(b))
+                self.sendImage(to,'{}.png'.format(b))
+                os.remove('{}.png'.format(b))
+            except:continue
+    
+    def adityasplittext(self,text,lp=''):
+        separate = text.split(" ")
+        if lp == '':adalah = text.replace(separate[0]+" ","")
+        elif lp == 's':adalah = text.replace(separate[0]+" "+separate[1]+" ","")
+        else:adalah = text.replace(separate[0]+" "+separate[1]+" "+separate[2]+" ","")
+        return adalah
 
     @loggedIn
-    def replyMessage(self, text, reply="replyMessage", contentMetadata={}):
-        for i in range(0, len(text), 10000):
-            txt = text[i:i+10000]
-            if reply == "replyMessage":
-                try:
-                    reply = self.sendMessage(self.to, txt, contentMetadata)
-                except:
-                    reply = self.sendMessage(reply, txt, contentMetadata)
-            else:
-                raise Exception("Invalid Method")
-        return reply
-                
+    def getRecentMessagesV2(self, chatId, count=1001):
+        return self.talk.getRecentMessagesV2(chatId,count)
+
+    @loggedIn
+    def sendMessage(self, to, text, contentMetadata={}, contentType=0):
+        msg = Message()
+        msg.to, msg._from = to, self.profile.mid
+        msg.text = text
+        msg.contentType, msg.contentMetadata = contentType, contentMetadata
+        if to not in self._messageReq:
+            self._messageReq[to] = -1
+        self._messageReq[to] += 1
+        return self.talk.sendMessage(self._messageReq[to], msg)
+        
+    @loggedIn
+    def sendMessage1(self, messageObject):
+        return self.talk.sendMessage(0,messageObject)    
+
     @loggedIn
     def sendMessageObject(self, msg):
         to = msg.to
         if to not in self._messageReq:
             self._messageReq[to] = -1
         self._messageReq[to] += 1
+        self._msgReq += 1
         return self.talk.sendMessage(self._messageReq[to], msg)
 
     @loggedIn
@@ -182,7 +385,7 @@ class Talk(object):
             'previewUrl': iconurl,
             'type': 'mt',
             'a-packageName': 'com.spotify.music',
-            'countryCode': 'JP',
+            'countryCode': 'ID',
             'id': 'mt000000000a6b79f9'
         }
         if contentMetadata:
@@ -191,6 +394,22 @@ class Talk(object):
             self._messageReq[to] = -1
         self._messageReq[to] += 1
         return self.talk.sendMessage(self._messageReq[to], msg)
+
+    @loggedIn
+    def sendFakeMessage(self, to, text, mids):
+        contact = self.getContact(mids)
+        pict = "http://dl.profile.line-cdn.net/{}".format(contact.pictureStatus)
+        name = "{}".format(contact.displayName)
+        contentMetadata={"MSG_SENDER_NAME": name,"MSG_SENDER_ICON": pict}
+        return self.sendMessage(to, text, contentMetadata=contentMetadata)
+
+    @loggedIn
+    def sendFakeReplyMessage(self, rynId, to, text, mids):
+        contact = self.getContact(mids)
+        pict = "http://dl.profile.line-cdn.net/{}".format(contact.pictureStatus)
+        name = "{}".format(contact.displayName)
+        contentMetadata={"MSG_SENDER_NAME": name,"MSG_SENDER_ICON": pict}
+        return self.sendReplyMessage(to, rynId, text, contentMetadata)
 
     @loggedIn
     def generateMessageFooter(self, title=None, link=None, iconlink=None):
@@ -214,6 +433,10 @@ class Talk(object):
             self._messageReq[to] = -1
         self._messageReq[to] += 1
         return self.talk.sendMessage(self._messageReq[to], msg)
+        
+    @loggedIn
+    def getRecentMessagesV2(self, messageBoxId, messagesCount=50):
+        return self.talk.getRecentMessagesV2(messageBoxId, messagesCount)
 
     @loggedIn
     def generateReplyMessage(self, relatedMessageId):
@@ -225,7 +448,10 @@ class Talk(object):
 
     @loggedIn
     def sendReplyMessage(self, relatedMessageId, to, text, contentMetadata={}, contentType=0):
-        msg = self.generateReplyMessage(relatedMessageId)
+        msg = Message()
+        msg.relatedMessageServiceCode = 1
+        msg.messageRelationType = 3
+        msg.relatedMessageId = str(relatedMessageId)
         msg.to = to
         msg.text = text
         msg.contentType = contentType
@@ -234,25 +460,92 @@ class Talk(object):
             self._messageReq[to] = -1
         self._messageReq[to] += 1
         return self.talk.sendMessage(self._messageReq[to], msg)
+		
+    @loggedIn	
+    def sendMessageWithMention(self, to, text='', dataMid=[]):
+        arr = []
+        list_text=''
+        if '[list]' in text.lower():
+            i=0
+            for l in dataMid:
+                list_text+='\n@[list-'+str(i)+']'
+                i=i+1
+            text=text.replace('[list]', list_text)
+        elif '[list-' in text.lower():
+            text=text
+        else:
+            i=0
+            for l in dataMid:
+                list_text+=' @[list-'+str(i)+']'
+                i=i+1
+            text=text+list_text
+        i=0
+        for l in dataMid:
+            mid=l
+            name='@[list-'+str(i)+']'
+            ln_text=text.replace('\n',' ')
+            if ln_text.find(name):
+                line_s=int(ln_text.index(name))
+                line_e=(int(line_s)+int(len(name)))
+            arrData={'S': str(line_s), 'E': str(line_e), 'M': mid}
+            arr.append(arrData)
+            i=i+1
+        contentMetadata={'MENTION':str('{"MENTIONEES":' + json.dumps(arr).replace(' ','') + '}')}
+        return self.sendMessage(to, text, contentMetadata)
 
     @loggedIn
-    def sendMention(self, to, mid, firstmessage='', lastmessage=''):
+    def sendReplyWithFooter(self, rynId, to, text, title=None, link=None, iconlink=None, contentMetadata={}):
+        msg = self.generateReplyMessage(rynId)
+        msg.to, msg._from = to, self.profile.mid
+        msg.text = text
+        msg.contentType = 0
+        msg.contentMetadata = self.generateMessageFooter(title, link, iconlink)
+        if contentMetadata:
+            msg.contentMetadata.update(contentMetadata)
+        if to not in self._messageReq:
+            self._messageReq[to] = -1
+        self._messageReq[to] += 1
+        return self.talk.sendMessage(self._messageReq[to], msg)
+
+    """ Usage:
+        @to Integer
+        @text String
+        @dataMid List of user Mid
+    """
+    @loggedIn
+    def sendMention(self, to, text="", mids=[]):
         arrData = ""
-        text = "%s " %(str(firstmessage))
         arr = []
-        mention = "@zeroxyuuki "
-        slen = str(len(text))
-        elen = str(len(text) + len(mention) - 1)
-        arrData = {'S':slen, 'E':elen, 'M':mid}
-        arr.append(arrData)
-        text += mention + str(lastmessage)
-        self.sendMessage(to, text, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+        mention = "@ryn "
+        if mids == []:
+            raise Exception("Invalid mids")
+        if "@!" in text:
+            if text.count("@!") != len(mids):
+                raise Exception("Invalid mids")
+            texts = text.split("@!")
+            textx = ""
+            for mid in mids:
+                textx += str(texts[mids.index(mid)])
+                slen = len(textx)
+                elen = len(textx) + 8
+                arrData = {'S':str(slen), 'E':str(elen - 4), 'M':mid}
+                arr.append(arrData)
+                textx += mention
+            textx += str(texts[len(mids)])
+        else:
+            textx = ""
+            slen = len(textx)
+            elen = len(textx) + 8
+            arrData = {'S':str(slen), 'E':str(elen - 4), 'M':mids[0]}
+            arr.append(arrData)
+            textx += mention + str(text)
+        return self.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
 
     @loggedIn
     def sendMentionV2(self, to, text="", mids=[], isUnicode=False):
         arrData = ""
         arr = []
-        mention = "@zeroxyuuki "
+        mention = "@rynkings__ "
         if mids == []:
             raise Exception("Invalid mids")
         if "@!" in text:
@@ -284,34 +577,63 @@ class Talk(object):
         self.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
 
     @loggedIn
-    def sendMentionV3(self, *args, **kwargs):
-        data = list(args[1]) if type(args[1]) is dict else args[1] if type(args[1]) is list else [args[1]]
+    def sendReplyMention(self,RynId, to, text="", mids=[]):
         arrData = ""
         arr = []
-        mention = "@RhyN"
-        if not data:
-            raise Exception("Invalid data")
-        if "@!" in args[0]:
-            if args[0].count("@!") != len(data):
-                raise Exception("Invalid count @!")
-            _t = args[0].split("@!")
-            _d = ''
-            for m in range(len(data)):
-                _d += f'{_t[m]}'
-                slen = len(_d)
-                elen = len(_d) + 5
-                arrData = {'S':str(slen), 'E':str(elen), 'M':data[m]}
+        mention = "@rynkings__ "
+        if mids == []:
+            raise Exception("Invalid mids")
+        if "@!" in text:
+            if text.count("@!") != len(mids):
+                raise Exception("Invalid mids")
+            texts = text.split("@!")
+            textx = ""
+            for mid in mids:
+                textx += str(texts[mids.index(mid)])
+                slen = len(textx)
+                elen = len(textx) + 15
+                arrData = {'S':str(slen), 'E':str(elen - 4), 'M':mid}
                 arr.append(arrData)
-                _d += mention
-            _d += str(_t[len(data)])+' '
-        self.replyMessage(_d, contentMetadata={'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')})
+                textx += mention
+            textx += str(texts[len(mids)])
+        else:
+            textx = ""
+            slen = len(textx)
+            elen = len(textx) + 15
+            arrData = {'S':str(slen), 'E':str(elen - 4), 'M':mids[0]}
+            arr.append(arrData)
+            textx += mention + str(text)
+        return self.sendReplyMessage(RynId, to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+
+    @loggedIn
+    def sendFakeMention(self, to, text="", mids=[]):
+        arrData = ""
+        arr = []
+        mention = "@rynkings__ "
+        if mids == []:
+            raise Exception("Invalid mids")
+        if "@!" in text:
+            if text.count("@!") != len(mids):
+                raise Exception("Invalid mids")
+            texts = text.split("@!")
+            textx = ""
+            for mid in mids:
+                textx += str(texts[mids.index(mid)])
+                slen = len(textx)
+                elen = len(textx) + 15
+                arrData = {'S':str(slen), 'E':str(elen - 4), 'M':mid}
+                arr.append(arrData)
+                textx += mention
+            textx += str(texts[len(mids)])
+        else:
+            textx = ""
+            slen = len(textx)
+            elen = len(textx) + 15
+            arrData = {'S':str(slen), 'E':str(elen - 4), 'M':mids[0]}
+            arr.append(arrData)
+            textx += mention + str(text)
+        return self.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}'),"MSG_SENDER_NAME": "http://dl.profile.line-cdn.net/{}".format(self.getContact(arr).pictureStatus),"MSG_SENDER_ICON": "{}".format(self.getContact(arr).displayName)}, 0)
         
-        
-    """ Usage:
-        @to Integer
-        @text String
-        @dataMid List of user Mid
-    """
     @loggedIn
     def sendMessageWithMention(self, to, text='', dataMid=[]):
         arr = []
@@ -352,11 +674,51 @@ class Talk(object):
             'STKID': stickerId
         }
         return self.sendMessage(to, '', contentMetadata, 7)
+
+    @loggedIn
+    def sendReplySticker(self, RynId, to, packageId, stickerId):
+        contentMetadata = {
+            'STKVER': '100',
+            'STKPKGID': packageId,
+            'STKID': stickerId
+        }
+        return self.sendReplyMessage(RynId, to, '', contentMetadata, 7)
         
     @loggedIn
     def sendContact(self, to, mid):
         contentMetadata = {'mid': mid}
         return self.sendMessage(to, '', contentMetadata, 13)
+
+    @loggedIn
+    def sendReplyContact(self, RynId, to, mid):
+        contentMetadata = {'mid': mid}
+        return self.sendReplyMessage(RynId, to, '', contentMetadata, 13)
+
+    @loggedIn
+    def sendFakeReplyContact(self, RynId, to, mid):
+        contact = self.getContact(mid)
+        pict = "http://dl.profile.line-cdn.net/{}".format(contact.pictureStatus)
+        name = "{}".format(contact.displayName)
+        contentMetadata={'mid' : mid,'MSG_SENDER_NAME': name,'MSG_SENDER_ICON': pict}
+        return self.sendReplyMessage(RynId, to, '', contentMetadata, 13)
+
+    @loggedIn
+    def sendFakeContact(self,to, mid):
+        contact = self.getContact(mid)
+        pict = "http://dl.profile.line-cdn.net/{}".format(contact.pictureStatus)
+        name = "{}".format(contact.displayName)
+        contentMetadata={'mid' : mid,'MSG_SENDER_NAME': name,'MSG_SENDER_ICON': pict}
+        return self.sendMessage(to, '', contentMetadata, 13)
+
+    @loggedIn
+    def sendContactHP(self, to, text, nomer, nama):
+        nomer = nomer
+        nama = nama
+        contentMetadata = {
+            'vCard': 'BEGIN:VCARD\r\nVERSION:3.0\r\nPRODID:ANDROID 8.13.3 Android OS 4.4.4\r\nFN:\\{}\r\nTEL;TYPE=mobile:{}\r\nN:?;\\,\r\nEND:VCARD\r\n'.format(nama,nomer),
+            'displayName': '{}'.format(nama)
+        }
+        return self.sendMessage(to, text, contentMetadata, 13)
 
     @loggedIn
     def sendGift(self, to, productId, productType):
@@ -370,6 +732,17 @@ class Talk(object):
         return self.sendMessage(to, '', contentMetadata, 9)
 
     @loggedIn
+    def sendReplyGift(self, RynId, to, productId, productType):
+        if productType not in ['theme','sticker']:
+            raise Exception('Invalid productType value')
+        contentMetadata = {
+            'MSGTPL': str(randint(0, 12)),
+            'PRDTYPE': productType.upper(),
+            'STKPKGID' if productType == 'sticker' else 'PRDID': productId
+        }
+        return self.sendReplyMessage(RynId, to, '', contentMetadata, 9)
+
+    @loggedIn
     def sendMessageAwaitCommit(self, to, text, contentMetadata={}, contentType=0):
         msg = Message()
         msg.to, msg._from = to, self.profile.mid
@@ -379,7 +752,7 @@ class Talk(object):
             self._messageReq[to] = -1
         self._messageReq[to] += 1
         return self.talk.sendMessageAwaitCommit(self._messageReq[to], msg)
-
+       
     @loggedIn
     def unsendMessage(self, messageId):
         self._unsendMessageReq += 1
@@ -438,6 +811,17 @@ class Talk(object):
         return self.sendImage(to, path)
 
     @loggedIn
+    def sendReplyImage(self, rynId, to, path):
+        objectId = self.sendReplyMessage(rynId, to=to, text=None, contentType = 1).id
+        return self.uploadObjTalk(path=path, type='image', returnAs='bool', objId=objectId)
+
+    @loggedIn
+    def sendReplyImageWithURL(self,rynId, to, url):
+        path = self.downloadFileURL(url, 'path')
+        self.sendReplyImage(rynId, to, path)
+        return self.deleteFile(path)
+
+    @loggedIn
     def sendGIF(self, to, path):
         return self.uploadObjTalk(path=path, type='gif', returnAs='bool', to=to)
 
@@ -448,7 +832,7 @@ class Talk(object):
 
     @loggedIn
     def sendVideo(self, to, path):
-        objectId = self.sendMessage(to=to, text=None, contentMetadata={'VIDLEN': '60000','DURATION': '60000'}, contentType = 2).id
+        objectId = self.sendMessage(to=to, text=None, contentMetadata={'VIDLEN': '60000','DURATION': '60000','PREVIEW_URL': 'http://dl.profile.line-cdn.net/{}'.format(self.getProfile().pictureStatus)}, contentType = 2).id
         return self.uploadObjTalk(path=path, type='video', returnAs='bool', objId=objectId)
 
     @loggedIn
@@ -465,6 +849,17 @@ class Talk(object):
     def sendAudioWithURL(self, to, url):
         path = self.downloadFileURL(url, 'path')
         return self.sendAudio(to, path)
+
+    @loggedIn
+    def sendReplyAudio(self,rynId, to, path):
+        objectId = self.sendReplyMessage(rynId, to=to, text=None, contentType = 3).id
+        return self.uploadObjTalk(path=path, type='audio', returnAs='bool', objId=objectId)
+
+    @loggedIn
+    def sendReplyAudioWithURL(self,rynId, to, url):
+        path = self.downloadFileURL(url, 'path')
+        self.sendReplyAudio(rynId, to, path)
+        return self.deleteFile(path)
 
     @loggedIn
     def sendFile(self, to, path, file_name=''):
@@ -607,6 +1002,9 @@ class Talk(object):
     @loggedIn
     def createGroup(self, name, midlist):
         return self.talk.createGroup(0, name, midlist)
+    @loggedIn
+    def createPostGroup(self, cmd, midlist):
+        return self.talk.createPostGroup(0, cmd, midlist)
 
     @loggedIn
     def getGroup(self, groupId):

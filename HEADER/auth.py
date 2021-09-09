@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-from DATA.ttypes import IdentityProvider, LoginResultType, LoginRequest, LoginType, E2EEKeyChain
+from DATA.ttypes import IdentityProvider, LoginResultType, LoginRequest, LoginType
 from .server import Server
 from .session import Session
 from .callback import Callback
-from .login import QRLogin
+
 import rsa, os
 
 class Auth(object):
@@ -18,7 +18,7 @@ class Auth(object):
             'User-Agent': self.server.USER_AGENT,
             'X-Line-Application': self.server.APP_NAME,
             'X-Line-Carrier': self.server.CARRIER,
-            'x-lal': 'en_US'
+            'x-lal': "in_ID"
         })
 
     def __loadSession(self):
@@ -29,7 +29,7 @@ class Auth(object):
         self.square     = Session(self.server.LINE_HOST_DOMAIN, self.server.Headers, self.server.LINE_SQUARE_QUERY_PATH, self.customThrift).Square()
         self.liff       = Session(self.server.LINE_HOST_DOMAIN, self.server.Headers, self.server.LINE_LIFF_QUERY_PATH, self.customThrift).Liff()
         self.shop       = Session(self.server.LINE_HOST_DOMAIN, self.server.Headers, self.server.LINE_SHOP_QUERY_PATH, self.customThrift).Shop()
-
+        
         self.revision = self.poll.getLastOpRevision()
         self.isLogin = True
 
@@ -67,7 +67,7 @@ class Auth(object):
             self.provider = IdentityProvider.LINE       # LINE
         else:
             self.provider = IdentityProvider.NAVER_KR   # NAVER
-
+        
         if self.appName is None:
             self.appName=self.server.APP_NAME
         self.server.setHeaders('X-Line-Application', self.appName)
@@ -86,6 +86,7 @@ class Auth(object):
                 self.certificate = f.read()
         except:
             if self.certificate is not None:
+                self.certificate = certificate
                 if os.path.exists(self.certificate):
                     with open(self.certificate, 'r') as f:
                         self.certificate = f.read()
@@ -144,14 +145,42 @@ class Auth(object):
             self.loginWithAuthToken(result.authToken)
 
     def loginWithQrCode(self):
-        newqr = QRLogin()
-        application = self.server.APP_NAME.split("\t")[0].lower()
-        if application == "androidlite":
-            application = "android_lite"
-        elif application == "iosipad":
-            application = "ios_ipad"
-        result = newqr.loginWithQrCode(application, callback=self.callback.callback)
-        self.loginWithAuthToken(result.accessToken)
+        if self.systemName is None:
+            self.systemName=self.server.SYSTEM_NAME
+        if self.appName is None:
+            self.appName=self.server.APP_NAME
+        self.server.setHeaders('X-Line-Application', self.appName)
+
+        self.tauth = Session(self.server.LINE_HOST_DOMAIN, self.server.Headers, self.server.LINE_AUTH_QUERY_PATH).Talk(isopen=False)
+        qrCode = self.tauth.getAuthQrcode(self.keepLoggedIn, self.systemName)
+
+        self.callback.QrUrl('line://au/q/' + qrCode.verifier, self.showQr)
+        self.server.setHeaders('X-Line-Access', qrCode.verifier)
+
+        getAccessKey = self.server.getJson(self.server.parseUrl(self.server.LINE_CERTIFICATE_PATH), allowHeader=True)
+        
+        self.auth = Session(self.server.LINE_HOST_DOMAIN, self.server.Headers, self.server.LINE_LOGIN_QUERY_PATH).Auth(isopen=False)
+        
+        try:
+            lReq = self.__loginRequest('1', {
+                'keepLoggedIn': self.keepLoggedIn,
+                'systemName': self.systemName,
+                'identityProvider': IdentityProvider.LINE,
+                'verifier': getAccessKey['result']['verifier'],
+                'accessLocation': self.server.IP_ADDR,
+                'e2eeVersion': 0
+            })
+            result = self.auth.loginZ(lReq)
+        except:
+            raise Exception('Login failed')
+
+        if result.type == LoginResultType.SUCCESS:
+            if result.authToken is not None:
+                self.loginWithAuthToken(result.authToken)
+            else:
+                return False
+        else:
+            raise Exception('Login failed')
 
     def loginWithAuthToken(self, authToken=None):
         if authToken is None:
@@ -169,5 +198,4 @@ class Auth(object):
         print(str)
 
     def logout(self):
-        self.isLogin = False
         self.auth.logoutZ()
