@@ -1,72 +1,34 @@
 # -*- coding: utf-8 -*-
 #Thaks to Hello world square
 #Thaks to all suport team bot
-from important import *
-from module import *
-from setup_args import *
-from list_def import *
+from HEADER import *
+from DATA.ttypes import Message
+from DATA.ttypes import ContentType as Type
+from DATA.ttypes import ChatRoomAnnouncementContents
+from DATA.ttypes import ChatRoomAnnouncement
+from thrift import transport, protocol, server
+from thrift.unverting import *
+from thrift.TMultiplexedProcessor import *
+from thrift.TSerialization import *
+from thrift.TRecursive import *
+from datetime import datetime, timedelta
+import pytz, pafy, time, asyncio, random, multiprocessing, timeit, sys, json, ctypes, codecs, threading, glob, re, ast, six, os, subprocess, wikipedia, atexit, urllib, urllib.parse, urllib3, string, tempfile, shutil, unicodedata
+from humanfriendly import format_timespan, format_size, format_number, format_length
+import html5lib
+import requests,json,urllib3
+from random import randint
+from bs4 import BeautifulSoup
+from gtts import gTTS
+from googletrans import Translator
+import youtube_dl
+from time import sleep
+import pyimgflip
+from zalgo_text import zalgo
+from threading import Thread,Event
 
-listAppType = ['DESKTOPWIN', 'DESKTOPMAC', 'IOSIPAD', 'CHROMEOS']
-try:
-    dhenzaSelfbot = None
-    if args.apptype:
-        tokenPath = Path('authToken.txt')
-        if tokenPath.exists():
-            tokenFile = tokenPath.open('r')
-        else:
-            tokenFile = tokenPath.open('w+')
-        savedAuthToken = tokenFile.read().strip()
-        authToken = savedAuthToken if savedAuthToken and not args.token else args.token
-        idOrToken = authToken if authToken else print("# No one Qr was readed, Lets Scan New QR.")
-        try:
-            dhenzaSelfbot = LINE(idOrToken, appType=args.apptype, systemName=args.systemname, channelId=args.channelid, showQr=args.showqr)
-            tokenFile.close()
-            tokenFile = tokenPath.open('w+')
-            tokenFile.write(dhenzaSelfbot.authToken)
-            tokenFile.close()
-        except TalkException as talk_error:
-            if args.traceback: traceback.print_tb(talk_error.__traceback__)
-            sys.exit('(+) Error : %s' % talk_error.reason.replace('_', ' '))
-        except Exception as error:
-            if args.traceback: traceback.print_tb(error.__traceback__)
-            sys.exit('(+) Error : %s' % str(error))
-    else:
-        for appType in listAppType:
-            tokenPath = Path('authToken.txt')
-            if tokenPath.exists():
-                tokenFile = tokenPath.open('r')
-            else:
-                tokenFile = tokenPath.open('w+')
-            savedAuthToken = tokenFile.read().strip()
-            authToken = savedAuthToken if savedAuthToken and not args.token else args.token
-            idOrToken = authToken if authToken else print("# No one Qr was readed, Lets Scan New QR.")
-            try:
-                dhenzaSelfbot = LINE(idOrToken, appType=appType, systemName=args.systemname, channelId=args.channelid, showQr=args.showqr)
-                tokenFile.close()
-                tokenFile = tokenPath.open('w+')
-                tokenFile.write(dhenzaSelfbot.authToken)
-                tokenFile.close()
-                break
-            except TalkException as talk_error:
-                print ('(+) Error : %s' % talk_error.reason.replace('_', ' '))
-                if args.traceback: traceback.print_tb(talk_error.__traceback__)
-                if talk_error.code == 1:
-                    continue
-                sys.exit(1)
-            except Exception as error:
-                print ('(+) Error : %s' % str(error))
-                if args.traceback: traceback.print_tb(error.__traceback__)
-                sys.exit(1)
-except Exception as error:
-    print ('[ System Message ] - Error : %s' % str(error))
-    if args.traceback: traceback.print_tb(error.__traceback__)
-    sys.exit(1)
 
-if dhenzaSelfbot:
-    print ('\n[ Your Auth Token ] -> %s\n' % dhenzaSelfbot.authToken)
-else:
-    sys.exit('[ System Message ] - Login Failed.')
-    
+dhenzaSelfbot = LINE("email","paswod")
+
 oepoll = OEPoll(dhenzaSelfbot)
 call = dhenzaSelfbot
 creator = ["ub1c5a71f27b863896e9d44bea857d35b"]
